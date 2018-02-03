@@ -8,9 +8,7 @@ image: id_photo.png
 ---
 
 
-증명사진 스캔 파일을 업로드하면, 여권/비자/반명함/증명사진 규격으로 프린트할 수 있도록 크기를 잡아주고 collage를 만들어 주는 웹 서비스.
-
-오픈소스 이것 저것 엮어서 만들어 봄.
+증명사진 스캔 파일을 업로드하면, 여권/비자/반명함/증명사진 규격으로 프린트할 수 있도록 크기를 잡아주고 collage를 만들어 주는 웹 서비스로 뜻밖에 유료로 서비스하는 곳이 많음. express, node.js를 이용해서 drag & drop으로 file upload하고, 원하는 규격별로 사이즈 잡은 후에 photo-collage 라이브러리를 이용해 A4 한장에 여러 장의 사진이 배치되도록 함.
 
 # 소스코드 다운 받기
 
@@ -56,7 +54,7 @@ package.json이 있는 디렉토리에서 아래 명령을 실행.
 - node canvas 관련 에러 나오면, [여기](https://github.com/Automattic/node-canvas) 참고
 - libpng 에러가 나올땐 [여기](https://github.com/Automattic/node-canvas/wiki/installation---osx#installing-cairo) 참고
 - Pixman 관련 에러가 나오면 [여기](http://macappstore.org/pixman/) 참고
-
+- node.js는 비동기로 동작하기 때문에 생성된 collage 사진을 지우면 오동작함. 그래서, 할수없이 container내에 위치시키도록 했음. 즉, 컨테이너 내려가면 같이 삭제됨. 또한, 파일이름은 난수로 생성되어 외부 접근이 불가하므로 프라이버시 이슈는 없을 듯하나... 개선은 필요한 부분.
 
 
 # 도커 이미지로 만들기

@@ -74,7 +74,7 @@
 					<dc:creator>Wook Hyun</dc:creator>
 				
 				
-					<description>&lt;p&gt;증명사진 스캔 파일을 업로드하면, 여권/비자/반명함/증명사진 규격으로 프린트할 수 있도록 크기를 잡아주고 collage를 만들어 주는 웹 서비스.&lt;/p&gt;
+					<description>&lt;p&gt;증명사진 스캔 파일을 업로드하면, 여권/비자/반명함/증명사진 규격으로 프린트할 수 있도록 크기를 잡아주고 collage를 만들어 주는 웹 서비스로 뜻밖에 유료로 서비스하는 곳이 많음. express, node.js를 이용해서 drag &amp;amp; drop으로 file upload하고, 원하는 규격별로 사이즈 잡은 후에 photo-collage 라이브러리를 이용해 A4 한장에 여러 장의 사진이 배치되도록 함.&lt;/p&gt;
 
 </description>
 				
