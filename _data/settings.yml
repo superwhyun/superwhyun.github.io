@@ -8,7 +8,7 @@ disqus:
 google-ID: 'superwhyun3@gmail.com'
 
 menu:
-- {name: 'Articles', folder: 'pages', file: 'facts.html'}
+- {name: 'Articles', folder: 'pages', file: 'articles.html'}
 - {name: 'Learning Resources', folder: 'pages', file: 'resources.html'}
 - {name: 'Upcoming', folder: 'pages', file: 'upcoming.html'}
 - {name: 'Documentation', folder: 'pages', file: 'documentation.html'}
