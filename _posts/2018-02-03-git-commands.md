@@ -2,20 +2,20 @@
 layout: post
 title: "Git, Github 활용 팁 정리"
 author: "Wook Hyun"
-categories: upcoming
+categories: documentation
 tags: [blog]
 image: nature-1.jpg
 comments: true
 ---
 ## Git command
 
+git가 초기 나왔을 때에는 몇가지 커맨드만 사용하면 되었는데, 요즘은 너무 많고 이해하기도 어렵다. 그냥 많이 써본 것과 유용할 것으로 판단되는 몇가지들만 정리해 본다.
 
 ### 소스코드를 다운 받을 때
 ```
 $ git clone [address]
 ```
 
-<span style="color:blue">aaa</span>
 
 ### 소스코드를 올릴 때
 
@@ -33,14 +33,21 @@ $ git push origin master
 
 
 
+<hr>
+
 
 ## Github
 
 ![git, github](https://linode.com/docs/assets/git-github-workflow-1000w.png){:class="img-responsive"}
 
 
+<hr>
 
 ## Trouble Shooting
+
+### Q. Git remote repository에 push하려면 모든 코드를 일단 다 받아놔야 하나?
+
+필요한 파일 하나만 바꾸고, 그 녀석만 올릴 수는 없을까? 가능할까?
 
 ### Q. Git commit 이 많이 쌓이면?
 

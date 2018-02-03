@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Github Blog 만들기 "
+title: "Github.io Blog 만들기 "
 author: "Wook Hyun"
 categories: documentation
 tags: [blog]
@@ -10,7 +10,7 @@ image: cuba-1.jpg
 
 ## Github.io 에 블로그  만들기
 
-다양한 블로그 사이트가 있기는 하나, github.io를 이용해 보기로 함.
+다양한 블로그 사이트가 있기는 하나, git을 이용해서 관리가 가능하다는 장점이 있으며 markdown을 쓸 수 있어서 ithub.io를 이용해 보기로 함.
 
 <hr>
 
@@ -30,7 +30,9 @@ image: cuba-1.jpg
 
 일단 로컬에서 작업한 이후 Github에 push를 하는 형태로 개발하면 되는데, 로컬에서 작업할 때 Jekyill로 만들어진 페이지들은 일반 웹서버에서는 보여지지 않는다. 그렇기 떄문에 전용 웹서버를 jekyill 툴로 구동시켜야만 한다. 자세한 내용은 [여기](https://mycyberuniverse.com/web/how-fix-jekyll-build-serve-error-message.html)를 참고하자.
 
-1. 템플릿을 [여기](http://jekyllthemes.org/)에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.
+**[1] 템플릿 다운로드**
+
+템플릿을 [여기](http://jekyllthemes.org/)에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.
 
 > $ gem install bundler
 
@@ -39,24 +41,43 @@ image: cuba-1.jpg
 > $ bundle exec jekyll serve 
 
 
-2. 그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 브라우저를 열고 주소창에 http://localhost:4000 를 입력하자
+**[2] 로컬 서버 접속하기**
 
-3. 잘 만들어진 것 같으면 github에 push하기
+그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 브라우저를 열고 주소창에 http://localhost:4000 를 입력하자
+
+**[3] 원격 서버에 업로드하기**
+
+잘 만들어진 것 같으면 github에 push하기
 
 > $ git push origin master
 
-4. https://계정명.github.io 에 접속해 보기. 끗.
+**[4] 원격 서버 접속하기**
+
+https://계정명.github.io 에 접속해 보기. 끗.
+
+
+**[5] Jekyll 설정 잡아보기**
+
+_config.yml 과 _settings.yml 만 만지면 된다. 보면 안다.
+
 <hr>
 ### Jekyll 기반 글쓰기
 
 _post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML front matter block에 간단한 메타데이터를 입려하면 자동으로 페이지가 생성된다.
 
-* image 파라미터에는 external link image를 달 수가 없다. 즉, assets/img/ 밑에 위치한 이미지만 로딩 가능하다.
+주의할 점으로,..
+* YML font matter block에 포함된 image 파라미터에는 external link image를 달 수가 없다. 즉, assets/img/ 밑에 위치한 이미지만 로딩 가능하다.
 
 
+<hr>
 
+### 댓글 달기 기능 추가하기
 
-#### Markdown 사용 팁
+**TBD**
+
+<hr>
+
+### Markdown 사용 팁
 
 - 글자에 색상을 넣고 싶어요
 
@@ -66,7 +87,7 @@ _post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML 
 
 <hr>
 ## Trouble shooting
-- 새로운 포스트 페이지가 보이지 않는다. 
+- 새로만든 페이지가 보이지 않는다. 
   - 여러 가능성이 있지만, 아래 명령을 실행한 후 로그 메시지를 확인한다.
 > bundle exec jekyll build --verbose 
     - 파일명에 기술된 날짜가 future 인지 확인. 오늘 날짜보다 다음 날짜인 경우 인식하지 않는다.

@@ -32,8 +32,8 @@
 </description>
 				
 				<pubDate>Sat, 03 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/upcoming/git-commands.html</link>
-				<guid isPermaLink="true">http://localhost:4000/upcoming/git-commands.html</guid>
+				<link>http://localhost:4000/documentation/git-commands.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/git-commands.html</guid>
 			</item>
 		
 			<item>
@@ -54,7 +54,7 @@
 			</item>
 		
 			<item>
-				<title>Github Blog 만들기 </title>
+				<title>Github.io Blog 만들기 </title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
 				
@@ -69,18 +69,33 @@
 			</item>
 		
 			<item>
-				<title>Development Log for ID photo</title>
+				<title>증명사진 이미지 생성 서비스 개발기</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
 				
 				
-					<description>&lt;h1 id=&quot;환경설정-installation&quot;&gt;환경설정 Installation&lt;/h1&gt;
+					<description>&lt;p&gt;뭐, 개발기라 할 것도 없고… 오픈소스 이것저것 엮어서 만든 것일 뿐.&lt;/p&gt;
 
 </description>
 				
 				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
 				<link>http://localhost:4000/upcoming/dev-log-idphoto.html</link>
 				<guid isPermaLink="true">http://localhost:4000/upcoming/dev-log-idphoto.html</guid>
+			</item>
+		
+			<item>
+				<title>Docker, Docker swarm 사용기</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;vagrant-commands&quot;&gt;Vagrant commands&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Tue, 30 Jan 2018 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/documentation/docker-swarm.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/docker-swarm.html</guid>
 			</item>
 		
 			<item>
@@ -104,8 +119,7 @@
 					<dc:creator>Paul Le</dc:creator>
 				
 				
-					<description>&lt;p&gt;Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Below is a compilation of some of my favourite things that I have built over the years. You may find everything else on my &lt;a href=&quot;http://github.com/lenpaul&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;https://codepen.io/lenpaul&quot; target=&quot;_blank&quot;&gt;Code Pen&lt;/a&gt; profiles.&lt;/p&gt;
-
+					<description>&lt;p&gt;/dev/null&lt;/p&gt;
 </description>
 				
 				<pubDate>Mon, 04 Apr 2016 00:00:00 +0900</pubDate>

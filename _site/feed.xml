@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-03T23:36:29+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">우분투 17.10.1에 nvidia-docker 올리기</title><link href="http://localhost:4000/upcoming/nvidia-docker.html" rel="alternate" type="text/html" title="우분투 17.10.1에 nvidia-docker 올리기" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/nvidia-docker</id><content type="html" xml:base="http://localhost:4000/upcoming/nvidia-docker.html">&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-04T01:48:45+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">우분투 17.10.1에 nvidia-docker 올리기</title><link href="http://localhost:4000/upcoming/nvidia-docker.html" rel="alternate" type="text/html" title="우분투 17.10.1에 nvidia-docker 올리기" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/nvidia-docker</id><content type="html" xml:base="http://localhost:4000/upcoming/nvidia-docker.html">&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;TBD&lt;/strong&gt; 우분투 리눅스 최신버전에 nvidia-docker를 올리는 과정을 요약예정&lt;/p&gt;
 
@@ -8,13 +8,13 @@
   &lt;li&gt;Nvidia Video Driver 설치&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;일단은 성공적.&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Nvidia-docker</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nvidia-docker.png" /></entry><entry><title type="html">Git, Github 활용 팁 정리</title><link href="http://localhost:4000/upcoming/git-commands.html" rel="alternate" type="text/html" title="Git, Github 활용 팁 정리" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/git-commands</id><content type="html" xml:base="http://localhost:4000/upcoming/git-commands.html">&lt;h2 id=&quot;git-command&quot;&gt;Git command&lt;/h2&gt;
+&lt;p&gt;일단은 성공적.&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Nvidia-docker</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nvidia-docker.png" /></entry><entry><title type="html">Git, Github 활용 팁 정리</title><link href="http://localhost:4000/documentation/git-commands.html" rel="alternate" type="text/html" title="Git, Github 활용 팁 정리" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/documentation/git-commands</id><content type="html" xml:base="http://localhost:4000/documentation/git-commands.html">&lt;h2 id=&quot;git-command&quot;&gt;Git command&lt;/h2&gt;
+
+&lt;p&gt;git가 초기 나왔을 때에는 몇가지 커맨드만 사용하면 되었는데, 요즘은 너무 많고 이해하기도 어렵다. 그냥 많이 써본 것과 유용할 것으로 판단되는 몇가지들만 정리해 본다.&lt;/p&gt;
 
 &lt;h3 id=&quot;소스코드를-다운-받을-때&quot;&gt;소스코드를 다운 받을 때&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone [address]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;span style=&quot;color:blue&quot;&gt;aaa&lt;/span&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;소스코드를-올릴-때&quot;&gt;소스코드를 올릴 때&lt;/h3&gt;
 
@@ -27,11 +27,19 @@ $ git commit -m &quot;comments&quot;
 $ git push origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;github&quot;&gt;Github&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://linode.com/docs/assets/git-github-workflow-1000w.png&quot; alt=&quot;git, github&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;trouble-shooting&quot;&gt;Trouble Shooting&lt;/h2&gt;
+
+&lt;h3 id=&quot;q-git-remote-repository에-push하려면-모든-코드를-일단-다-받아놔야-하나&quot;&gt;Q. Git remote repository에 push하려면 모든 코드를 일단 다 받아놔야 하나?&lt;/h3&gt;
+
+&lt;p&gt;필요한 파일 하나만 바꾸고, 그 녀석만 올릴 수는 없을까? 가능할까?&lt;/p&gt;
 
 &lt;h3 id=&quot;q-git-commit-이-많이-쌓이면&quot;&gt;Q. Git commit 이 많이 쌓이면?&lt;/h3&gt;
 
@@ -84,9 +92,9 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-&lt;p&gt;[&lt;a href=&quot;https://docstore.mik.ua/orelly/unix3/upt/ch45_07.htm&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">image from</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/source-code.jpg" /></entry><entry><title type="html">Github Blog 만들기</title><link href="http://localhost:4000/documentation/github-blog.html" rel="alternate" type="text/html" title="Github Blog 만들기 " /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/github-blog</id><content type="html" xml:base="http://localhost:4000/documentation/github-blog.html">&lt;h2 id=&quot;githubio-에-블로그--만들기&quot;&gt;Github.io 에 블로그  만들기&lt;/h2&gt;
+&lt;p&gt;[&lt;a href=&quot;https://docstore.mik.ua/orelly/unix3/upt/ch45_07.htm&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">image from</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/source-code.jpg" /></entry><entry><title type="html">Github.io Blog 만들기</title><link href="http://localhost:4000/documentation/github-blog.html" rel="alternate" type="text/html" title="Github.io Blog 만들기 " /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/github-blog</id><content type="html" xml:base="http://localhost:4000/documentation/github-blog.html">&lt;h2 id=&quot;githubio-에-블로그--만들기&quot;&gt;Github.io 에 블로그  만들기&lt;/h2&gt;
 
-&lt;p&gt;다양한 블로그 사이트가 있기는 하나, github.io를 이용해 보기로 함.&lt;/p&gt;
+&lt;p&gt;다양한 블로그 사이트가 있기는 하나, git을 이용해서 관리가 가능하다는 장점이 있으며 markdown을 쓸 수 있어서 ithub.io를 이용해 보기로 함.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -110,9 +118,9 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
 
 &lt;p&gt;일단 로컬에서 작업한 이후 Github에 push를 하는 형태로 개발하면 되는데, 로컬에서 작업할 때 Jekyill로 만들어진 페이지들은 일반 웹서버에서는 보여지지 않는다. 그렇기 떄문에 전용 웹서버를 jekyill 툴로 구동시켜야만 한다. 자세한 내용은 &lt;a href=&quot;https://mycyberuniverse.com/web/how-fix-jekyll-build-serve-error-message.html&quot;&gt;여기&lt;/a&gt;를 참고하자.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;템플릿을 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;여기&lt;/a&gt;에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;[1] 템플릿 다운로드&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;템플릿을 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;여기&lt;/a&gt;에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;$ gem install bundler&lt;/p&gt;
@@ -126,33 +134,46 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
   &lt;p&gt;$ bundle exec jekyll serve&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 브라우저를 열고 주소창에 http://localhost:4000 를 입력하자&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;잘 만들어진 것 같으면 github에 push하기&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;[2] 로컬 서버 접속하기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 브라우저를 열고 주소창에 http://localhost:4000 를 입력하자&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[3] 원격 서버에 업로드하기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;잘 만들어진 것 같으면 github에 push하기&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;$ git push origin master&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;https://계정명.github.io 에 접속해 보기. 끗.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;[4] 원격 서버 접속하기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;https://계정명.github.io 에 접속해 보기. 끗.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;[5] Jekyll 설정 잡아보기&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;_config.yml 과 _settings.yml 만 만지면 된다. 보면 안다.&lt;/p&gt;
+
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;jekyll-기반-글쓰기&quot;&gt;Jekyll 기반 글쓰기&lt;/h3&gt;
 
 &lt;p&gt;_post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML front matter block에 간단한 메타데이터를 입려하면 자동으로 페이지가 생성된다.&lt;/p&gt;
 
+&lt;p&gt;주의할 점으로,..&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;image 파라미터에는 external link image를 달 수가 없다. 즉, assets/img/ 밑에 위치한 이미지만 로딩 가능하다.&lt;/li&gt;
+  &lt;li&gt;YML font matter block에 포함된 image 파라미터에는 external link image를 달 수가 없다. 즉, assets/img/ 밑에 위치한 이미지만 로딩 가능하다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;markdown-사용-팁&quot;&gt;Markdown 사용 팁&lt;/h4&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;댓글-달기-기능-추가하기&quot;&gt;댓글 달기 기능 추가하기&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;TBD&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;markdown-사용-팁&quot;&gt;Markdown 사용 팁&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;글자에 색상을 넣고 싶어요&lt;/li&gt;
@@ -165,7 +186,7 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
 
 &lt;h2 id=&quot;trouble-shooting&quot;&gt;Trouble shooting&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;새로운 포스트 페이지가 보이지 않는다.
+  &lt;li&gt;새로만든 페이지가 보이지 않는다.
     &lt;ul&gt;
       &lt;li&gt;여러 가능성이 있지만, 아래 명령을 실행한 후 로그 메시지를 확인한다.
         &lt;blockquote&gt;
@@ -193,7 +214,9 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/30625044/jekyll-post-not-generated&quot;&gt;https://stackoverflow.com/questions/30625044/jekyll-post-not-generated&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Github.io 에 블로그 만들기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-1.jpg" /></entry><entry><title type="html">Development Log for ID photo</title><link href="http://localhost:4000/upcoming/dev-log-idphoto.html" rel="alternate" type="text/html" title="Development Log for ID photo" /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/dev-log-idphoto</id><content type="html" xml:base="http://localhost:4000/upcoming/dev-log-idphoto.html">&lt;h1 id=&quot;환경설정-installation&quot;&gt;환경설정 Installation&lt;/h1&gt;
+&lt;/ol&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Github.io 에 블로그 만들기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-1.jpg" /></entry><entry><title type="html">증명사진 이미지 생성 서비스 개발기</title><link href="http://localhost:4000/upcoming/dev-log-idphoto.html" rel="alternate" type="text/html" title="증명사진 이미지 생성 서비스 개발기" /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/dev-log-idphoto</id><content type="html" xml:base="http://localhost:4000/upcoming/dev-log-idphoto.html">&lt;p&gt;뭐, 개발기라 할 것도 없고… 오픈소스 이것저것 엮어서 만든 것일 뿐.&lt;/p&gt;
+
+&lt;h1 id=&quot;환경설정-installation&quot;&gt;환경설정 Installation&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;$ npm install
@@ -210,177 +233,234 @@ Pixman 관련 에러가 나오면 &lt;a href=&quot;http://macappstore.org/pixman
   &lt;p&gt;node canvas 관련 에러가 뿜뿜할 때는…
 &lt;a href=&quot;https://github.com/Automattic/node-canvas&quot;&gt;여기&lt;/a&gt;를 참고해 보자.
 brew install pkg-config cairo pango libpng jpeg giflib&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/blockquote&gt;</content><author><name>Wook Hyun</name></author><category term="dev log" /><summary type="html">뭐, 개발기라 할 것도 없고… 오픈소스 이것저것 엮어서 만든 것일 뿐.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arctic-1.jpg" /></entry><entry><title type="html">Docker, Docker swarm 사용기</title><link href="http://localhost:4000/documentation/docker-swarm.html" rel="alternate" type="text/html" title="Docker, Docker swarm 사용기" /><published>2018-01-30T00:00:00+09:00</published><updated>2018-01-30T00:00:00+09:00</updated><id>http://localhost:4000/documentation/docker-swarm</id><content type="html" xml:base="http://localhost:4000/documentation/docker-swarm.html">&lt;h1 id=&quot;vagrant-commands&quot;&gt;Vagrant commands&lt;/h1&gt;
 
-&lt;h2 id=&quot;basic-formatting&quot;&gt;Basic Formatting&lt;/h2&gt;
-
-&lt;h2 id=&quot;paragraphs&quot;&gt;Paragraphs&lt;/h2&gt;
-
-&lt;h2 id=&quot;headings&quot;&gt;Headings&lt;/h2&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;p&gt;You can create an inline link by wrapping link text in square brackets &lt;code class=&quot;highlighter-rouge&quot;&gt;[ ]&lt;/code&gt;, and then wrapping the URL in parentheses &lt;code class=&quot;highlighter-rouge&quot;&gt;( )&lt;/code&gt;. For example, it is very easy to &lt;a href=&quot;http://google.com&quot;&gt;link to Google!&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
-
-&lt;p&gt;Blockquotes are useful for denoting quotes, or highlighting a large block of text. Single line blockquote:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This quote will change your life.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Multi line blockquote with a cite reference:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;code-and-syntax-highlighting&quot;&gt;Code and Syntax Highlighting&lt;/h2&gt;
-
-&lt;p&gt;Code blocks are part of the Markdown spec, but syntax highlighting isn’t. However, many renderers - like GitHub or most Jekyll themes - support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. You can find the full list of supported programming languages &lt;a href=&quot;https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers&quot;&gt;here&lt;/a&gt;. Also, it is possible to do &lt;code class=&quot;highlighter-rouge&quot;&gt;inline code blocks&lt;/code&gt;, by wrapping the text in ` ` ` quotations.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;No language indicated, so no syntax highlighting.
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;실행 - vagrant up
+상태 - vagrant status
+삭제 - vagrant destroy
+중지 - vagrant halt
+로긴 - vagrant ssh [machine name]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;TODO&lt;/strong&gt; : 다른 포스트로 옮길 것.&lt;/p&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;docker&quot;&gt;Docker&lt;/h1&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;return a + b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Another option is to embed your code through &lt;a href=&quot;https://en.support.wordpress.com/gist/&quot;&gt;Gist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;unordered-and-numbered-lists&quot;&gt;Unordered and Numbered Lists&lt;/h2&gt;
-
-&lt;p&gt;You can make an unordered and nested list by preceding one or more lines of text with &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;, and indenting sublists. The following lists show the full range of possible list formats.&lt;/p&gt;
-
+&lt;p&gt;먼저 Docker를 제대로 활용하려면 다음을 이해해야 함&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;List item one
-    &lt;ul&gt;
-      &lt;li&gt;List item one
-        &lt;ul&gt;
-          &lt;li&gt;List item one&lt;/li&gt;
-          &lt;li&gt;List item two&lt;/li&gt;
-          &lt;li&gt;List item three&lt;/li&gt;
-          &lt;li&gt;List item four&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;List item two&lt;/li&gt;
-      &lt;li&gt;List item three&lt;/li&gt;
-      &lt;li&gt;List item four&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;List item two&lt;/li&gt;
-  &lt;li&gt;List item three&lt;/li&gt;
-  &lt;li&gt;List item four&lt;/li&gt;
+  &lt;li&gt;image&lt;/li&gt;
+  &lt;li&gt;container&lt;/li&gt;
+  &lt;li&gt;swarm&lt;/li&gt;
+  &lt;li&gt;service&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Numbered lists are made by using numbers instead of bullet points.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;List item one
-    &lt;ol&gt;
-      &lt;li&gt;List item one
-        &lt;ol&gt;
-          &lt;li&gt;List item one&lt;/li&gt;
-          &lt;li&gt;List item two&lt;/li&gt;
-          &lt;li&gt;List item three&lt;/li&gt;
-          &lt;li&gt;List item four&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;List item two&lt;/li&gt;
-      &lt;li&gt;List item three&lt;/li&gt;
-      &lt;li&gt;List item four&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;List item two&lt;/li&gt;
-  &lt;li&gt;List item three&lt;/li&gt;
-  &lt;li&gt;List item four&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;docker-기본-명령어&quot;&gt;Docker 기본 명령어&lt;/h2&gt;
 
-&lt;h2 id=&quot;mathjax-example&quot;&gt;MathJax Example&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Docker image 설치&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation&quot;&gt;Schrödinger equation&lt;/a&gt; is a partial differential equation that describes how the quantum state of a quantum system changes with time:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker pull [img_name]&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t)&lt;/script&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;공식 image repository인 hub.docker.com에 등록된 이미지를 받아온다. 자체 구축한 repository에서 받아오게 할 수도 있으나, 그건 다음 기회에 설명.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Joseph-Louis_Millennial&quot;&gt;Joseph-Louis Millennial&lt;/a&gt; was an Italian mathematician and astronomer who was responsible for the formulation of Lagrangian mechanics, which is a reformulation of Newtonian mechanics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker container 실행&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker run -d -p 9999:80 [img_name]&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac {\partial  L}{\partial \dot{q}_j} \right ) =  \frac {\partial L}{\partial q_j}&lt;/script&gt;
+&lt;p&gt;&lt;strong&gt;Docker image 생성&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker build -t [maker/name] .&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Dockerfile 이 위치한 디렉토리에서 실행해야 함.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Title 1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Title 2&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;Title 3&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;Title 4&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;lorem ipsum&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;lorem ipsum dolor&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;lorem ipsum dolor sit&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Docker container의 터미널에 접근&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker exec -it [container] /bin/bash&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&quot;embedding&quot;&gt;Embedding&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Docker container에 있는 명령어 한번만 실행하기&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker run -it –rm alpine /bin/sh&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Plenty of social media sites offer the option of embedding certain parts of their site on your own site, such as YouTube and Twitter:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm 옵션은 해당 프로세스가 종료되면 컨테이너도 같이 종료시킴
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mthtn1X4eUY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;&lt;a class=&quot;twitter-grid&quot; data-partner=&quot;tweetdeck&quot; href=&quot;https://twitter.com/paululele/timelines/755079130027352064&quot;&gt;New Collection&lt;/a&gt; &lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;h2 id=&quot;docker-swarm-관련-명령어&quot;&gt;Docker swarm 관련 명령어&lt;/h2&gt;
 
-&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
+&lt;p&gt;Docker swarm은 여러개의 machine들이 마치 하나의 클러스터처럼 동작하도록 하는 것인데, 불행히도 docker for mac/windows는 single node만 지원한다. 제대로된 클러스터링을 하려면 리눅스에서만 가능하다. 즉, 윈도우/맥은 개발할 때만 쓰란 얘기임. 이 이유가 어차피 윈도우/맥은 native가 아니니까 자체적으로 virutal machine을 띄우고 그 위에 리눅스를 올릴 수 밖에 없어서 성능의 20~30% 이상은 손해보고 들어가는 구조라 정식 서비스에서는 아무래도 낭비요소가 있기 때문일 것으로 생각한다.&lt;/p&gt;
 
-&lt;p&gt;HTML defines a long list of available inline tags, which you can mix with Markdown if you like. A complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;개념적으로 swarm이라는 것을 manager와 일반 node로 나눠서 동작을 볼 필요가 있다.&lt;/p&gt;
 
-&lt;h2 id=&quot;useful-resources&quot;&gt;Useful Resources&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;In manager&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker swarm init –advertise-addr [host-ip-address]&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;More information on Markdown can be found at the following links:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 이 명령어를 실행하면 해당 swarm에 할당된 token 과 일반 다른 node에서 실행해야 할 command를 알려준다. 복사해 두자.
+* host-ip-address는 실제 machine의 ip 주소를 의미한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;In nodes&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker swarm join –token [token] [host-ip-address:2377]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 조금 전 manager node가 알려준 command를 실행한다. machine이 여러 대면 같은 작업을 반복한다. 메뚝메뚝!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;In manager&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker node ls&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 클러스터에 join되어 있는 모든 node들의 목록을 보여준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;docker-service-관련-명령어&quot;&gt;Docker service 관련 명령어&lt;/h2&gt;
+
+&lt;p&gt;swarm mode가 아니어도 동일하게 실행 할 수 있ㄷ. 혹시 swarm cluster에서 구동시키고자 한다면 manager node에서 동작시키도록 한다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker service create –name [service_name] –name [name] –network=[net_name] –replicas [num] -e [environment value] -p [port]:[port] [img_name:img_ver]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 하나의 docker image를 service로 cluster에서 구동시키는 명령으로, swarm 내의 적절한 노드에 알아서 구동된다.
+* manager machine에 해당 이미지가 없으면 docker hub에서 다운로드 하며, local repository에서 받아오게 할 수도 있음.
+* -p : port mapping
+* --network : 서비스가 연결될 가상의 network 이름 
+* --replicas : 몇개의 프로세스 복제본을 돌릴 것인가
+* -e : container에서 환경변수를 사용함
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker service ls&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 현재 구동되고 있는 서비스의 목록을 보여준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker service ps [service_name]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 어느 노드에서 몇 개의 replica가 돌고 있는지 등의 상세 정보를 보여준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker service update [image_name]=[number]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 이미 서비스가 진행 중인 상태에서 image가 업데이트 되는 경우, 동작중인 container들을 대체하는 역할을 한다.
+* 무중단 서비스에 적합하다.
+* 참고로, trouble shooting을 위해 replica당 5개의 최근 프로세스를 남겨두고 있으니, 그게 보이더라도 놀라지는 말자.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker service rm&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 진행 중인 서비스를 shutdown할 때 사용
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;docker-network-관련-명령어&quot;&gt;Docker network 관련 명령어&lt;/h2&gt;
+
+&lt;p&gt;container간 연동할 때 사용되는 가상의 overlay network을 생성 할 수 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker network ls&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* network 목록을 보여준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker network create —attachable —driver overlay backend&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 'backend'라는 overlay network을 만든다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;docker-stack-관련-명령어&quot;&gt;Docker stack 관련 명령어&lt;/h2&gt;
+
+&lt;p&gt;여러개의 서비스를 한번에 구동시킬 때 사용된다. 목적하는 바는 docker-compose와 유사한 데 이 명령은 swarm에 적용 가능하다는 차이가 있다. 
+swarm mode가 아니어도 동작 가능하다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker stack deploy –compose-file docker-compose.yml [stack_name]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* docker-compose.yml에 있는 내용을 읽어 여러 서비스들을 한번에 구동시켜준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker stack ls&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 목록을 보여준다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker stack rm [stack_name]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 삭제한다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;자세한 내용과 실습을 위해서는 &lt;a href=&quot;https://subicura.com/2017/02/25/container-orchestration-with-docker-swarm.html&quot;&gt;[Docker Swarm을 이용한 쉽고 빠른 분산 서버 관리]&lt;/a&gt;를 참고하자. 별 다섯개도 모자라다. 단, 아래 내용을 참고하자.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet#code&quot;&gt;Markdown Here Cheatsheet&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html&quot;&gt;Quick Markdown Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/projects/markdown/basics&quot;&gt;Markdown Basics&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GitHub Flavoured Markdown Spec&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/basic-writing-and-formatting-syntax/#lists&quot;&gt;Basic writing and formatting syntax&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="dev log" /><summary type="html">환경설정 Installation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arctic-1.jpg" /></entry><entry><title type="html">Getting Started</title><link href="http://localhost:4000/facts/getting-started.html" rel="alternate" type="text/html" title="Getting Started" /><published>2016-10-10T00:00:00+09:00</published><updated>2016-10-10T00:00:00+09:00</updated><id>http://localhost:4000/facts/getting-started</id><content type="html" xml:base="http://localhost:4000/facts/getting-started.html">&lt;h1 id=&quot;millennial&quot;&gt;Millennial&lt;/h1&gt;
+  &lt;li&gt;local.dev 도메인은 쓰지 말자. 자동으로 https로 바뀌면서 페이지를 못 찾을 거다.&lt;/li&gt;
+  &lt;li&gt;traefik 관련된 부분에서 labels 입력하는 부분이 조금 바뀌었다. 안되더라도 좌절말고 아래 내용 참고하자. labels만 잘 만져주면 된다.
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;portainer&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;portainer/portainer&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;-H unix:///var/run/docker.sock&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;9000:9000&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;networks&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;frontend&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;traefik&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;traefik.port=9000'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;traefik.enable=true'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;traefik.docker.network=traefik'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;traefik.backend=portainer'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;traefik.frontend.rule=Host:portainer.u2pia.local'&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/var/run/docker.sock:/var/run/docker.sock&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# - type: bind&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   source: /var/run/docker.sock&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   target: /var/run/docker.sock&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;deploy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# replicas: 1&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;placement&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;constraints&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;node.role == manager&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;update_config&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;parallelism&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;10s&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;restart_policy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;on-failure&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Vagrant commands</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/docker-swarm.jpg" /></entry><entry><title type="html">Getting Started</title><link href="http://localhost:4000/facts/getting-started.html" rel="alternate" type="text/html" title="Getting Started" /><published>2016-10-10T00:00:00+09:00</published><updated>2016-10-10T00:00:00+09:00</updated><id>http://localhost:4000/facts/getting-started</id><content type="html" xml:base="http://localhost:4000/facts/getting-started.html">&lt;h1 id=&quot;millennial&quot;&gt;Millennial&lt;/h1&gt;
 
 &lt;p&gt;Millennial is a minimalist Jekyll theme for running a simple, clean, content-focused publishing platform for your publication site or blog through &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;, or on your own server. Everything that you will ever need to know about this Jekyll theme is included in the README below, which you can also find in &lt;a href=&quot;https://lenpaul.github.io/Millennial/&quot;&gt;the demo site&lt;/a&gt;.&lt;/p&gt;
 
@@ -679,12 +759,4 @@ image:
 
 &lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
 
-&lt;p&gt;Open sourced under the &lt;a href=&quot;https://github.com/LeNPaul/Millennial/blob/gh-pages/LICENSE.md&quot;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;</content><author><name>Paul Le</name></author><category term="documentation" /><category term="sample" /><summary type="html">Millennial</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/city-2.jpg" /></entry><entry><title type="html">About the Author</title><link href="http://localhost:4000/facts/about-the-author.html" rel="alternate" type="text/html" title="About the Author" /><published>2016-04-04T00:00:00+09:00</published><updated>2016-04-04T00:00:00+09:00</updated><id>http://localhost:4000/facts/about-the-author</id><content type="html" xml:base="http://localhost:4000/facts/about-the-author.html">&lt;p&gt;Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Below is a compilation of some of my favourite things that I have built over the years. You may find everything else on my &lt;a href=&quot;http://github.com/lenpaul&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;https://codepen.io/lenpaul&quot; target=&quot;_blank&quot;&gt;Code Pen&lt;/a&gt; profiles.&lt;/p&gt;
-
-&lt;h3 id=&quot;jekyll-website-theme-for-blogging&quot;&gt;Jekyll Website Theme for Blogging&lt;/h3&gt;
-
-&lt;p&gt;Lagrange is a minimalist Jekyll blog theme that I built from scratch. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. This theme is currently being used by about three dozen people, with this number growing every day.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/demo.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Feel free to check out &lt;a href=&quot;https://lenpaul.github.io/Lagrange/&quot; target=&quot;_blank&quot;&gt;the demo&lt;/a&gt;, where you’ll also find instructions on &lt;a href=&quot;https://lenpaul.github.io/Lagrange/journal/Installation-Guide.html&quot;&gt;how to use install&lt;/a&gt; and use the theme.&lt;/p&gt;</content><author><name>Paul Le</name></author><category term="sample" /><summary type="html">Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Below is a compilation of some of my favourite things that I have built over the years. You may find everything else on my Github and Code Pen profiles.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-4.jpg" /></entry></feed>
+&lt;p&gt;Open sourced under the &lt;a href=&quot;https://github.com/LeNPaul/Millennial/blob/gh-pages/LICENSE.md&quot;&gt;MIT license&lt;/a&gt;.&lt;/p&gt;</content><author><name>Paul Le</name></author><category term="documentation" /><category term="sample" /><summary type="html">Millennial</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/city-2.jpg" /></entry><entry><title type="html">About the Author</title><link href="http://localhost:4000/facts/about-the-author.html" rel="alternate" type="text/html" title="About the Author" /><published>2016-04-04T00:00:00+09:00</published><updated>2016-04-04T00:00:00+09:00</updated><id>http://localhost:4000/facts/about-the-author</id><content type="html" xml:base="http://localhost:4000/facts/about-the-author.html">&lt;p&gt;/dev/null&lt;/p&gt;</content><author><name>Paul Le</name></author><category term="sample" /><summary type="html">/dev/null</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-4.jpg" /></entry></feed>

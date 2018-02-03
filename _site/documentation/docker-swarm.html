@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      Docker, Docker swarm 사용기 | U2PIA
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="U2PIA" />
+  <!-- RSS-v2.0
+  <link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="U2PIA | Joy of learning"/>
+  //-->
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'superwhyun3@gmail.com', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Docker, Docker swarm 사용기 | U2PIA</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="Docker, Docker swarm 사용기" />
+<meta name="author" content="Wook Hyun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Vagrant commands" />
+<meta property="og:description" content="Vagrant commands" />
+<link rel="canonical" href="http://localhost:4000/documentation/docker-swarm.html" />
+<meta property="og:url" content="http://localhost:4000/documentation/docker-swarm.html" />
+<meta property="og:site_name" content="U2PIA" />
+<meta property="og:image" content="http://localhost:4000/docker-swarm.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-30T00:00:00+09:00" />
+<script type="application/ld+json">
+{"description":"Vagrant commands","author":{"@type":"Person","name":"Wook Hyun"},"@type":"BlogPosting","url":"http://localhost:4000/documentation/docker-swarm.html","image":"http://localhost:4000/docker-swarm.jpg","headline":"Docker, Docker swarm 사용기","dateModified":"2018-01-30T00:00:00+09:00","datePublished":"2018-01-30T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/documentation/docker-swarm.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+  <header class="site-header">
+  <h3 class="site-title">
+    <a href="/">U2PIA</a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="/pages/facts.html" class="menu-link">Articles</a>
+    
+      <a href="/pages/resources.html" class="menu-link">Learning Resources</a>
+    
+      <a href="/pages/upcoming.html" class="menu-link">Upcoming</a>
+    
+      <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+    
+      <a href="/pages/about.html" class="menu-link">About</a>
+    
+      <a href="/pages/contact.html" class="menu-link">Contact</a>
+    
+
+    
+      <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+      <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+    
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+        <a href="/pages/facts.html" class="menu-link">Articles</a>
+      
+        <a href="/pages/resources.html" class="menu-link">Learning Resources</a>
+      
+        <a href="/pages/upcoming.html" class="menu-link">Upcoming</a>
+      
+        <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+      
+        <a href="/pages/about.html" class="menu-link">About</a>
+      
+        <a href="/pages/contact.html" class="menu-link">Contact</a>
+      
+
+      
+        <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      
+        <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</header>
+
+  <div class="posts-wrapper">
+    <div class="page-content">
+  <h1>
+    Docker, Docker swarm 사용기
+  </h1>
+
+  <span class="post-date">
+    Written on
+    
+    January
+    30th,
+    2018
+    by
+    
+      Wook Hyun
+    
+  </span>
+
+  
+    <div class="featured-image">
+      <img src="/assets/img/docker-swarm.jpg">
+    </div>
+  
+
+  <article>
+    <h1 id="vagrant-commands">Vagrant commands</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>실행 - vagrant up
+상태 - vagrant status
+삭제 - vagrant destroy
+중지 - vagrant halt
+로긴 - vagrant ssh [machine name]
+</code></pre></div></div>
+<p><strong>TODO</strong> : 다른 포스트로 옮길 것.</p>
+
+<h1 id="docker">Docker</h1>
+
+<p>먼저 Docker를 제대로 활용하려면 다음을 이해해야 함</p>
+<ul>
+  <li>image</li>
+  <li>container</li>
+  <li>swarm</li>
+  <li>service</li>
+</ul>
+
+<hr />
+
+<h2 id="docker-기본-명령어">Docker 기본 명령어</h2>
+
+<p><strong>Docker image 설치</strong></p>
+
+<blockquote>
+  <p>$ docker pull [img_name]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>공식 image repository인 hub.docker.com에 등록된 이미지를 받아온다. 자체 구축한 repository에서 받아오게 할 수도 있으나, 그건 다음 기회에 설명.
+</code></pre></div></div>
+
+<p><strong>Docker container 실행</strong></p>
+<blockquote>
+  <p>$ docker run -d -p 9999:80 [img_name]</p>
+</blockquote>
+
+<p><strong>Docker image 생성</strong></p>
+<blockquote>
+  <p>$ docker build -t [maker/name] .</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Dockerfile 이 위치한 디렉토리에서 실행해야 함.
+</code></pre></div></div>
+
+<p><strong>Docker container의 터미널에 접근</strong></p>
+<blockquote>
+  <p>$ docker exec -it [container] /bin/bash</p>
+</blockquote>
+
+<p><strong>Docker container에 있는 명령어 한번만 실행하기</strong></p>
+<blockquote>
+  <p>$ docker run -it –rm alpine /bin/sh</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm 옵션은 해당 프로세스가 종료되면 컨테이너도 같이 종료시킴
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="docker-swarm-관련-명령어">Docker swarm 관련 명령어</h2>
+
+<p>Docker swarm은 여러개의 machine들이 마치 하나의 클러스터처럼 동작하도록 하는 것인데, 불행히도 docker for mac/windows는 single node만 지원한다. 제대로된 클러스터링을 하려면 리눅스에서만 가능하다. 즉, 윈도우/맥은 개발할 때만 쓰란 얘기임. 이 이유가 어차피 윈도우/맥은 native가 아니니까 자체적으로 virutal machine을 띄우고 그 위에 리눅스를 올릴 수 밖에 없어서 성능의 20~30% 이상은 손해보고 들어가는 구조라 정식 서비스에서는 아무래도 낭비요소가 있기 때문일 것으로 생각한다.</p>
+
+<p>개념적으로 swarm이라는 것을 manager와 일반 node로 나눠서 동작을 볼 필요가 있다.</p>
+
+<p><strong>In manager</strong></p>
+<blockquote>
+  <p>$ docker swarm init –advertise-addr [host-ip-address]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 이 명령어를 실행하면 해당 swarm에 할당된 token 과 일반 다른 node에서 실행해야 할 command를 알려준다. 복사해 두자.
+* host-ip-address는 실제 machine의 ip 주소를 의미한다.
+</code></pre></div></div>
+
+<p><strong>In nodes</strong></p>
+<blockquote>
+  <p>$ docker swarm join –token [token] [host-ip-address:2377]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 조금 전 manager node가 알려준 command를 실행한다. machine이 여러 대면 같은 작업을 반복한다. 메뚝메뚝!
+</code></pre></div></div>
+
+<p><strong>In manager</strong></p>
+<blockquote>
+  <p>$ docker node ls</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 클러스터에 join되어 있는 모든 node들의 목록을 보여준다.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="docker-service-관련-명령어">Docker service 관련 명령어</h2>
+
+<p>swarm mode가 아니어도 동일하게 실행 할 수 있ㄷ. 혹시 swarm cluster에서 구동시키고자 한다면 manager node에서 동작시키도록 한다.</p>
+
+<blockquote>
+  <p>$ docker service create –name [service_name] –name [name] –network=[net_name] –replicas [num] -e [environment value] -p [port]:[port] [img_name:img_ver]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 하나의 docker image를 service로 cluster에서 구동시키는 명령으로, swarm 내의 적절한 노드에 알아서 구동된다.
+* manager machine에 해당 이미지가 없으면 docker hub에서 다운로드 하며, local repository에서 받아오게 할 수도 있음.
+* -p : port mapping
+* --network : 서비스가 연결될 가상의 network 이름 
+* --replicas : 몇개의 프로세스 복제본을 돌릴 것인가
+* -e : container에서 환경변수를 사용함
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker service ls</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 현재 구동되고 있는 서비스의 목록을 보여준다.
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker service ps [service_name]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 어느 노드에서 몇 개의 replica가 돌고 있는지 등의 상세 정보를 보여준다.
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker service update [image_name]=[number]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 이미 서비스가 진행 중인 상태에서 image가 업데이트 되는 경우, 동작중인 container들을 대체하는 역할을 한다.
+* 무중단 서비스에 적합하다.
+* 참고로, trouble shooting을 위해 replica당 5개의 최근 프로세스를 남겨두고 있으니, 그게 보이더라도 놀라지는 말자.
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker service rm</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 진행 중인 서비스를 shutdown할 때 사용
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="docker-network-관련-명령어">Docker network 관련 명령어</h2>
+
+<p>container간 연동할 때 사용되는 가상의 overlay network을 생성 할 수 있다.</p>
+
+<blockquote>
+  <p>$ docker network ls</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* network 목록을 보여준다.
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker network create —attachable —driver overlay backend</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 'backend'라는 overlay network을 만든다.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="docker-stack-관련-명령어">Docker stack 관련 명령어</h2>
+
+<p>여러개의 서비스를 한번에 구동시킬 때 사용된다. 목적하는 바는 docker-compose와 유사한 데 이 명령은 swarm에 적용 가능하다는 차이가 있다. 
+swarm mode가 아니어도 동작 가능하다.</p>
+
+<blockquote>
+  <p>$ docker stack deploy –compose-file docker-compose.yml [stack_name]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* docker-compose.yml에 있는 내용을 읽어 여러 서비스들을 한번에 구동시켜준다.
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker stack ls</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 목록을 보여준다.
+</code></pre></div></div>
+
+<blockquote>
+  <p>$ docker stack rm [stack_name]</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* 삭제한다.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<p>자세한 내용과 실습을 위해서는 <a href="https://subicura.com/2017/02/25/container-orchestration-with-docker-swarm.html">[Docker Swarm을 이용한 쉽고 빠른 분산 서버 관리]</a>를 참고하자. 별 다섯개도 모자라다. 단, 아래 내용을 참고하자.</p>
+<ul>
+  <li>local.dev 도메인은 쓰지 말자. 자동으로 https로 바뀌면서 페이지를 못 찾을 거다.</li>
+  <li>traefik 관련된 부분에서 labels 입력하는 부분이 조금 바뀌었다. 안되더라도 좌절말고 아래 내용 참고하자. labels만 잘 만져주면 된다.
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">portainer</span><span class="pi">:</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">portainer/portainer</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">-H unix:///var/run/docker.sock</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">9000:9000</span>
+  <span class="na">networks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">frontend</span>
+    <span class="pi">-</span> <span class="s">traefik</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">traefik.port=9000'</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">traefik.enable=true'</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">traefik.docker.network=traefik'</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">traefik.backend=portainer'</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">traefik.frontend.rule=Host:portainer.u2pia.local'</span>
+  <span class="na">volumes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">/var/run/docker.sock:/var/run/docker.sock</span>
+    <span class="c1"># - type: bind</span>
+    <span class="c1">#   source: /var/run/docker.sock</span>
+    <span class="c1">#   target: /var/run/docker.sock</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="c1"># replicas: 1</span>
+    <span class="na">placement</span><span class="pi">:</span>
+      <span class="na">constraints</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">node.role == manager</span>
+    <span class="na">update_config</span><span class="pi">:</span>
+      <span class="na">parallelism</span><span class="pi">:</span> <span class="s">1</span>
+      <span class="na">delay</span><span class="pi">:</span> <span class="s">10s</span>
+    <span class="na">restart_policy</span><span class="pi">:</span>
+      <span class="na">condition</span><span class="pi">:</span> <span class="s">on-failure</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script>
+  
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://superwhyun.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                           
+
+
+
+  <div class="post-share">
+    <div class="post-date">Feel free to share!</div>
+    <div class="sharing-icons">
+      <a href="https://twitter.com/intent/tweet?text=Docker, Docker swarm 사용기&amp;url=/documentation/docker-swarm.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/documentation/docker-swarm.html&amp;title=Docker, Docker swarm 사용기" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=/documentation/docker-swarm.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>You may also enjoy...</h2>
+    
+    <ul class="related-posts">
+      
+        
+          
+            <li>
+              <h3>
+                <a href="/upcoming/nvidia-docker.html">
+                  <div class="related-thumbnail">
+                    
+                      <img src="http://localhost:4000/assets/img/nvidia-docker.png">
+                    
+                  </div>
+                  <div class="related-title">
+                    우분투 17.10.1에 nvidia-docker 올리기
+                  </div>
+                  <!--<small>February 3, 2018</small>-->
+                </a>
+              </h3>
+            </li>
+            
+          
+        
+          
+            <li>
+              <h3>
+                <a href="/documentation/git-commands.html">
+                  <div class="related-thumbnail">
+                    
+                      <img src="http://localhost:4000/assets/img/nature-1.jpg">
+                    
+                  </div>
+                  <div class="related-title">
+                    Git, Github 활용 팁 정리
+                  </div>
+                  <!--<small>February 3, 2018</small>-->
+                </a>
+              </h3>
+            </li>
+            
+          
+        
+      
+    </ul>
+  </div>
+
+  
+
+</div>
+
+  </div>
+  <footer class="footer">
+  
+    <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+    <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+  <div class="post-date"><a href="/">U2PIA | Joy of learning by Wook Hyun</a></div>
+</footer>
+
+</div>
+
+</body>
+</html>
