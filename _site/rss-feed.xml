@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>U2PIA</title>
+		<description>Joy of learning</description>
+		<link></link>
+		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>우분투 17.10.1에 nvidia-docker 올리기</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Sat, 03 Feb 2018 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/upcoming/nvidia-docker.html</link>
+				<guid isPermaLink="true">http://localhost:4000/upcoming/nvidia-docker.html</guid>
+			</item>
+		
+			<item>
+				<title>Source code 예쁘게 프린트 하기</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;div style=&quot;text-align: right; font-size: 50%&quot;&gt; 
+ &lt;a href=&quot;https://www.crazyegg.com/blog/8-reasons-analyze-source-code/&quot;&gt;image from&lt;/a&gt;
+&lt;/div&gt;
+
+</description>
+				
+				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/documentation/source-code-print.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/source-code-print.html</guid>
+			</item>
+		
+			<item>
+				<title>Github Blog 만들기 </title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h2 id=&quot;githubio-에-블로그-페이지-만들기&quot;&gt;Github.io 에 블로그 페이지 만들기&lt;/h2&gt;
+
+</description>
+				
+				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/documentation/github-blog.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/github-blog.html</guid>
+			</item>
+		
+			<item>
+				<title>Development Log for ID photo</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;환경설정-installation&quot;&gt;환경설정 Installation&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/documentation/dev-log-idphoto.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/dev-log-idphoto.html</guid>
+			</item>
+		
+			<item>
+				<title>Getting Started</title>
+				
+					<dc:creator>Paul Le</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;millennial&quot;&gt;Millennial&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Mon, 10 Oct 2016 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/documentation/getting-started.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/getting-started.html</guid>
+			</item>
+		
+			<item>
+				<title>About the Author</title>
+				
+					<dc:creator>Paul Le</dc:creator>
+				
+				
+					<description>&lt;p&gt;Hi there! I’m Paul. I’m a physics major turned programmer. Ever since I first learned how to program while taking a scientific computing for physics course, I have pursued programming as a passion, and as a career. Below is a compilation of some of my favourite things that I have built over the years. You may find everything else on my &lt;a href=&quot;http://github.com/lenpaul&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; and &lt;a href=&quot;https://codepen.io/lenpaul&quot; target=&quot;_blank&quot;&gt;Code Pen&lt;/a&gt; profiles.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 04 Apr 2016 00:00:00 +0900</pubDate>
+				<link>http://localhost:4000/facts/about-the-author.html</link>
+				<guid isPermaLink="true">http://localhost:4000/facts/about-the-author.html</guid>
+			</item>
+		
+	</channel>
+</rss>

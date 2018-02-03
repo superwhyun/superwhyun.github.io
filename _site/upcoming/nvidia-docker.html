@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      우분투 17.10.1에 nvidia-docker 올리기 | U2PIA
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="U2PIA" />
+  <!-- RSS-v2.0
+  <link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="U2PIA | Joy of learning"/>
+  //-->
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'superwhyun3@gmail.com', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>우분투 17.10.1에 nvidia-docker 올리기 | U2PIA</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="우분투 17.10.1에 nvidia-docker 올리기" />
+<meta name="author" content="Wook Hyun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nvidia-docker" />
+<meta property="og:description" content="Nvidia-docker" />
+<link rel="canonical" href="http://localhost:4000/upcoming/nvidia-docker.html" />
+<meta property="og:url" content="http://localhost:4000/upcoming/nvidia-docker.html" />
+<meta property="og:site_name" content="U2PIA" />
+<meta property="og:image" content="http://localhost:4000/nvidia-docker.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-03T00:00:00+09:00" />
+<script type="application/ld+json">
+{"description":"Nvidia-docker","author":{"@type":"Person","name":"Wook Hyun"},"@type":"BlogPosting","url":"http://localhost:4000/upcoming/nvidia-docker.html","image":"http://localhost:4000/nvidia-docker.png","headline":"우분투 17.10.1에 nvidia-docker 올리기","dateModified":"2018-02-03T00:00:00+09:00","datePublished":"2018-02-03T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/upcoming/nvidia-docker.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+  <header class="site-header">
+  <h3 class="site-title">
+    <a href="/">U2PIA</a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="/pages/facts.html" class="menu-link">Articles</a>
+    
+      <a href="/pages/resources.html" class="menu-link">Learning Resources</a>
+    
+      <a href="/pages/upcoming.html" class="menu-link">Upcoming</a>
+    
+      <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+    
+      <a href="/pages/about.html" class="menu-link">About</a>
+    
+      <a href="/pages/contact.html" class="menu-link">Contact</a>
+    
+
+    
+      <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+      <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+    
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+        <a href="/pages/facts.html" class="menu-link">Articles</a>
+      
+        <a href="/pages/resources.html" class="menu-link">Learning Resources</a>
+      
+        <a href="/pages/upcoming.html" class="menu-link">Upcoming</a>
+      
+        <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+      
+        <a href="/pages/about.html" class="menu-link">About</a>
+      
+        <a href="/pages/contact.html" class="menu-link">Contact</a>
+      
+
+      
+        <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      
+        <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</header>
+
+  <div class="posts-wrapper">
+    <div class="page-content">
+  <h1>
+    우분투 17.10.1에 nvidia-docker 올리기
+  </h1>
+
+  <span class="post-date">
+    Written on
+    
+    February
+    3rd
+      ,
+    2018
+    by
+    
+      Wook Hyun
+    
+  </span>
+
+  
+    <div class="featured-image">
+      <img src="/assets/img/nvidia-docker.png">
+    </div>
+  
+
+  <article>
+    <h1 id="nvidia-docker">Nvidia-docker</h1>
+
+<p><strong>TBD</strong> 우분투 리눅스 최신버전에 nvidia-docker를 올리는 과정을 요약예정</p>
+
+<p><strong>Contents to be included</strong></p>
+<ul>
+  <li>Ubuntu 17.10.1 설치</li>
+  <li>Nvidia Video Driver 설치</li>
+</ul>
+
+<p>일단은 성공적.</p>
+
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script>
+  
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://superwhyun.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                           
+
+
+
+  <div class="post-share">
+    <div class="post-date">Feel free to share!</div>
+    <div class="sharing-icons">
+      <a href="https://twitter.com/intent/tweet?text=우분투 17.10.1에 nvidia-docker 올리기&amp;url=/upcoming/nvidia-docker.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/upcoming/nvidia-docker.html&amp;title=우분투 17.10.1에 nvidia-docker 올리기" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=/upcoming/nvidia-docker.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>You may also enjoy...</h2>
+    
+    <ul class="related-posts">
+      
+        
+          
+          
+        
+          
+            <li>
+              <h3>
+                <a href="/documentation/source-code-print.html">
+                  <div class="related-thumbnail">
+                    
+                      <img src="http://localhost:4000/assets/img/source-code.jpg">
+                    
+                  </div>
+                  <div class="related-title">
+                    Source code 예쁘게 프린트 하기
+                  </div>
+                  <!--<small>February 2, 2018</small>-->
+                </a>
+              </h3>
+            </li>
+            
+          
+        
+      
+    </ul>
+  </div>
+
+  
+
+</div>
+
+  </div>
+  <footer class="footer">
+  
+    <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+    <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+  <div class="post-date"><a href="/">U2PIA | Joy of learning by Wook Hyun</a></div>
+</footer>
+
+</div>
+
+</body>
+</html>
