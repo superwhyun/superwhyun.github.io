@@ -8,30 +8,63 @@ image: cuba-1.jpg
 ---
 
 
-## Github.io 에 블로그 페이지 만들기
+## Github.io 에 블로그  만들기
 
+다양한 블로그 사이트가 있기는 하나, github.io를 이용해 보기로 함.
 
+<hr>
 
-## 필요한 툴
-  * jekyll
+### Github.io에 블로그 주소 만들기
 
-## github에 공간 만들기
+1. Github에 계정만들기
+2. 새로운 repository를 '계정명.github.io'로 만든다.
+* 예전에는 새로운 브랜치를 만들어서 했는데, 이제 그렇게 하지 않아도 된다.
+3. git push를 통해 내가 만든 홈페이지를 올린다. 끗.
 
-  * 일단 [여기](https://angrypark.github.io/starting-my-blog/)에서 시작하자.
+<hr>
 
-## 사용법
+### Jekyll 템플릿 이용하기
+
+내가 만든 홈페이지가 있다면 그냥 github에 올리면 되지만, 새로 만들려면 이미 만들어진 템플릿을 쓰는 것도 좋다. 마침 github.io에서 jekyll 이라는 프레임워크를 지원하니 이것을 사용해 보도록 하자.
+
 
 일단 로컬에서 작업한 이후 Github에 push를 하는 형태로 개발하면 되는데, 로컬에서 작업할 때 Jekyill로 만들어진 페이지들은 일반 웹서버에서는 보여지지 않는다. 그렇기 떄문에 전용 웹서버를 jekyill 툴로 구동시켜야만 한다. 자세한 내용은 [여기](https://mycyberuniverse.com/web/how-fix-jekyll-build-serve-error-message.html)를 참고하자.
 
 1. 템플릿을 [여기](http://jekyllthemes.org/)에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.
-```
-$ gem install bundler
-$ bundle install
-$ bundle exec jekyll serve 
+
+> $ gem install bundler
+
+> $ bundle install
+
+> $ bundle exec jekyll serve 
+
+
+2. 그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 브라우저를 열고 주소창에 http://localhost:4000 를 입력하자
+
+3. 잘 만들어진 것 같으면 github에 push하기
+
+> $ git push origin master
+
+4. https://계정명.github.io 에 접속해 보기. 끗.
+<hr>
+### Jekyll 기반 글쓰기
+
+_post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML front matter block에 간단한 메타데이터를 입려하면 자동으로 페이지가 생성된다.
+
+* image 파라미터에는 external link image를 달 수가 없다. 즉, assets/img/ 밑에 위치한 이미지만 로딩 가능하다.
+
+
+
+
+#### Markdown 사용 팁
+
+- 글자에 색상을 넣고 싶어요
+
+```css
+<span style="color:blue">aaa</span>
 ```
 
-2. 그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 주소는 http://localhost:4000 이다.
-
+<hr>
 ## Trouble shooting
 - 새로운 포스트 페이지가 보이지 않는다. 
   - 여러 가능성이 있지만, 아래 명령을 실행한 후 로그 메시지를 확인한다.
@@ -41,9 +74,9 @@ $ bundle exec jekyll serve
 
 - jekyll 실행시 에러가 나온다.
   - 명령어 실행구문이 바뀐 모양이다. 아래 명령을 실행하자.
-> bundle exec jekyll serve --watch를 실행
+> bundle exec jekyll serve --watch
 
-
+<hr>
 
 ## References
 1. [https://stackoverflow.com/questions/30625044/jekyll-post-not-generated](https://stackoverflow.com/questions/30625044/jekyll-post-not-generated)

@@ -5,11 +5,11 @@
 <lastmod>2016-04-04T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/documentation/getting-started.html</loc>
+<loc>http://localhost:4000/facts/getting-started.html</loc>
 <lastmod>2016-10-10T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/documentation/dev-log-idphoto.html</loc>
+<loc>http://localhost:4000/upcoming/dev-log-idphoto.html</loc>
 <lastmod>2018-02-02T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -19,6 +19,10 @@
 <url>
 <loc>http://localhost:4000/documentation/source-code-print.html</loc>
 <lastmod>2018-02-02T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/upcoming/git-commands.html</loc>
+<lastmod>2018-02-03T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/upcoming/nvidia-docker.html</loc>

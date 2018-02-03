@@ -2,7 +2,7 @@
 layout: post
 title: "Development Log for ID photo"
 author: "Wook Hyun"
-categories: documentation
+categories: upcoming
 tags: [dev log]
 image: arctic-1.jpg
 ---

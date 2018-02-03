@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-03T19:43:54+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">우분투 17.10.1에 nvidia-docker 올리기</title><link href="http://localhost:4000/upcoming/nvidia-docker.html" rel="alternate" type="text/html" title="우분투 17.10.1에 nvidia-docker 올리기" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/nvidia-docker</id><content type="html" xml:base="http://localhost:4000/upcoming/nvidia-docker.html">&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-03T23:36:29+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">우분투 17.10.1에 nvidia-docker 올리기</title><link href="http://localhost:4000/upcoming/nvidia-docker.html" rel="alternate" type="text/html" title="우분투 17.10.1에 nvidia-docker 올리기" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/nvidia-docker</id><content type="html" xml:base="http://localhost:4000/upcoming/nvidia-docker.html">&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;TBD&lt;/strong&gt; 우분투 리눅스 최신버전에 nvidia-docker를 올리는 과정을 요약예정&lt;/p&gt;
 
@@ -8,7 +8,43 @@
   &lt;li&gt;Nvidia Video Driver 설치&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;일단은 성공적.&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Nvidia-docker</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nvidia-docker.png" /></entry><entry><title type="html">Source code 예쁘게 프린트 하기</title><link href="http://localhost:4000/documentation/source-code-print.html" rel="alternate" type="text/html" title="Source code 예쁘게 프린트 하기" /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/source-code-print</id><content type="html" xml:base="http://localhost:4000/documentation/source-code-print.html">&lt;div style=&quot;text-align: right; font-size: 50%&quot;&gt; 
+&lt;p&gt;일단은 성공적.&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Nvidia-docker</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nvidia-docker.png" /></entry><entry><title type="html">Git, Github 활용 팁 정리</title><link href="http://localhost:4000/upcoming/git-commands.html" rel="alternate" type="text/html" title="Git, Github 활용 팁 정리" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/git-commands</id><content type="html" xml:base="http://localhost:4000/upcoming/git-commands.html">&lt;h2 id=&quot;git-command&quot;&gt;Git command&lt;/h2&gt;
+
+&lt;h3 id=&quot;소스코드를-다운-받을-때&quot;&gt;소스코드를 다운 받을 때&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone [address]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:blue&quot;&gt;aaa&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;소스코드를-올릴-때&quot;&gt;소스코드를 올릴 때&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git init
+$ git remote add https://[git-repository-address
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git add .
+$ git commit -m &quot;comments&quot;
+$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;github&quot;&gt;Github&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://linode.com/docs/assets/git-github-workflow-1000w.png&quot; alt=&quot;git, github&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;trouble-shooting&quot;&gt;Trouble Shooting&lt;/h2&gt;
+
+&lt;h3 id=&quot;q-git-commit-이-많이-쌓이면&quot;&gt;Q. Git commit 이 많이 쌓이면?&lt;/h3&gt;
+
+&lt;p&gt;commit이 많은 코드를 git clone할 때 마다 모든 히스토리가 따라오기 때문에 크기가 커지는 것 같다. 정말 이러한 것인지, 히스토리를 날릴 수 있는지 확인해 보자.&lt;/p&gt;
+
+&lt;h3 id=&quot;mac에서-github-계정-없애기&quot;&gt;Mac에서 github 계정 없애기&lt;/h3&gt;
+
+&lt;p&gt;가끔 다른 github 계정을 써야 할 경우가 있는데, github account 계정이 시스템 내에 저장되어서 변경이 안된다.
+둘을 다 쓰게 하는 방법도 있기는 하나, 해야 할 것이 많다. 걍 날리려면 아래처럼 하면 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;https://help.github.com/articles/updating-credentials-from-the-osx-keychain/&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Git command</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/nature-1.jpg" /></entry><entry><title type="html">Source code 예쁘게 프린트 하기</title><link href="http://localhost:4000/documentation/source-code-print.html" rel="alternate" type="text/html" title="Source code 예쁘게 프린트 하기" /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/source-code-print</id><content type="html" xml:base="http://localhost:4000/documentation/source-code-print.html">&lt;div style=&quot;text-align: right; font-size: 50%&quot;&gt; 
  &lt;a href=&quot;https://www.crazyegg.com/blog/8-reasons-analyze-source-code/&quot;&gt;image from&lt;/a&gt;
 &lt;/div&gt;
 
@@ -48,32 +84,84 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-&lt;p&gt;[&lt;a href=&quot;https://docstore.mik.ua/orelly/unix3/upt/ch45_07.htm&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">image from</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/source-code.jpg" /></entry><entry><title type="html">Github Blog 만들기</title><link href="http://localhost:4000/documentation/github-blog.html" rel="alternate" type="text/html" title="Github Blog 만들기 " /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/github-blog</id><content type="html" xml:base="http://localhost:4000/documentation/github-blog.html">&lt;h2 id=&quot;githubio-에-블로그-페이지-만들기&quot;&gt;Github.io 에 블로그 페이지 만들기&lt;/h2&gt;
+&lt;p&gt;[&lt;a href=&quot;https://docstore.mik.ua/orelly/unix3/upt/ch45_07.htm&quot;&gt;1&lt;/a&gt;]&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">image from</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/source-code.jpg" /></entry><entry><title type="html">Github Blog 만들기</title><link href="http://localhost:4000/documentation/github-blog.html" rel="alternate" type="text/html" title="Github Blog 만들기 " /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/github-blog</id><content type="html" xml:base="http://localhost:4000/documentation/github-blog.html">&lt;h2 id=&quot;githubio-에-블로그--만들기&quot;&gt;Github.io 에 블로그  만들기&lt;/h2&gt;
 
-&lt;h2 id=&quot;필요한-툴&quot;&gt;필요한 툴&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;jekyll&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;다양한 블로그 사이트가 있기는 하나, github.io를 이용해 보기로 함.&lt;/p&gt;
 
-&lt;h2 id=&quot;github에-공간-만들기&quot;&gt;github에 공간 만들기&lt;/h2&gt;
+&lt;hr /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;일단 &lt;a href=&quot;https://angrypark.github.io/starting-my-blog/&quot;&gt;여기&lt;/a&gt;에서 시작하자.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;githubio에-블로그-주소-만들기&quot;&gt;Github.io에 블로그 주소 만들기&lt;/h3&gt;
 
-&lt;h2 id=&quot;사용법&quot;&gt;사용법&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Github에 계정만들기&lt;/li&gt;
+  &lt;li&gt;새로운 repository를 ‘계정명.github.io’로 만든다.
+    &lt;ul&gt;
+      &lt;li&gt;예전에는 새로운 브랜치를 만들어서 했는데, 이제 그렇게 하지 않아도 된다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;git push를 통해 내가 만든 홈페이지를 올린다. 끗.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;jekyll-템플릿-이용하기&quot;&gt;Jekyll 템플릿 이용하기&lt;/h3&gt;
+
+&lt;p&gt;내가 만든 홈페이지가 있다면 그냥 github에 올리면 되지만, 새로 만들려면 이미 만들어진 템플릿을 쓰는 것도 좋다. 마침 github.io에서 jekyll 이라는 프레임워크를 지원하니 이것을 사용해 보도록 하자.&lt;/p&gt;
 
 &lt;p&gt;일단 로컬에서 작업한 이후 Github에 push를 하는 형태로 개발하면 되는데, 로컬에서 작업할 때 Jekyill로 만들어진 페이지들은 일반 웹서버에서는 보여지지 않는다. 그렇기 떄문에 전용 웹서버를 jekyill 툴로 구동시켜야만 한다. 자세한 내용은 &lt;a href=&quot;https://mycyberuniverse.com/web/how-fix-jekyll-build-serve-error-message.html&quot;&gt;여기&lt;/a&gt;를 참고하자.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;템플릿을 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;여기&lt;/a&gt;에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install bundler
-$ bundle install
-$ bundle exec jekyll serve 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 주소는 http://localhost:4000 이다.&lt;/li&gt;
+  &lt;li&gt;템플릿을 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;여기&lt;/a&gt;에서 다운받아 압축을 푼 디렉토리로 가서.. 아래 명령을 실행한다.&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ gem install bundler&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ bundle install&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ bundle exec jekyll serve&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;그리고 웹 브라우저에서 잘 동작하는지 들여다 보자. 브라우저를 열고 주소창에 http://localhost:4000 를 입력하자&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;잘 만들어진 것 같으면 github에 push하기&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ git push origin master&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;https://계정명.github.io 에 접속해 보기. 끗.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;jekyll-기반-글쓰기&quot;&gt;Jekyll 기반 글쓰기&lt;/h3&gt;
+
+&lt;p&gt;_post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML front matter block에 간단한 메타데이터를 입려하면 자동으로 페이지가 생성된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;image 파라미터에는 external link image를 달 수가 없다. 즉, assets/img/ 밑에 위치한 이미지만 로딩 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;markdown-사용-팁&quot;&gt;Markdown 사용 팁&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;글자에 색상을 넣고 싶어요&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;color:blue&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;aaa&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;trouble-shooting&quot;&gt;Trouble shooting&lt;/h2&gt;
 &lt;ul&gt;
@@ -93,17 +181,19 @@ $ bundle exec jekyll serve
     &lt;ul&gt;
       &lt;li&gt;명령어 실행구문이 바뀐 모양이다. 아래 명령을 실행하자.
         &lt;blockquote&gt;
-          &lt;p&gt;bundle exec jekyll serve –watch를 실행&lt;/p&gt;
+          &lt;p&gt;bundle exec jekyll serve –watch&lt;/p&gt;
         &lt;/blockquote&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/30625044/jekyll-post-not-generated&quot;&gt;https://stackoverflow.com/questions/30625044/jekyll-post-not-generated&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Github.io 에 블로그 페이지 만들기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-1.jpg" /></entry><entry><title type="html">Development Log for ID photo</title><link href="http://localhost:4000/documentation/dev-log-idphoto.html" rel="alternate" type="text/html" title="Development Log for ID photo" /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/documentation/dev-log-idphoto</id><content type="html" xml:base="http://localhost:4000/documentation/dev-log-idphoto.html">&lt;h1 id=&quot;환경설정-installation&quot;&gt;환경설정 Installation&lt;/h1&gt;
+&lt;/ol&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Github.io 에 블로그 만들기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-1.jpg" /></entry><entry><title type="html">Development Log for ID photo</title><link href="http://localhost:4000/upcoming/dev-log-idphoto.html" rel="alternate" type="text/html" title="Development Log for ID photo" /><published>2018-02-02T00:00:00+09:00</published><updated>2018-02-02T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/dev-log-idphoto</id><content type="html" xml:base="http://localhost:4000/upcoming/dev-log-idphoto.html">&lt;h1 id=&quot;환경설정-installation&quot;&gt;환경설정 Installation&lt;/h1&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;$ npm install
@@ -290,7 +380,7 @@ brew install pkg-config cairo pango libpng jpeg giflib&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/projects/markdown/basics&quot;&gt;Markdown Basics&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.github.com/gfm/&quot;&gt;GitHub Flavoured Markdown Spec&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/basic-writing-and-formatting-syntax/#lists&quot;&gt;Basic writing and formatting syntax&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="dev log" /><summary type="html">환경설정 Installation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arctic-1.jpg" /></entry><entry><title type="html">Getting Started</title><link href="http://localhost:4000/documentation/getting-started.html" rel="alternate" type="text/html" title="Getting Started" /><published>2016-10-10T00:00:00+09:00</published><updated>2016-10-10T00:00:00+09:00</updated><id>http://localhost:4000/documentation/getting-started</id><content type="html" xml:base="http://localhost:4000/documentation/getting-started.html">&lt;h1 id=&quot;millennial&quot;&gt;Millennial&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="dev log" /><summary type="html">환경설정 Installation</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arctic-1.jpg" /></entry><entry><title type="html">Getting Started</title><link href="http://localhost:4000/facts/getting-started.html" rel="alternate" type="text/html" title="Getting Started" /><published>2016-10-10T00:00:00+09:00</published><updated>2016-10-10T00:00:00+09:00</updated><id>http://localhost:4000/facts/getting-started</id><content type="html" xml:base="http://localhost:4000/facts/getting-started.html">&lt;h1 id=&quot;millennial&quot;&gt;Millennial&lt;/h1&gt;
 
 &lt;p&gt;Millennial is a minimalist Jekyll theme for running a simple, clean, content-focused publishing platform for your publication site or blog through &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;, or on your own server. Everything that you will ever need to know about this Jekyll theme is included in the README below, which you can also find in &lt;a href=&quot;https://lenpaul.github.io/Millennial/&quot;&gt;the demo site&lt;/a&gt;.&lt;/p&gt;
 
