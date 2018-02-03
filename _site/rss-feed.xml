@@ -74,13 +74,13 @@
 					<dc:creator>Wook Hyun</dc:creator>
 				
 				
-					<description>&lt;p&gt;뭐, 개발기라 할 것도 없고… 오픈소스 이것저것 엮어서 만든 것일 뿐.&lt;/p&gt;
+					<description>&lt;p&gt;증명사진 스캔 파일을 업로드하면, 여권/비자/반명함/증명사진 규격으로 프린트할 수 있도록 크기를 잡아주고 collage를 만들어 주는 웹 서비스.&lt;/p&gt;
 
 </description>
 				
 				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/upcoming/dev-log-idphoto.html</link>
-				<guid isPermaLink="true">http://localhost:4000/upcoming/dev-log-idphoto.html</guid>
+				<link>http://localhost:4000/documentation/dev-log-idphoto.html</link>
+				<guid isPermaLink="true">http://localhost:4000/documentation/dev-log-idphoto.html</guid>
 			</item>
 		
 			<item>
