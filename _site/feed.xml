@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-04T02:34:49+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">우분투 17.10.1에 nvidia-docker 올리기</title><link href="http://localhost:4000/upcoming/nvidia-docker.html" rel="alternate" type="text/html" title="우분투 17.10.1에 nvidia-docker 올리기" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/nvidia-docker</id><content type="html" xml:base="http://localhost:4000/upcoming/nvidia-docker.html">&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-04T02:54:59+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">우분투 17.10.1에 nvidia-docker 올리기</title><link href="http://localhost:4000/upcoming/nvidia-docker.html" rel="alternate" type="text/html" title="우분투 17.10.1에 nvidia-docker 올리기" /><published>2018-02-03T00:00:00+09:00</published><updated>2018-02-03T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/nvidia-docker</id><content type="html" xml:base="http://localhost:4000/upcoming/nvidia-docker.html">&lt;h1 id=&quot;nvidia-docker&quot;&gt;Nvidia-docker&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;TBD&lt;/strong&gt; 우분투 리눅스 최신버전에 nvidia-docker를 올리는 과정을 요약예정&lt;/p&gt;
 
@@ -43,7 +43,47 @@ $ git push origin master
 
 &lt;h3 id=&quot;q-git-commit-이-많이-쌓이면&quot;&gt;Q. Git commit 이 많이 쌓이면?&lt;/h3&gt;
 
-&lt;p&gt;commit이 많은 코드를 git clone할 때 마다 모든 히스토리가 따라오기 때문에 크기가 커지는 것 같다. 정말 이러한 것인지, 히스토리를 날릴 수 있는지 확인해 보자.&lt;/p&gt;
+&lt;p&gt;commit이 많은 코드를 git clone할 때 마다 모든 히스토리가 따라오기 때문에 크기가 커지는 것 같다. 이런 히스토리를 정리하면 좀 가벼워질 듯.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;git log&lt;/strong&gt; 명령을 이용해 그 동안의 commit 히스토리를 보자.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git log
+
+commit 8efd57676fa6f0c908b1025b46e5e942a7a1308c (HEAD -&amp;gt; master, origin/master)
+Author: W.Hyun &amp;lt;superwhyun3@gmail.com&amp;gt;
+Date:   Sun Feb 4 02:35:17 2018 +0900
+
+    하나 더 마무리
+
+commit f0b679bd7f4ba430092bd0b7635b5212e29bc4ef
+Author: W.Hyun &amp;lt;superwhyun3@gmail.com&amp;gt;
+Date:   Sun Feb 4 02:21:18 2018 +0900
+
+    id photo 초안 완료
+
+commit 0cd3d9f30a66222fa931b6e53f4afb1635c927a3
+Author: W.Hyun &amp;lt;superwhyun3@gmail.com&amp;gt;
+Date:   Sun Feb 4 01:49:09 2018 +0900
+
+    몇개 문서 1차마무리
+
+commit 2da2f901443c535da869d66b8d0b569056323922
+Author: W.Hyun &amp;lt;superwhyun3@gmail.com&amp;gt;
+Date:   Sat Feb 3 23:36:41 2018 +0900
+
+    slight changes
+
+commit b6425a271a16202bd6f17f5b8b6254c54b5f923d
+Author: W.Hyun &amp;lt;superwhyun3@gmail.com&amp;gt;
+Date:   Sat Feb 3 22:31:50 2018 +0900
+
+    my blog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이번에는 &lt;strong&gt;git rebase&lt;/strong&gt; 명령을 이용해 정리하자.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rebase -i HEAD~5
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;mac에서-github-계정-없애기&quot;&gt;Mac에서 github 계정 없애기&lt;/h3&gt;
 

@@ -178,7 +178,47 @@ $ git push origin master
 
 <h3 id="q-git-commit-이-많이-쌓이면">Q. Git commit 이 많이 쌓이면?</h3>
 
-<p>commit이 많은 코드를 git clone할 때 마다 모든 히스토리가 따라오기 때문에 크기가 커지는 것 같다. 정말 이러한 것인지, 히스토리를 날릴 수 있는지 확인해 보자.</p>
+<p>commit이 많은 코드를 git clone할 때 마다 모든 히스토리가 따라오기 때문에 크기가 커지는 것 같다. 이런 히스토리를 정리하면 좀 가벼워질 듯.</p>
+
+<p><strong>git log</strong> 명령을 이용해 그 동안의 commit 히스토리를 보자.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git log
+
+commit 8efd57676fa6f0c908b1025b46e5e942a7a1308c (HEAD -&gt; master, origin/master)
+Author: W.Hyun &lt;superwhyun3@gmail.com&gt;
+Date:   Sun Feb 4 02:35:17 2018 +0900
+
+    하나 더 마무리
+
+commit f0b679bd7f4ba430092bd0b7635b5212e29bc4ef
+Author: W.Hyun &lt;superwhyun3@gmail.com&gt;
+Date:   Sun Feb 4 02:21:18 2018 +0900
+
+    id photo 초안 완료
+
+commit 0cd3d9f30a66222fa931b6e53f4afb1635c927a3
+Author: W.Hyun &lt;superwhyun3@gmail.com&gt;
+Date:   Sun Feb 4 01:49:09 2018 +0900
+
+    몇개 문서 1차마무리
+
+commit 2da2f901443c535da869d66b8d0b569056323922
+Author: W.Hyun &lt;superwhyun3@gmail.com&gt;
+Date:   Sat Feb 3 23:36:41 2018 +0900
+
+    slight changes
+
+commit b6425a271a16202bd6f17f5b8b6254c54b5f923d
+Author: W.Hyun &lt;superwhyun3@gmail.com&gt;
+Date:   Sat Feb 3 22:31:50 2018 +0900
+
+    my blog
+</code></pre></div></div>
+
+<p>이번에는 <strong>git rebase</strong> 명령을 이용해 정리하자.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git rebase -i HEAD~5
+
+</code></pre></div></div>
 
 <h3 id="mac에서-github-계정-없애기">Mac에서 github 계정 없애기</h3>
 
