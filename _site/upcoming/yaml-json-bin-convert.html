@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>
+    
+      센서 데이터 Text-Binary 변환 엔진 | U2PIA
+    
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <!-- Use Atom -->
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="U2PIA" />
+  <!-- RSS-v2.0
+  <link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="U2PIA | Joy of learning"/>
+  //-->
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'superwhyun3@gmail.com', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <!-- Use Jekyll SEO plugin -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>센서 데이터 Text-Binary 변환 엔진 | U2PIA</title>
+<meta name="generator" content="Jekyll v3.6.2" />
+<meta property="og:title" content="센서 데이터 Text-Binary 변환 엔진" />
+<meta name="author" content="Wook Hyun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="데이터 notation/serialization 변환 기능" />
+<meta property="og:description" content="데이터 notation/serialization 변환 기능" />
+<link rel="canonical" href="http://localhost:4000/upcoming/yaml-json-bin-convert.html" />
+<meta property="og:url" content="http://localhost:4000/upcoming/yaml-json-bin-convert.html" />
+<meta property="og:site_name" content="U2PIA" />
+<meta property="og:image" content="http://localhost:4000/conversion.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-04T00:00:00+09:00" />
+<script type="application/ld+json">
+{"description":"데이터 notation/serialization 변환 기능","author":{"@type":"Person","name":"Wook Hyun"},"@type":"BlogPosting","url":"http://localhost:4000/upcoming/yaml-json-bin-convert.html","image":"http://localhost:4000/conversion.jpg","headline":"센서 데이터 Text-Binary 변환 엔진","dateModified":"2018-02-04T00:00:00+09:00","datePublished":"2018-02-04T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/upcoming/yaml-json-bin-convert.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+
+
+<body>
+
+<div class="container">
+  <header class="site-header">
+  <h3 class="site-title">
+    <a href="/">U2PIA</a>
+  </h3>
+  <nav class="menu-list">
+    
+      <a href="/pages/articles.html" class="menu-link">Articles</a>
+    
+      <a href="/pages/resources.html" class="menu-link">Learning Resources</a>
+    
+      <a href="/pages/upcoming.html" class="menu-link">Upcoming</a>
+    
+      <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+    
+      <a href="/pages/about.html" class="menu-link">About</a>
+    
+      <a href="/pages/contact.html" class="menu-link">Contact</a>
+    
+
+    
+      <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+    
+      <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+    
+  </nav>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+    <div class="dropdown-content">
+      
+        <a href="/pages/articles.html" class="menu-link">Articles</a>
+      
+        <a href="/pages/resources.html" class="menu-link">Learning Resources</a>
+      
+        <a href="/pages/upcoming.html" class="menu-link">Upcoming</a>
+      
+        <a href="/pages/documentation.html" class="menu-link">Documentation</a>
+      
+        <a href="/pages/about.html" class="menu-link">About</a>
+      
+        <a href="/pages/contact.html" class="menu-link">Contact</a>
+      
+
+      
+        <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      
+        <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+      
+    </div>
+  </div>
+</header>
+
+  <div class="posts-wrapper">
+    <div class="page-content">
+  <h1>
+    센서 데이터 Text-Binary 변환 엔진
+  </h1>
+
+  <span class="post-date">
+    Written on
+    
+    February
+    4th,
+    2018
+    by
+    
+      Wook Hyun
+    
+  </span>
+
+  
+    <div class="featured-image">
+      <img src="/assets/img/conversion.jpg">
+    </div>
+  
+
+  <article>
+    <h1 id="데이터-notationserialization-변환-기능">데이터 notation/serialization 변환 기능</h1>
+
+<ul>
+  <li>개발목표
+    <ul>
+      <li>데이터에 대한 notation 방식/설정은 YAML로 하고, 예제 데이터를 JSON으로 생성케 하고, JSON 데이터를 바이너리로 변환하는 기능
+        <ul>
+          <li>YAML에서 스키마를 조정할 때마다 자동으로 JSON 예제 만들어지고, 관련 Parser/Generator 또한 연계되어 작성되도록 하는 것을 목표로 함.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="yamljson">YAML/JSON</h3>
+<ul>
+  <li>YAML은 JSON보다 human 가독성은 더 좋음. 그래서 설정파일 다룰때 많이 씀</li>
+  <li>JSON은 데이터를 담을 때 많이 씀</li>
+</ul>
+
+<h3 id="기본자료형">기본자료형</h3>
+
+<ul>
+  <li>
+    <p><strong>스칼라(scalar)</strong> : 문자열, 숫자</p>
+  </li>
+  <li>
+    <p><strong>시퀀스(sequence)</strong> : 배열, 리스트를 표현하며, 들여쓰기/’-‘를 구분자로 이용</p>
+  </li>
+  <li>
+    <p><strong>맵핑(mapping)</strong> : 해시, 딕셔너리, key/value 등을 표현하며, ‘:’를 구분자로 이용</p>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="예제">예제</h3>
+
+<h4 id="배열">배열</h4>
+
+<p><span style="color:blue; font-size:5pt">YAML</span></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="pi">-</span> <span class="s">Mark McGwire</span>
+        <span class="pi">-</span> <span class="s">Sammy Sosa</span>
+        <span class="pi">-</span> <span class="s">Ken Griffey</span>
+</code></pre></div></div>
+<p><span style="color:blue; font-size:5pt">JSON</span></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">        </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Mark McGwire"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Sammy Sosa"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"Ken Griffey"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="keyvalue">Key/Value</h4>
+<p><span style="color:blue; font-size:5pt">YAML</span></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="c1"># Mapping of scalars to scalars(player statics)</span>
+        <span class="na">hr</span><span class="pi">:</span>  <span class="s">65</span>    <span class="c1"># Home runs</span>
+        <span class="na">avg</span><span class="pi">:</span> <span class="s">0.278</span> <span class="c1"># Batting average</span>
+        <span class="na">rbi</span><span class="pi">:</span> <span class="s">147</span>   <span class="c1"># Runs Batted In</span>
+</code></pre></div></div>
+<p><span style="color:blue; font-size:5pt">JSON</span></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">        </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"hr"</span><span class="p">:</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"avg"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.278</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rbi"</span><span class="p">:</span><span class="w"> </span><span class="mi">147</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="keyarray">Key/Array</h4>
+<p><span style="color:blue; font-size:5pt">YAML</span></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="c1"># Mapping of scalars to sequences(ball clubs in each league)</span>
+        <span class="na">american</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">Boston Red Sox</span>
+        <span class="pi">-</span> <span class="s">Detroit Tigers</span>
+        <span class="pi">-</span> <span class="s">New York Yankees</span>
+        <span class="na">national</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">New York Mets</span>
+        <span class="pi">-</span> <span class="s">Chicago Cubs</span>
+        <span class="pi">-</span> <span class="s">Atlanta Braves</span>
+</code></pre></div></div>
+<p><span style="color:blue; font-size:5pt">JSON</span></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">        </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"american"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"Boston Red Sox"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Detroit Tigers"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"New York Yankees"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"national"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"New York Mets"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Chicago Cubs"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Atlanta Braves"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="array">Array</h4>
+<p><span style="color:blue; font-size:5pt">YAML</span></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="c1"># in-line flow style for compact notation</span>
+        <span class="pi">-</span> <span class="pi">[</span><span class="nv">name</span>        <span class="pi">,</span> <span class="nv">hr</span><span class="pi">,</span> <span class="nv">avg</span>  <span class="pi">]</span>
+        <span class="pi">-</span> <span class="pi">[</span><span class="nv">Mark McGwire</span><span class="pi">,</span> <span class="nv">65</span><span class="pi">,</span> <span class="nv">0.278</span><span class="pi">]</span>
+        <span class="pi">-</span> <span class="pi">[</span><span class="nv">Sammy Sosa</span>  <span class="pi">,</span> <span class="nv">63</span><span class="pi">,</span> <span class="nv">0.288</span><span class="pi">]</span>
+</code></pre></div></div>
+<p><span style="color:blue; font-size:5pt">JSON</span></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">        </span><span class="p">[</span><span class="w">
+            </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"hr"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"avg"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Mark McGwire"</span><span class="p">,</span><span class="w">
+                </span><span class="mi">65</span><span class="p">,</span><span class="w">
+                </span><span class="mf">0.278</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"Sammy Sosa"</span><span class="p">,</span><span class="w">
+                </span><span class="mi">63</span><span class="p">,</span><span class="w">
+                </span><span class="mf">0.288</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="etc">ETC</h4>
+<p>얘네는 conversion error가 생기네.. 왜 그런지 모르겠음. 공부가 필요할 뿐!</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="c1"># Sequence of mappings(players' statics)</span>
+        <span class="pi">-</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">Mark McGwire</span>
+        <span class="na">hr</span><span class="pi">:</span>   <span class="s">65</span>
+        <span class="na">avg</span><span class="pi">:</span>  <span class="s">0.278</span>
+        <span class="pi">-</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">Sammy Sosa</span>
+        <span class="na">hr</span><span class="pi">:</span>   <span class="s">63</span>
+        <span class="na">avg</span><span class="pi">:</span>  <span class="s">0.288</span>
+        
+        <span class="c1"># in-line flow style for compact notation</span>
+        <span class="na">Mark McGwire</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">hr</span><span class="pi">:</span> <span class="nv">65</span><span class="pi">,</span> <span class="nv">avg</span><span class="pi">:</span> <span class="nv">0.278</span><span class="pi">}</span>
+        <span class="na">Mark McGwire</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">hr</span><span class="pi">:</span> <span class="nv">65</span><span class="pi">,</span> <span class="nv">avg</span><span class="pi">:</span> <span class="nv">0.278</span><span class="pi">}</span>
+        <span class="na">Sammy Sosa</span><span class="pi">:</span> <span class="pi">{</span>
+            <span class="nv">hr</span><span class="pi">:</span> <span class="nv">63</span><span class="pi">,</span>
+            <span class="nv">avg</span><span class="pi">:</span> <span class="nv">0.288</span>
+        <span class="pi">}</span>
+</code></pre></div></div>
+
+<h2 id="references">References</h2>
+<ol>
+  <li><a href="https://www.sitepoint.com/data-serialization-comparison-json-yaml-bson-messagepack/">https://www.sitepoint.com/data-serialization-comparison-json-yaml-bson-messagepack/</a></li>
+  <li><a href="http://anitoy.pe.kr/yaml-format/">http://anitoy.pe.kr/yaml-format/</a></li>
+  <li><a href="https://www.browserling.com/tools/yaml-to-json">yaml to json</a></li>
+  <li><a href="https://www.browserling.com/tools/json-to-yaml">json to yaml</a></li>
+  <li><a href="http://sjava.net/tag/protocol-buffer/">http://sjava.net/tag/protocol-buffer/</a></li>
+</ol>
+
+  </article>
+
+  
+  <div id="disqus_thread"></div>
+  <script>
+  
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://superwhyun.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                           
+
+
+
+  <div class="post-share">
+    <div class="post-date">Feel free to share!</div>
+    <div class="sharing-icons">
+      <a href="https://twitter.com/intent/tweet?text=센서 데이터 Text-Binary 변환 엔진&amp;url=/upcoming/yaml-json-bin-convert.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/upcoming/yaml-json-bin-convert.html&amp;title=센서 데이터 Text-Binary 변환 엔진" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=/upcoming/yaml-json-bin-convert.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>You may also enjoy...</h2>
+    
+    <ul class="related-posts">
+      
+        
+          
+          
+        
+          
+            <li>
+              <h3>
+                <a href="/documentation/nvidia-docker.html">
+                  <div class="related-thumbnail">
+                    
+                      <img src="http://localhost:4000/assets/img/nvidia-docker.png">
+                    
+                  </div>
+                  <div class="related-title">
+                    우분투 17.10.1에 nvidia-docker 올리기
+                  </div>
+                  <!--<small>February 3, 2018</small>-->
+                </a>
+              </h3>
+            </li>
+            
+          
+        
+      
+    </ul>
+  </div>
+
+  
+
+</div>
+
+  </div>
+  <footer class="footer">
+  
+    <a href="mailto:superwhyun3@gmail.com" class="menu-link" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  
+    <a href="feed.xml" class="menu-link" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i></a>
+  
+  <div class="post-date"><a href="/">U2PIA | Joy of learning by Wook Hyun</a></div>
+</footer>
+
+</div>
+
+</body>
+</html>

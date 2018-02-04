@@ -81,10 +81,10 @@ _post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML 
 
 전체 목록은 [[마크다운 깃헙 가이드]](https://guides.github.com/features/mastering-markdown/)를 참고하자. 이 포스트에서는 그 외의 것들을 다뤄본다.
 
-- 글자에 색상을 넣고 싶어요
+- 글자에 색상을 넣고, 글자 크기도 조정하고 싶어요
 
 ```css
-<span style="color:blue">aaa</span>
+<span style="color:blue;font-size:8pt">aaa</span>
 ```
 
 <hr>
