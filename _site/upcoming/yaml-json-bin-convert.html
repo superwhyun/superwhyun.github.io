@@ -151,10 +151,96 @@
         <ul>
           <li>YAML에서 스키마를 조정할 때마다 자동으로 JSON 예제 만들어지고, 관련 Parser/Generator 또한 연계되어 작성되도록 하는 것을 목표로 함.</li>
         </ul>
+
+        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">Temperature</span><span class="pi">:</span>
+          <span class="na">code </span><span class="pi">:</span> <span class="s">1</span>
+          <span class="na">type </span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">decimal_point </span><span class="pi">:</span> <span class="s">0</span>
+          <span class="c1"># 0 이면 integer</span>
+          <span class="na">unit </span><span class="pi">:</span> <span class="s">celcius</span>
+          <span class="na">min </span><span class="pi">:</span> <span class="s">-100</span>
+          <span class="na">max </span><span class="pi">:</span> <span class="s">100</span>
+          <span class="na">byte </span><span class="pi">:</span> <span class="s">4</span>
+</code></pre></div>        </div>
       </li>
     </ul>
   </li>
+  <li>개발기록
+    <ul>
+      <li>YAML은 PyYaml을 이용</li>
+      <li>binary 표기법은 <a href="http://pythonhosted.org/bitstring/index.html">bitstring</a> 패키지를 이용</li>
+    </ul>
+  </li>
 </ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">yaml</span><span class="p">,</span> <span class="n">json</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">bitstring</span>
+
+<span class="k">def</span> <span class="nf">generateRandTemperature</span><span class="p">(</span><span class="n">conf</span><span class="p">):</span>
+    <span class="nb">min</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="s">"min"</span><span class="p">]</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="s">"max"</span><span class="p">]</span>
+    <span class="n">decpoint</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="s">"decimal_point"</span><span class="p">]</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">decpoint</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">decpoint</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span>
+
+
+<span class="n">stream</span> <span class="o">=</span> <span class="s">"""
+    temperature:
+        code : 1
+        type : number
+        decimal_point : 2
+        # 0 이면 integer
+        unit : celcius
+        min : -100
+        max : 100
+        byte : 4"""</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s">"-----------------YAML-----------------"</span><span class="p">);</span>
+<span class="n">yaml_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">yaml_dict</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"-----------------JSON-----------------"</span><span class="p">);</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">yaml_dict</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+
+
+
+<span class="n">tempConf</span> <span class="o">=</span> <span class="n">yaml_dict</span><span class="p">[</span><span class="s">"temperature"</span><span class="p">]</span>
+<span class="n">tempRandValue</span> <span class="o">=</span> <span class="n">generateRandTemperature</span><span class="p">(</span><span class="n">tempConf</span><span class="p">)</span>
+
+
+<span class="k">print</span><span class="p">(</span><span class="s">"랜덤값은"</span> <span class="p">,</span><span class="n">tempRandValue</span><span class="p">,</span> <span class="s">"/"</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">tempRandValue</span><span class="p">),</span> <span class="s">"입니다"</span><span class="p">)</span>
+<span class="c"># binary(tempRandValue)</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tempRandValue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="n">f1</span><span class="o">=</span><span class="n">bitstring</span><span class="o">.</span><span class="n">BitArray</span><span class="p">(</span><span class="nb">int</span><span class="o">=</span><span class="n">tempRandValue</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tempConf</span><span class="p">[</span><span class="s">"byte"</span><span class="p">])</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">f1</span><span class="o">=</span><span class="n">bitstring</span><span class="o">.</span><span class="n">BitArray</span><span class="p">(</span><span class="nb">float</span><span class="o">=</span><span class="n">tempRandValue</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tempConf</span><span class="p">[</span><span class="s">"byte"</span><span class="p">])</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+    
+<span class="k">print</span><span class="p">(</span><span class="s">"바이너리 표기 :"</span> <span class="p">,</span> <span class="n">f1</span><span class="o">.</span><span class="nb">bin</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="s">-----------------YAML-----------------</span>
+        <span class="s">{'Temperature'</span><span class="pi">:</span> <span class="pi">{</span><span class="s1">'</span><span class="s">code'</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span> <span class="s1">'</span><span class="s">type'</span><span class="pi">:</span> <span class="s1">'</span><span class="s">number'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">decimal_point'</span><span class="pi">:</span> <span class="nv">0</span><span class="pi">,</span> <span class="s1">'</span><span class="s">unit'</span><span class="pi">:</span> <span class="s1">'</span><span class="s">celcius'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">min'</span><span class="pi">:</span> <span class="nv">-100</span><span class="pi">,</span> <span class="s1">'</span><span class="s">max'</span><span class="pi">:</span> <span class="nv">100</span><span class="pi">,</span> <span class="s1">'</span><span class="s">byte'</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">}</span><span class="err">}</span>
+        <span class="s">-----------------JSON-----------------</span>
+        <span class="pi">{</span>
+        <span class="s2">"</span><span class="s">Temperature"</span><span class="pi">:</span> <span class="pi">{</span>
+                <span class="s2">"</span><span class="s">code"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
+                <span class="s2">"</span><span class="s">type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">number"</span><span class="pi">,</span>
+                <span class="s2">"</span><span class="s">decimal_point"</span><span class="pi">:</span> <span class="nv">0</span><span class="pi">,</span>
+                <span class="s2">"</span><span class="s">unit"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">celcius"</span><span class="pi">,</span>
+                <span class="s2">"</span><span class="s">min"</span><span class="pi">:</span> <span class="nv">-100</span><span class="pi">,</span>
+                <span class="s2">"</span><span class="s">max"</span><span class="pi">:</span> <span class="nv">100</span><span class="pi">,</span>
+                <span class="s2">"</span><span class="s">byte"</span><span class="pi">:</span> <span class="nv">4</span>
+                <span class="pi">}</span>
+        <span class="pi">}</span>
+        <span class="s">랜덤값은 -93 / &lt;class 'int'&gt; 입니다</span>
+        <span class="s">바이너리 표기</span> <span class="pi">:</span> <span class="s">1111111110100011</span>
+</code></pre></div></div>
 
 <hr />
 
@@ -300,6 +386,9 @@
   <li><a href="https://www.browserling.com/tools/yaml-to-json">yaml to json</a></li>
   <li><a href="https://www.browserling.com/tools/json-to-yaml">json to yaml</a></li>
   <li><a href="http://sjava.net/tag/protocol-buffer/">http://sjava.net/tag/protocol-buffer/</a></li>
+  <li><a href="https://codebeautify.org/text-to-binary">https://codebeautify.org/text-to-binary</a></li>
+  <li><a href="http://pythonhosted.org/bitstring/creation.html">http://pythonhosted.org/bitstring/creation.html</a></li>
+  <li><a href="https://stackoverflow.com/questions/16444726/binary-representation-of-float-in-python-bits-not-hex">https://stackoverflow.com/questions/16444726/binary-representation-of-float-in-python-bits-not-hex</a></li>
 </ol>
 
   </article>

@@ -14,11 +14,99 @@ comments: true
     - 데이터에 대한 notation 방식/설정은 YAML로 하고, 예제 데이터를 JSON으로 생성케 하고, JSON 데이터를 바이너리로 변환하는 기능
         - YAML에서 스키마를 조정할 때마다 자동으로 JSON 예제 만들어지고, 관련 Parser/Generator 또한 연계되어 작성되도록 하는 것을 목표로 함.
 
+        ```yaml
+        Temperature:
+                code : 1
+                type : number
+                decimal_point : 0
+                # 0 이면 integer
+                unit : celcius
+                min : -100
+                max : 100
+                byte : 4
+        ```
+
+- 개발기록
+    - YAML은 PyYaml을 이용
+    - binary 표기법은 [bitstring](http://pythonhosted.org/bitstring/index.html) 패키지를 이용
+
+```python
+import yaml, json
+import random
+import bitstring
+
+def generateRandTemperature(conf):
+    min = conf["min"]
+    max = conf["max"]
+    decpoint = conf["decimal_point"]
+
+    if(decpoint > 0):
+        value = random.uniform(min, max)
+        return round(value,int(decpoint))
+    else:
+        value = random.randint(min, max)
+        return value
+
+
+stream = """
+    temperature:
+        code : 1
+        type : number
+        decimal_point : 2
+        # 0 이면 integer
+        unit : celcius
+        min : -100
+        max : 100
+        byte : 4"""
+
+
+print("-----------------YAML-----------------");
+yaml_dict = yaml.load(stream)
+print (yaml_dict)
+
+print("-----------------JSON-----------------");
+print (json.dumps(yaml_dict, sort_keys=False, indent=2))
+
+
+
+tempConf = yaml_dict["temperature"]
+tempRandValue = generateRandTemperature(tempConf)
+
+
+print("랜덤값은" ,tempRandValue, "/", type(tempRandValue), "입니다")
+# binary(tempRandValue)
+if(type(tempRandValue) == int):
+    f1=bitstring.BitArray(int=tempRandValue, length=int(tempConf["byte"])*8)
+else:
+    f1=bitstring.BitArray(float=tempRandValue, length=int(tempConf["byte"])*8)
+    
+print("바이너리 표기 :" , f1.bin)
+```
+```yaml
+        -----------------YAML-----------------
+        {'Temperature': {'code': 1, 'type': 'number', 'decimal_point': 0, 'unit': 'celcius', 'min': -100, 'max': 100, 'byte': 4}}
+        -----------------JSON-----------------
+        {
+        "Temperature": {
+                "code": 1,
+                "type": "number",
+                "decimal_point": 0,
+                "unit": "celcius",
+                "min": -100,
+                "max": 100,
+                "byte": 4
+                }
+        }
+        랜덤값은 -93 / <class 'int'> 입니다
+        바이너리 표기 : 1111111110100011
+```
+
 <hr>
 
 ### YAML/JSON
 - YAML은 JSON보다 human 가독성은 더 좋음. 그래서 설정파일 다룰때 많이 씀
 - JSON은 데이터를 담을 때 많이 씀
+
 
 
 ### 기본자료형
@@ -159,3 +247,6 @@ comments: true
 3. [yaml to json](https://www.browserling.com/tools/yaml-to-json)
 4. [json to yaml](https://www.browserling.com/tools/json-to-yaml)
 5. [http://sjava.net/tag/protocol-buffer/](http://sjava.net/tag/protocol-buffer/)
+6. [https://codebeautify.org/text-to-binary](https://codebeautify.org/text-to-binary)
+7. [http://pythonhosted.org/bitstring/creation.html](http://pythonhosted.org/bitstring/creation.html)
+8. [https://stackoverflow.com/questions/16444726/binary-representation-of-float-in-python-bits-not-hex](https://stackoverflow.com/questions/16444726/binary-representation-of-float-in-python-bits-not-hex)

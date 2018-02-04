@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "증명사진 이미지 생성 서비스 개발기"
+title: "증명사진 포토프린팅용 콜라주 이미지 만들기"
 author: "Wook Hyun"
 categories: documentation
 tags: [dev log]
