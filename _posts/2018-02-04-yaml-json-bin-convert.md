@@ -10,6 +10,7 @@ comments: true
 
 # 데이터 notation/serialization 변환 기능 
 
+소스코드는 [https://github.com/superwhyun/sfdata_convert](https://github.com/superwhyun/sfdata_convert) 에서 다운가능합니다.
 - 개발목표
     - 데이터에 대한 notation 방식/설정은 YAML로 하고, 예제 데이터를 JSON으로 생성케 하고, JSON 데이터를 바이너리로 변환하는 기능
         - YAML에서 스키마를 조정할 때마다 자동으로 JSON 예제 만들어지고, ~~관련 Parser/Generator 또한 연계되어 작성되도록 하는 것을 목표로 함.~~
