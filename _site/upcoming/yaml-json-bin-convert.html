@@ -149,7 +149,17 @@
     <ul>
       <li>데이터에 대한 notation 방식/설정은 YAML로 하고, 예제 데이터를 JSON으로 생성케 하고, JSON 데이터를 바이너리로 변환하는 기능
         <ul>
-          <li>YAML에서 스키마를 조정할 때마다 자동으로 JSON 예제 만들어지고, 관련 Parser/Generator 또한 연계되어 작성되도록 하는 것을 목표로 함.</li>
+          <li>YAML에서 스키마를 조정할 때마다 자동으로 JSON 예제 만들어지고, <del>관련 Parser/Generator 또한 연계되어 작성되도록 하는 것을 목표로 함.</del></li>
+        </ul>
+      </li>
+      <li>부동소수점/음수 표기법
+        <ul>
+          <li>시스템에서 사용하는 부동소수점, 2의 보수 표기법을 쓰면 데이터 가독성이 매우 떨어지기 때문에 갖은 천재성 꼼수들이 등장하여 활용 중에 있음.
+            <ul>
+              <li>음수 : 변수가 수용가능한 최대값의 1/2을 더해 줌. 즉, 변수최대값의 1/2이 안되는 값은 음수.</li>
+              <li>부동소수점 : 소수점을 없애기 위해 곱한 10의 배수값을 별도 기재</li>
+            </ul>
+          </li>
         </ul>
 
         <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">Temperature</span><span class="pi">:</span>
@@ -171,75 +181,219 @@
       <li>binary 표기법은 <a href="http://pythonhosted.org/bitstring/index.html">bitstring</a> 패키지를 이용</li>
     </ul>
   </li>
+  <li>개발현황
+    <ul>
+      <li><del>YAML loading</del></li>
+      <li><del>JSON loading/dumping</del></li>
+      <li><del>바이너리 포맷 출력</del></li>
+      <li>~~라이브러리 자동 생성 –&gt; X ~~</li>
+    </ul>
+  </li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">yaml</span><span class="p">,</span> <span class="n">json</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">bitstring</span>
 
-<span class="k">def</span> <span class="nf">generateRandTemperature</span><span class="p">(</span><span class="n">conf</span><span class="p">):</span>
-    <span class="nb">min</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="s">"min"</span><span class="p">]</span>
-    <span class="nb">max</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="s">"max"</span><span class="p">]</span>
-    <span class="n">decpoint</span> <span class="o">=</span> <span class="n">conf</span><span class="p">[</span><span class="s">"decimal_point"</span><span class="p">]</span>
 
-    <span class="k">if</span><span class="p">(</span><span class="n">decpoint</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">decpoint</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">value</span>
+<span class="n">role2type_dic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"sensor"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s">"actuator"</span><span class="p">:</span><span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="n">func2code_dic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"temperature"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> 
+    <span class="s">"humidity"</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span> 
+    <span class="s">"CO2"</span><span class="p">:</span><span class="mi">32</span><span class="p">,</span>
+    <span class="s">"pyranometer"</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span>
+    <span class="s">"winddirection"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+    <span class="s">"windspeed"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span>
+    <span class="s">"rain"</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span>
+    <span class="s">"quantum"</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+    <span class="s">"soilmoisture"</span><span class="p">:</span><span class="mi">29</span><span class="p">,</span>
+    <span class="s">"soiltension"</span><span class="p">:</span><span class="mi">22</span><span class="p">,</span>
+    <span class="s">"EC"</span><span class="p">:</span><span class="mi">24</span><span class="p">,</span>
+    <span class="s">"PH"</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span>
+    <span class="s">"soiltemperature"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+    <span class="s">"uppermotor"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s">"sidemotor"</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s">"warmmotor"</span> <span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+    <span class="s">"curtainmotor"</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s">"ventilationfan"</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s">"circulationfan"</span> <span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="s">"irrigationpump"</span> <span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s">"irrigationvalve"</span> <span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+    <span class="s">"coolingheater"</span> <span class="p">:</span> <span class="mi">4</span>    
+    <span class="p">}</span>
+
+<span class="c"># actuator2code_dic = {</span>
+<span class="c">#     "uppermotor": 1,</span>
+<span class="c">#     "sidemotor" : 2,</span>
+<span class="c">#     "warmmotor" : 11,</span>
+<span class="c">#     "curtainmotor" : 6,</span>
+<span class="c">#     "ventilationfan" : 3,</span>
+<span class="c">#     "circulationfan" : 12,</span>
+<span class="c">#     "irrigationpump" : 8,</span>
+<span class="c">#     "irrigationvalve" : 13,</span>
+<span class="c">#     "coolingheater" : 4</span>
+<span class="c"># }</span>
 
 
-<span class="n">stream</span> <span class="o">=</span> <span class="s">"""
-    temperature:
-        code : 1
-        type : number
-        decimal_point : 2
-        # 0 이면 integer
-        unit : celcius
-        min : -100
-        max : 100
-        byte : 4"""</span>
+<span class="n">unit2code_dic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"none"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+    <span class="s">"default"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s">"celsius"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s">"fahrenheit"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span>
+    <span class="s">"percentage"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+    <span class="s">"ppm"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span>
+    <span class="s">"W/m2"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span>
+    <span class="s">"degree"</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span>
+    <span class="s">"m/s"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+    <span class="s">"umol/m2s"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span>
+    <span class="s">"</span><span class="si">%</span><span class="s">vol"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span>
+    <span class="s">"kPa"</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span>
+    <span class="s">"dS/m"</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span>
+    <span class="s">"pH"</span><span class="p">:</span><span class="mi">13</span>
+<span class="p">}</span>
 
+<span class="k">def</span> <span class="nf">gen_rand_values</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">identifier</span><span class="p">):</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">"-----------------YAML-----------------"</span><span class="p">);</span>
-<span class="n">yaml_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
-<span class="k">print</span> <span class="p">(</span><span class="n">yaml_dict</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">"-----------------JSON-----------------"</span><span class="p">);</span>
-<span class="k">print</span> <span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">yaml_dict</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-
-
-
-<span class="n">tempConf</span> <span class="o">=</span> <span class="n">yaml_dict</span><span class="p">[</span><span class="s">"temperature"</span><span class="p">]</span>
-<span class="n">tempRandValue</span> <span class="o">=</span> <span class="n">generateRandTemperature</span><span class="p">(</span><span class="n">tempConf</span><span class="p">)</span>
-
-
-<span class="k">print</span><span class="p">(</span><span class="s">"랜덤값은"</span> <span class="p">,</span><span class="n">tempRandValue</span><span class="p">,</span> <span class="s">"/"</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">tempRandValue</span><span class="p">),</span> <span class="s">"입니다"</span><span class="p">)</span>
-<span class="c"># binary(tempRandValue)</span>
-<span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tempRandValue</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="n">f1</span><span class="o">=</span><span class="n">bitstring</span><span class="o">.</span><span class="n">BitArray</span><span class="p">(</span><span class="nb">int</span><span class="o">=</span><span class="n">tempRandValue</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tempConf</span><span class="p">[</span><span class="s">"byte"</span><span class="p">])</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">f1</span><span class="o">=</span><span class="n">bitstring</span><span class="o">.</span><span class="n">BitArray</span><span class="p">(</span><span class="nb">float</span><span class="o">=</span><span class="n">tempRandValue</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">tempConf</span><span class="p">[</span><span class="s">"byte"</span><span class="p">])</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">conf</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"error: argument error"</span><span class="p">)</span>
+        <span class="k">return</span>
     
-<span class="k">print</span><span class="p">(</span><span class="s">"바이너리 표기 :"</span> <span class="p">,</span> <span class="n">f1</span><span class="o">.</span><span class="nb">bin</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">identifier</span> <span class="o">==-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">identifier</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">127</span><span class="p">)</span>
+
+    <span class="n">data</span><span class="o">=</span><span class="n">conf</span><span class="p">[</span><span class="n">dtype</span><span class="p">]</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"type"</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"min"</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"max"</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"min"</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"max"</span><span class="p">])</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"precision"</span><span class="p">]))</span>
+
+    <span class="n">D</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">D1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">D1</span><span class="p">[</span><span class="s">'identifier'</span><span class="p">]</span><span class="o">=</span><span class="n">identifier</span>
+    <span class="n">D1</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s">"type"</span><span class="p">]</span>
+    <span class="n">D1</span><span class="p">[</span><span class="s">'code'</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s">"code"</span><span class="p">]</span>
+    <span class="n">D1</span><span class="p">[</span><span class="s">'value'</span><span class="p">]</span><span class="o">=</span><span class="n">value</span>
+    <span class="n">D1</span><span class="p">[</span><span class="s">'unit'</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"unit"</span><span class="p">]</span>
+    <span class="n">D1</span><span class="p">[</span><span class="s">'precision'</span><span class="p">]</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s">"value"</span><span class="p">][</span><span class="s">"precision"</span><span class="p">]</span>
+
+    <span class="n">D</span><span class="p">[</span><span class="n">dtype</span><span class="p">]</span><span class="o">=</span><span class="n">D1</span>
+
+    <span class="k">return</span> <span class="n">D</span>
+
+
+<span class="k">def</span> <span class="nf">gen_bitstring</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="nb">len</span><span class="p">):</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="p">):</span>
+        <span class="n">genbit</span> <span class="o">=</span> <span class="n">bitstring</span><span class="o">.</span><span class="n">BitArray</span><span class="p">(</span><span class="nb">int</span><span class="o">=</span><span class="n">val</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="nb">len</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">genbit</span> <span class="o">=</span> <span class="n">bitstring</span><span class="o">.</span><span class="n">BitArray</span><span class="p">(</span><span class="nb">float</span><span class="o">=</span><span class="n">val</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="nb">len</span><span class="o">*</span><span class="mi">8</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s">"0x"</span><span class="o">+</span><span class="n">genbit</span><span class="o">.</span><span class="nb">hex</span><span class="o">+</span><span class="s">" ==&gt; "</span><span class="o">+</span><span class="n">genbit</span><span class="o">.</span><span class="nb">bin</span>
+
+
+<span class="k">def</span> <span class="nf">gen_binary_values</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span> <span class="n">dval</span><span class="p">):</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+    <span class="n">D</span><span class="p">[</span><span class="s">"identifier"</span><span class="p">]</span> <span class="o">=</span> <span class="n">gen_bitstring</span><span class="p">(</span><span class="n">dval</span><span class="p">[</span><span class="s">"identifier"</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s">"identifier"</span><span class="p">])</span>
+    <span class="n">D</span><span class="p">[</span><span class="s">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="n">gen_bitstring</span><span class="p">(</span><span class="n">role2type_dic</span><span class="p">[</span><span class="n">dval</span><span class="p">[</span><span class="s">"type"</span><span class="p">]],</span> <span class="n">conf</span><span class="p">[</span><span class="s">"type"</span><span class="p">])</span>
+    <span class="n">D</span><span class="p">[</span><span class="s">"code"</span><span class="p">]</span> <span class="o">=</span> <span class="n">gen_bitstring</span><span class="p">(</span><span class="n">func2code_dic</span><span class="p">[</span><span class="n">dval</span><span class="p">[</span><span class="s">"code"</span><span class="p">]],</span> <span class="n">conf</span><span class="p">[</span><span class="s">"code"</span><span class="p">])</span>
+    <span class="n">D</span><span class="p">[</span><span class="s">"length"</span><span class="p">]</span> <span class="o">=</span> <span class="n">gen_bitstring</span><span class="p">(</span><span class="n">conf</span><span class="p">[</span><span class="s">"value"</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s">"length"</span><span class="p">])</span>
+    <span class="n">D</span><span class="p">[</span><span class="s">"value"</span><span class="p">]</span> <span class="o">=</span> <span class="n">gen_bitstring</span><span class="p">(</span><span class="n">dval</span><span class="p">[</span><span class="s">"value"</span><span class="p">],</span> <span class="n">conf</span><span class="p">[</span><span class="s">"value"</span><span class="p">])</span>
+    <span class="n">D</span><span class="p">[</span><span class="s">"unit"</span><span class="p">]</span> <span class="o">=</span> <span class="n">gen_bitstring</span><span class="p">(</span><span class="n">unit2code_dic</span><span class="p">[</span><span class="n">dval</span><span class="p">[</span><span class="s">"unit"</span><span class="p">]],</span> <span class="n">conf</span><span class="p">[</span><span class="s">"unit"</span><span class="p">])</span>
+
+
+    <span class="c"># TLV 파라미터가 필요한 경우 (drafting...)</span>
+    <span class="c"># attr_cnt=0</span>
+    <span class="c"># for attr in conf["attr"]:</span>
+    <span class="c">#     if(attr == "unit"): </span>
+    <span class="c">#         D["unit"] = gen_bitstring(unit2code_dic[value["unit"]], 1)</span>
+    <span class="c">#         attr_cnt = attr_cnt+1</span>
+        
+
+    <span class="k">return</span> <span class="n">D</span>
+
+
+<span class="n">stream</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'sfdata_cfg.yml'</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span>
+            
+
+
+<span class="c"># print("-----------------YAML-----------------");</span>
+<span class="n">yaml_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+<span class="c"># print (yaml_dict)</span>
+
+<span class="c"># print("-----------------JSON-----------------");</span>
+<span class="c"># print (json.dumps(yaml_dict, sort_keys=False, indent=2))</span>
+
+<span class="n">value_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">"temperature"</span><span class="p">,</span>
+    <span class="s">"humidity"</span><span class="p">,</span>
+    <span class="s">"CO2"</span><span class="p">,</span>
+    <span class="s">"pyranometer"</span><span class="p">,</span>
+    <span class="s">"winddirection"</span><span class="p">,</span>
+    <span class="s">"windspeed"</span><span class="p">,</span>
+    <span class="s">"rain"</span><span class="p">,</span>
+    <span class="s">"quantum"</span><span class="p">,</span>
+    <span class="s">"soilmoisture"</span><span class="p">,</span>
+    <span class="s">"soiltension"</span><span class="p">,</span>
+    <span class="s">"EC"</span><span class="p">,</span>
+    <span class="s">"PH"</span><span class="p">,</span>
+    <span class="s">"soiltemperature"</span><span class="p">,</span>
+    <span class="s">"uppermotor"</span><span class="p">,</span>
+    <span class="s">"sidemotor"</span><span class="p">,</span>
+    <span class="s">"warmmotor"</span><span class="p">,</span>
+    <span class="s">"curtainmotor"</span><span class="p">,</span>
+    <span class="s">"ventilationfan"</span><span class="p">,</span>
+    <span class="s">"circulationfan"</span><span class="p">,</span>
+    <span class="s">"irrigationpump"</span><span class="p">,</span>
+    <span class="s">"irrigationvalve"</span><span class="p">,</span>
+    <span class="s">"coolingheater"</span>
+    
+<span class="p">]</span>
+
+
+
+
+<span class="k">for</span> <span class="n">val_type</span> <span class="ow">in</span> <span class="n">value_list</span><span class="p">:</span>
+    <span class="c"># val_type = "temperature"</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"--------------["</span><span class="p">,</span> <span class="n">val_type</span> <span class="p">,</span> <span class="s">"]-----------"</span><span class="p">)</span>
+    <span class="n">rand_val</span> <span class="o">=</span> <span class="n">gen_rand_values</span><span class="p">(</span><span class="n">yaml_dict</span><span class="p">,</span> <span class="n">val_type</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">binary_val</span> <span class="o">=</span> <span class="n">gen_binary_values</span><span class="p">(</span><span class="n">yaml_dict</span><span class="p">[</span><span class="n">val_type</span><span class="p">][</span><span class="s">"binary"</span><span class="p">],</span> <span class="n">rand_val</span><span class="p">[</span><span class="n">val_type</span><span class="p">])</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">"[JSON]</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">rand_val</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"[Binary]</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">binary_val</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+
+
+
+
 </code></pre></div></div>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="s">-----------------YAML-----------------</span>
-        <span class="s">{'Temperature'</span><span class="pi">:</span> <span class="pi">{</span><span class="s1">'</span><span class="s">code'</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span> <span class="s1">'</span><span class="s">type'</span><span class="pi">:</span> <span class="s1">'</span><span class="s">number'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">decimal_point'</span><span class="pi">:</span> <span class="nv">0</span><span class="pi">,</span> <span class="s1">'</span><span class="s">unit'</span><span class="pi">:</span> <span class="s1">'</span><span class="s">celcius'</span><span class="pi">,</span> <span class="s1">'</span><span class="s">min'</span><span class="pi">:</span> <span class="nv">-100</span><span class="pi">,</span> <span class="s1">'</span><span class="s">max'</span><span class="pi">:</span> <span class="nv">100</span><span class="pi">,</span> <span class="s1">'</span><span class="s">byte'</span><span class="pi">:</span> <span class="nv">4</span><span class="pi">}</span><span class="err">}</span>
-        <span class="s">-----------------JSON-----------------</span>
-        <span class="pi">{</span>
-        <span class="s2">"</span><span class="s">Temperature"</span><span class="pi">:</span> <span class="pi">{</span>
-                <span class="s2">"</span><span class="s">code"</span><span class="pi">:</span> <span class="nv">1</span><span class="pi">,</span>
-                <span class="s2">"</span><span class="s">type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">number"</span><span class="pi">,</span>
-                <span class="s2">"</span><span class="s">decimal_point"</span><span class="pi">:</span> <span class="nv">0</span><span class="pi">,</span>
-                <span class="s2">"</span><span class="s">unit"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">celcius"</span><span class="pi">,</span>
-                <span class="s2">"</span><span class="s">min"</span><span class="pi">:</span> <span class="nv">-100</span><span class="pi">,</span>
-                <span class="s2">"</span><span class="s">max"</span><span class="pi">:</span> <span class="nv">100</span><span class="pi">,</span>
-                <span class="s2">"</span><span class="s">byte"</span><span class="pi">:</span> <span class="nv">4</span>
-                <span class="pi">}</span>
-        <span class="pi">}</span>
-        <span class="s">랜덤값은 -93 / &lt;class 'int'&gt; 입니다</span>
-        <span class="s">바이너리 표기</span> <span class="pi">:</span> <span class="s">1111111110100011</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">...</span>
+<span class="s">--------------[ curtainmotor ]-----------</span>
+<span class="pi">[</span><span class="nv">JSON</span><span class="pi">]</span>
+ <span class="pi">{</span>
+  <span class="s2">"</span><span class="s">curtainmotor"</span><span class="pi">:</span> <span class="pi">{</span>
+    <span class="s2">"</span><span class="s">identifier"</span><span class="pi">:</span> <span class="nv">65</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">actuator"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">code"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">curtainmotor"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">value"</span><span class="pi">:</span> <span class="nv">0</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">unit"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">none"</span><span class="pi">,</span>
+    <span class="s2">"</span><span class="s">precision"</span><span class="pi">:</span> <span class="nv">0</span>
+  <span class="pi">}</span>
+<span class="pi">}</span>
+<span class="pi">[</span><span class="nv">Binary</span><span class="pi">]</span>
+ <span class="pi">{</span>
+  <span class="s2">"</span><span class="s">identifier"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0x41</span><span class="nv"> </span><span class="s">==&gt;</span><span class="nv"> </span><span class="s">01000001"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">type"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0x02</span><span class="nv"> </span><span class="s">==&gt;</span><span class="nv"> </span><span class="s">00000010"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">code"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0x06</span><span class="nv"> </span><span class="s">==&gt;</span><span class="nv"> </span><span class="s">00000110"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">length"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0x04</span><span class="nv"> </span><span class="s">==&gt;</span><span class="nv"> </span><span class="s">00000100"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">value"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0x00000000</span><span class="nv"> </span><span class="s">==&gt;</span><span class="nv"> </span><span class="s">00000000000000000000000000000000"</span><span class="pi">,</span>
+  <span class="s2">"</span><span class="s">unit"</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0x00</span><span class="nv"> </span><span class="s">==&gt;</span><span class="nv"> </span><span class="s">00000000"</span>
+<span class="pi">}</span>
+<span class="nn">...</span>
 </code></pre></div></div>
 
 <hr />
@@ -389,6 +543,9 @@
   <li><a href="https://codebeautify.org/text-to-binary">https://codebeautify.org/text-to-binary</a></li>
   <li><a href="http://pythonhosted.org/bitstring/creation.html">http://pythonhosted.org/bitstring/creation.html</a></li>
   <li><a href="https://stackoverflow.com/questions/16444726/binary-representation-of-float-in-python-bits-not-hex">https://stackoverflow.com/questions/16444726/binary-representation-of-float-in-python-bits-not-hex</a></li>
+  <li><a href="http://smeffect.tistory.com/entry/C%EC%96%B8%EC%96%B4-%EC%9E%85%EB%A0%A5%EB%90%9C-%EC%A0%95%EC%88%98%EC%9D%98-2%EC%9D%98-%EB%B3%B4%EC%88%98%EB%A5%BC-%EA%B5%AC%ED%95%98%EC%97%AC-10%EC%A7%84%EC%88%98-16%EC%A7%84%EC%88%98-%ED%98%95%ED%83%9C%EB%A1%9C-%EC%B6%9C%EB%A0%A5%ED%95%98%EB%8A%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8">2의 보수 구하는 C함수</a></li>
+  <li><a href="http://story.wisedog.net/python-programming-language-tutorial/python-datatype/dictionary/">파이썬 dict 사용법</a></li>
+  <li><a href="https://gregstoll.dyndns.org/~gregstoll/floattohex/">부동소수점 변환</a></li>
 </ol>
 
   </article>
