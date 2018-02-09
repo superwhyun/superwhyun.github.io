@@ -47,6 +47,9 @@ comments: true
 **Docker container의 터미널에 접근**
 > $ docker exec -it [container] /bin/bash
 
+**Docker container 로그 내용 보기**
+> $ docker logs [container]
+
 **Docker container에 있는 명령어 한번만 실행하기**
 > $ docker run -it --rm alpine /bin/sh
     

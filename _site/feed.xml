@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-08T23:33:05+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">MongoDB 사용하기</title><link href="http://localhost:4000/upcoming/mongodb.html" rel="alternate" type="text/html" title="MongoDB 사용하기" /><published>2018-02-08T00:00:00+09:00</published><updated>2018-02-08T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/mongodb</id><content type="html" xml:base="http://localhost:4000/upcoming/mongodb.html">&lt;h2 id=&quot;1-설치-및-실행&quot;&gt;1. 설치 및 실행&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-10T00:12:59+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">InfuxDB + Grafana 사용하기</title><link href="http://localhost:4000/upcoming/influxdb.html" rel="alternate" type="text/html" title="InfuxDB + Grafana 사용하기" /><published>2018-02-09T00:00:00+09:00</published><updated>2018-02-09T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/influxdb</id><content type="html" xml:base="http://localhost:4000/upcoming/influxdb.html">&lt;h1 id=&quot;influxdb와-grafana-연동하여-시계열-데이터-시각화-하기&quot;&gt;InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기&lt;/h1&gt;
+
+&lt;h2 id=&quot;influxdb&quot;&gt;InfluxDB&lt;/h2&gt;
+
+&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;시계열 데이터 저장&lt;/li&gt;
+  &lt;li&gt;현재 시각 이후의 미래 데이터는 저장이 안됨(?)&lt;/li&gt;
+  &lt;li&gt;시계열 데이터는 UTC 시간 기준
+    &lt;ul&gt;
+      &lt;li&gt;즉, datetime.now()가 아닌 datetime.utcnow()를 써야 함.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;influxdb-설치&quot;&gt;InfluxDB 설치&lt;/h3&gt;
+
+&lt;p&gt;설치하고 설정 잡느라 고생하지 말고, Docker를 쓰자&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker pull influxdb&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;터미널에서 바로 실행하려면 아래처럼 하자.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker run -p 8086:8086 
+      -v influxdb:/var/lib/influxdb 
+      influxdb&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;docker-compose.yml을 쓰려면 아래처럼 하자.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;na&quot;&gt;influxdb&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;influxdb:latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;influxdb&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./app/influxdb/influxdb:/var/lib/influxdb&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8086:8086&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;잘 돌아가는지 확인해 보자. influxdb CLI 접속하기!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker exec -it influxdb influx&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이제 database를 하나 만들고 지워보자.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; show databases;
+name: databases
+name
+----
+_internal
+           
+&amp;gt; create database test_db
+&amp;gt; show databases
+name: databases
+name
+----
+_internal
+test_db
+&amp;gt; drop database test_db
+&amp;gt; show databases
+name: databases
+name
+----
+_internal
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다시 만들고, 만져보자.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TBD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;python을-위한-influxdb-라이브러리-설치&quot;&gt;Python을 위한 InfluxDB 라이브러리 설치&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;$pip3 install influxdb&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;grafana와-연동&quot;&gt;Grafana와 연동&lt;/h2&gt;
+
+&lt;p&gt;influxDB에 들어 있는 내용을 그래프로 시각화 하기&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Add Data Source&lt;/li&gt;
+  &lt;li&gt;Add Dashboard&lt;/li&gt;
+  &lt;li&gt;Edit Graph
+    &lt;ul&gt;
+      &lt;li&gt;에러가 뜨거나 그래프가 안 그려지면, SQL 쿼리문을 잘 들여다 본다.&lt;/li&gt;
+      &lt;li&gt;docker logs 명령어로 influxdb container의 로그파일을 들여다 본다.
+        &lt;ul&gt;
+          &lt;li&gt;자세히 들여다보면 주소가 보인다. 그것을 카피해서 브라우저에서 열어본다. 잘 되나 본다.
+            &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; [httpd] 10.255.0.2 - root [09/Feb/2018:09:02:59 +0000] &quot;GET /query?db=tstest&amp;amp;epoch=ms&amp;amp;p=%5BREDACTED%5D&amp;amp;q=SELECT+%22fld03%22+FROM+%22table02%22+WHERE+%28%22host%22+%3D+%27server02%27%29+AND+time+%3E%3D+1517410800000ms+GROUP+BY+time%281s%29+fill%28none%29&amp;amp;u=root HTTP/1.1&quot; 200 103 &amp;lt;&quot;http://grafana.u2pia.local/d/tG3MB6jkk/new-dashboard-copy?panelId=2&amp;amp;fullscreen&amp;amp;edit&amp;amp;orgId=1&amp;amp;from=now%2FM&amp;amp;to=now&amp;amp;tab=metrics&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36&quot; 06e4af33-0d78-11e8-8033-000000000000 1044
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Grafana 페이지에서 ‘Query Inspector’를 보면 에러가 뭔지 대강 알 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://egloos.zum.com/mcchae/v/11201229&quot;&gt;Python-InfluxDB 입력 및 검색&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yenaworldblog.wordpress.com/2017/07/28/influxdb/&quot;&gt;INFLUXDB 설명 및 설치&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/arctic-1.jpg" /></entry><entry><title type="html">MongoDB 사용하기</title><link href="http://localhost:4000/upcoming/mongodb.html" rel="alternate" type="text/html" title="MongoDB 사용하기" /><published>2018-02-08T00:00:00+09:00</published><updated>2018-02-08T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/mongodb</id><content type="html" xml:base="http://localhost:4000/upcoming/mongodb.html">&lt;h2 id=&quot;1-설치-및-실행&quot;&gt;1. 설치 및 실행&lt;/h2&gt;
 
 &lt;h3 id=&quot;1-호스트에서-직접-설치실행&quot;&gt;1. 호스트에서 직접 설치/실행&lt;/h3&gt;
 
@@ -945,6 +1055,11 @@ enscript -2Gr --color -Ejavascript sample.js -o s.ps
 &lt;p&gt;&lt;strong&gt;Docker container의 터미널에 접근&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;$ docker exec -it [container] /bin/bash&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Docker container 로그 내용 보기&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;$ docker logs [container]&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Docker container에 있는 명령어 한번만 실행하기&lt;/strong&gt;&lt;/p&gt;
