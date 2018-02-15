@@ -144,6 +144,9 @@
   <article>
     <h1 id="influxdb와-grafana-연동하여-시계열-데이터-시각화-하기">InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기</h1>
 
+<p>InfluxDb나 Grafana는 시계열 데이터를 위해 특화되었기 때문에 time 정보가 있어야만 유용하게 사용할 수 있다.
+비 시계열성 데이터에 대한 chartting web app은 많이 있기는 한데, 라이센스가 유료일 공산이 크다.</p>
+
 <h2 id="influxdb">InfluxDB</h2>
 
 <h3 id="특징">특징</h3>
@@ -154,6 +157,28 @@
     <ul>
       <li>즉, datetime.now()가 아닌 datetime.utcnow()를 써야 함.</li>
     </ul>
+  </li>
+  <li>같은 시간으로 여러 데이터를 넣으면 덮어 씌워진다.
+    <ul>
+      <li>이를 해결하려면, 특정 데이터는 ‘tag’로 저장하면 된다. 아래 예제 참고</li>
+    </ul>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="s2">"measurement"</span><span class="p">:</span><span class="w"> </span><span class="err">table_name</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="s2">"fatrCode"</span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="s2">"facilityId"</span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"fatrCode"</span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"fldCode"</span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"itemCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"sectCode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+             </span><span class="s2">"senVal"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="err">None</span><span class="p">,</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
   </li>
 </ul>
 
@@ -217,6 +242,16 @@ _internal
 <p>다시 만들고, 만져보자.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TBD
+</code></pre></div></div>
+
+<p>시간정보가 가독성 떨어지면,</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; precision rfc3339
+</code></pre></div></div>
+
+<p>measurement(table)을 없애려면,</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>drop measurement environment_tbl
 </code></pre></div></div>
 
 <h3 id="python을-위한-influxdb-라이브러리-설치">Python을 위한 InfluxDB 라이브러리 설치</h3>
