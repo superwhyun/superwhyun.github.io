@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-16T02:26:53+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">InfuxDB + Grafana 사용하기</title><link href="http://localhost:4000/upcoming/influxdb.html" rel="alternate" type="text/html" title="InfuxDB + Grafana 사용하기" /><published>2018-02-09T00:00:00+09:00</published><updated>2018-02-09T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/influxdb</id><content type="html" xml:base="http://localhost:4000/upcoming/influxdb.html">&lt;h1 id=&quot;influxdb와-grafana-연동하여-시계열-데이터-시각화-하기&quot;&gt;InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-16T21:52:36+09:00</updated><id>http://localhost:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">유용한 학습 사이트</title><link href="http://localhost:4000/resources/learning.html" rel="alternate" type="text/html" title="유용한 학습 사이트" /><published>2018-02-14T00:00:00+09:00</published><updated>2018-02-14T00:00:00+09:00</updated><id>http://localhost:4000/resources/learning</id><content type="html" xml:base="http://localhost:4000/resources/learning.html">&lt;p&gt;일단 &lt;a href=&quot;http://www.bloter.net/archives/225814&quot;&gt;여기&lt;/a&gt;를 먼저 함 훑어 보시고…&lt;/p&gt;
+
+&lt;p&gt;아래는 추천할만한 곳.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;국내 사이트
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.inflearn.com/&quot;&gt;인프런 https://www.inflearn.com/&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;해외 사이트
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://stackskills.com/&quot;&gt;https://stackskills.com/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.edx.org/&quot;&gt;https://www.edx.org/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.makeschool.com/academy/&quot;&gt;https://www.makeschool.com/academy/&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">일단 여기를 먼저 함 훑어 보시고…</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/city-1.jpg" /></entry><entry><title type="html">InfuxDB + Grafana 사용하기</title><link href="http://localhost:4000/upcoming/influxdb.html" rel="alternate" type="text/html" title="InfuxDB + Grafana 사용하기" /><published>2018-02-09T00:00:00+09:00</published><updated>2018-02-09T00:00:00+09:00</updated><id>http://localhost:4000/upcoming/influxdb</id><content type="html" xml:base="http://localhost:4000/upcoming/influxdb.html">&lt;h1 id=&quot;influxdb와-grafana-연동하여-시계열-데이터-시각화-하기&quot;&gt;InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기&lt;/h1&gt;
 
 &lt;p&gt;InfluxDb나 Grafana는 시계열 데이터를 위해 특화되었기 때문에 time 정보가 있어야만 유용하게 사용할 수 있다.
 비 시계열성 데이터에 대한 chartting web app은 많이 있기는 한데, 라이센스가 유료일 공산이 크다.&lt;/p&gt;
@@ -1355,4 +1372,4 @@ swarm mode가 아니어도 동작 가능하다.&lt;/p&gt;
       &lt;span class=&quot;na&quot;&gt;condition&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;on-failure&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Vagrant commands</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/docker-swarm.jpg" /></entry><entry><title type="html">About the Author</title><link href="http://localhost:4000/facts/about-the-author.html" rel="alternate" type="text/html" title="About the Author" /><published>2016-04-04T00:00:00+09:00</published><updated>2016-04-04T00:00:00+09:00</updated><id>http://localhost:4000/facts/about-the-author</id><content type="html" xml:base="http://localhost:4000/facts/about-the-author.html">&lt;p&gt;/dev/null&lt;/p&gt;</content><author><name>Paul Le</name></author><category term="sample" /><summary type="html">/dev/null</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/cuba-4.jpg" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Vagrant commands</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/docker-swarm.jpg" /></entry></feed>

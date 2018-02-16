@@ -5,7 +5,7 @@
 
   <title>
     
-      Git, Github 활용 팁 정리 | U2PIA
+      유용한 학습 사이트 | U2PIA
     
   </title>
 
@@ -42,21 +42,21 @@
 
   <!-- Use Jekyll SEO plugin -->
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Git, Github 활용 팁 정리 | U2PIA</title>
+<title>유용한 학습 사이트 | U2PIA</title>
 <meta name="generator" content="Jekyll v3.6.2" />
-<meta property="og:title" content="Git, Github 활용 팁 정리" />
+<meta property="og:title" content="유용한 학습 사이트" />
 <meta name="author" content="Wook Hyun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="많이들 쓰니까 좋은갑따~ 하긴 하는데, 어떤 X이 git이 쉽다고 그런건지는 모르겠다만,.. 명령어도 많고 옵션도 많고.. 문제도 많이 생기고… 설명들도 개떡같고…" />
-<meta property="og:description" content="많이들 쓰니까 좋은갑따~ 하긴 하는데, 어떤 X이 git이 쉽다고 그런건지는 모르겠다만,.. 명령어도 많고 옵션도 많고.. 문제도 많이 생기고… 설명들도 개떡같고…" />
-<link rel="canonical" href="http://localhost:4000/documentation/git-commands.html" />
-<meta property="og:url" content="http://localhost:4000/documentation/git-commands.html" />
+<meta name="description" content="일단 여기를 먼저 함 훑어 보시고…" />
+<meta property="og:description" content="일단 여기를 먼저 함 훑어 보시고…" />
+<link rel="canonical" href="http://localhost:4000/resources/learning.html" />
+<meta property="og:url" content="http://localhost:4000/resources/learning.html" />
 <meta property="og:site_name" content="U2PIA" />
-<meta property="og:image" content="http://localhost:4000/nature-1.jpg" />
+<meta property="og:image" content="http://localhost:4000/city-1.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-03T00:00:00+09:00" />
+<meta property="article:published_time" content="2018-02-14T00:00:00+09:00" />
 <script type="application/ld+json">
-{"description":"많이들 쓰니까 좋은갑따~ 하긴 하는데, 어떤 X이 git이 쉽다고 그런건지는 모르겠다만,.. 명령어도 많고 옵션도 많고.. 문제도 많이 생기고… 설명들도 개떡같고…","author":{"@type":"Person","name":"Wook Hyun"},"@type":"BlogPosting","url":"http://localhost:4000/documentation/git-commands.html","image":"http://localhost:4000/nature-1.jpg","headline":"Git, Github 활용 팁 정리","dateModified":"2018-02-03T00:00:00+09:00","datePublished":"2018-02-03T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/documentation/git-commands.html"},"@context":"http://schema.org"}</script>
+{"description":"일단 여기를 먼저 함 훑어 보시고…","author":{"@type":"Person","name":"Wook Hyun"},"@type":"BlogPosting","url":"http://localhost:4000/resources/learning.html","image":"http://localhost:4000/city-1.jpg","headline":"유용한 학습 사이트","dateModified":"2018-02-14T00:00:00+09:00","datePublished":"2018-02-14T00:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/resources/learning.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -120,15 +120,14 @@
   <div class="posts-wrapper">
     <div class="page-content">
   <h1>
-    Git, Github 활용 팁 정리
+    유용한 학습 사이트
   </h1>
 
   <span class="post-date">
     Written on
     
     February
-    3rd
-      ,
+    14th,
     2018
     by
     
@@ -138,59 +137,28 @@
 
   
     <div class="featured-image">
-      <img src="/assets/img/nature-1.jpg">
+      <img src="/assets/img/city-1.jpg">
     </div>
   
 
   <article>
-    <p>많이들 쓰니까 좋은갑따~ 하긴 하는데, 어떤 X이 git이 쉽다고 그런건지는 모르겠다만,.. 명령어도 많고 옵션도 많고.. 문제도 많이 생기고… 설명들도 개떡같고…</p>
+    <p>일단 <a href="http://www.bloter.net/archives/225814">여기</a>를 먼저 함 훑어 보시고…</p>
 
-<h2 id="git-command">Git command</h2>
-
-<p>git가 초기 나왔을 때에는 몇가지 커맨드만 사용하면 되었는데, 요즘은 너무 많고 이해하기도 어렵다. 그냥 많이 써본 것과 유용할 것으로 판단되는 몇가지들만 정리해 본다.</p>
-
-<h3 id="소스코드를-다운-받을-때">소스코드를 다운 받을 때</h3>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone [address]
-</code></pre></div></div>
-
-<h3 id="소스코드를-올릴-때">소스코드를 올릴 때</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git init
-$ git remote add https://[git-repository-address
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add .
-$ git commit -m "comments"
-$ git push origin master
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="github">Github</h2>
-
-<p><img src="https://linode.com/docs/assets/git-github-workflow-1000w.png" alt="git, github" class="img-responsive" /></p>
-
-<hr />
-
-<h2 id="trouble-shooting">Trouble Shooting</h2>
-
-<h3 id="q-git-remote-repository에-push하려면-모든-코드를-일단-다-받아놔야-하나">Q. Git remote repository에 push하려면 모든 코드를 일단 다 받아놔야 하나?</h3>
-
-<p>필요한 파일 하나만 바꾸고, 그 녀석만 올릴 수는 없을까? 가능할까?</p>
-
-<h3 id="q-git-commit-이-많이-쌓이면">Q. Git commit 이 많이 쌓이면?</h3>
-
-<p>commit이 많은 코드를 git clone할 때 마다 모든 히스토리가 따라오기 때문에 크기가 커지는 것 같다. 이런 히스토리를 정리하면 좀 가벼워질 듯.</p>
-
-<p><strong>git merge</strong>를 쓰면 될 듯.</p>
-
-<h3 id="mac에서-github-계정-없애기">Mac에서 github 계정 없애기</h3>
-
-<p>가끔 다른 github 계정을 써야 할 경우가 있는데, github account 계정이 시스템 내에 저장되어서 변경이 안된다.
-둘을 다 쓰게 하는 방법도 있기는 하나, 해야 할 것이 많다. 걍 날리려면 아래처럼 하면 된다.</p>
+<p>아래는 추천할만한 곳.</p>
 
 <ul>
-  <li>https://help.github.com/articles/updating-credentials-from-the-osx-keychain/</li>
+  <li>국내 사이트
+    <ul>
+      <li><a href="https://www.inflearn.com/">인프런 https://www.inflearn.com/</a></li>
+    </ul>
+  </li>
+  <li>해외 사이트
+    <ul>
+      <li><a href="https://stackskills.com/">https://stackskills.com/</a></li>
+      <li><a href="https://www.edx.org/">https://www.edx.org/</a></li>
+      <li><a href="https://www.makeschool.com/academy/">https://www.makeschool.com/academy/</a></li>
+    </ul>
+  </li>
 </ul>
 
   </article>
@@ -222,9 +190,9 @@ $ git push origin master
   <div class="post-share">
     <div class="post-date">Feel free to share!</div>
     <div class="sharing-icons">
-      <a href="https://twitter.com/intent/tweet?text=Git, Github 활용 팁 정리&amp;url=/documentation/git-commands.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/documentation/git-commands.html&amp;title=Git, Github 활용 팁 정리" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href="https://plus.google.com/share?url=/documentation/git-commands.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/intent/tweet?text=유용한 학습 사이트&amp;url=/resources/learning.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/resources/learning.html&amp;title=유용한 학습 사이트" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=/resources/learning.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -235,22 +203,6 @@ $ git push origin master
       
         
           
-            <li>
-              <h3>
-                <a href="/resources/learning.html">
-                  <div class="related-thumbnail">
-                    
-                      <img src="http://localhost:4000/assets/img/city-1.jpg">
-                    
-                  </div>
-                  <div class="related-title">
-                    유용한 학습 사이트
-                  </div>
-                  <!--<small>February 14, 2018</small>-->
-                </a>
-              </h3>
-            </li>
-            
           
         
           
