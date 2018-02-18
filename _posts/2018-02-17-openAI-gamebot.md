@@ -2,7 +2,7 @@
 layout: post
 title: "OpenAI - Auto Gamebot"
 author: "Wook Hyun"
-categories: upcoming
+categories: documentation
 tags: [blog]
 image: openai-gym.png
 comments: true
