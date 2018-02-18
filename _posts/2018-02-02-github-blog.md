@@ -79,13 +79,22 @@ _post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML 
 
 ### Markdown 사용 팁
 
-전체 목록은 [[마크다운 깃헙 가이드]](https://guides.github.com/features/mastering-markdown/)를 참고하자. 이 포스트에서는 그 외의 것들을 다뤄본다.
+전체 목록은 [[마크다운 깃헙 가이드]](https://guides.github.com/features/mastering-markdown/)를 참고하고, 
+기본적인 것들은 [https://jekyllrb.com/docs/posts/](https://jekyllrb.com/docs/posts/)를 참고하자.
+
+가급적이면, 이 포스트에서는 그 외의 것들을 다뤄본다.
 
 - 글자에 색상을 넣고, 글자 크기도 조정하고 싶어요
 
 ```css
 <span style="color:blue;font-size:8pt">aaa</span>
 ```
+
+이미지를 넣고 싶으면 아래 태그를 이용하고, 
+이미지는 assets/img 폴더 밑에 넣어주자.
+
+![screenshot]({{ "/assets/img/openai.png" }}){:class="img-responsive"}
+
 
 <hr>
 ## Trouble shooting

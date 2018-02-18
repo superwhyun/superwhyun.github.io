@@ -111,7 +111,7 @@ th, td {
   Site container
 */
 .container {
-  width: 1100px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -122,12 +122,12 @@ th, td {
   padding-top: 66px;
   margin: auto;
   display: block;
-  width: 1080px; }
+  width: 1180px; }
 
 .posts-wrapper h1 {
   margin: 20px 0px 5px; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .container {
     width: 95vw;
     margin-left: auto;
@@ -139,7 +139,7 @@ th, td {
     display: block;
     width: 95vw; } }
 .featured-posts {
-  height: 400px;
+  height: 100px;
   margin: 5px 10px 10px;
   padding: 10px;
   background-position: center;
@@ -155,7 +155,7 @@ th, td {
   /* fallback color */
   background: rgba(0, 0, 0, 0.7);
   padding: 10px;
-  margin-top: 320px; }
+  margin-top: 20px; }
 
 .featured-posts span a {
   color: white; }
@@ -200,7 +200,7 @@ th, td {
   margin-bottom: 10px; }
 
 .page-content {
-  width: 600px;
+  width: 1200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -219,7 +219,7 @@ th, td {
   display: block;
   max-width: 600px; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .page-content {
     width: 60vw;
     display: block;
@@ -285,7 +285,7 @@ th, td {
   padding-bottom: .5rem;
   font-family: "Roboto", sans-serif; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .related-thumbnail {
     width: 60vw; } }
 @media (max-width: 600px) {
@@ -293,12 +293,12 @@ th, td {
     width: 95vw; } }
 .site-header {
   min-height: 56px;
-  width: 1100px;
+  width: 1200px;
   position: fixed;
   background-color: white;
   box-shadow: 0 5px 6px -6px #bbb; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .site-header {
     min-height: 56px;
     width: 95vw;
@@ -327,13 +327,13 @@ th, td {
 /*
   Responsiveness with a dropdown menu
 */
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   .dropbtn {
     display: none; }
 
   .dropdown-content {
     display: none; } }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .menu-list {
     display: none; }
 
@@ -381,14 +381,14 @@ th, td {
   text-align: center;
   min-height: 56px;
   line-height: 45px;
-  width: 1100px; }
+  width: 1200px; }
 
 .footer a {
   color: black;
   padding: 0px 10px 0px;
   text-decoration: none; }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .footer {
     background: white;
     color: black;
