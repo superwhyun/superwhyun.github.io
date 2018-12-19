@@ -7,6 +7,76 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Python에서 OpenCV 사용하기</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;p&gt;python으로 openCV를 이용해 카메라/영상을 제어하고자 할때..&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/python-opencv.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/python-opencv.html</guid>
+			</item>
+		
+			<item>
+				<title>Python에서 fork, exec등을 위한 subprocess 사용법</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;예제코드&quot;&gt;예제코드&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/tips/python-exec.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/tips/python-exec.html</guid>
+			</item>
+		
+			<item>
+				<title>Jekyll 사용팁</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;google-docs-문서-임베딩하기&quot;&gt;Google Docs 문서 임베딩하기&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/tips/jekyll.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/tips/jekyll.html</guid>
+			</item>
+		
+			<item>
+				<title>Ethereum testnet 구축, 채굴, 자체 코인 발행</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;style&gt;
+.responsive-wrap iframe{ max-width: 100%;}
+&lt;/style&gt;
+
+&lt;div class=&quot;responsive-wrap&quot;&gt;
+&lt;!-- this is the embed code provided by Google --&gt;
+  &lt;iframe src=&quot;https://docs.google.com/document/d/e/2PACX-1vSqUUImEBqVQzeldrtyyfuhfw04PzGNrrIOMWQV4jnggtW2JlGq2pYrhpbSiliYnBx6zkv7jFPl-k5q/pub?embedded=true&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;!-- Google embed ends --&gt;
+&lt;/div&gt;
+</description>
+				
+				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/ethereum-testnet.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/ethereum-testnet.html</guid>
+			</item>
+		
+			<item>
 				<title>AWK, Xargs 등 bash script</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
@@ -17,8 +87,8 @@
 </description>
 				
 				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/resources/awk.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/resources/awk.html</guid>
+				<link>http://0.0.0.0:4000/tips/awk.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/tips/awk.html</guid>
 			</item>
 		
 			<item>
@@ -94,68 +164,6 @@
 				<pubDate>Sun, 04 Feb 2018 00:00:00 -0600</pubDate>
 				<link>http://0.0.0.0:4000/upcoming/yaml-json-bin-convert.html</link>
 				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/yaml-json-bin-convert.html</guid>
-			</item>
-		
-			<item>
-				<title>우분투 17.10.1에 nvidia-docker 올리기</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;ubuntu-17101에-nvidia-docker-설치하는-순서&quot;&gt;Ubuntu 17.10.1에 Nvidia-Docker 설치하는 순서&lt;/h1&gt;
-
-</description>
-				
-				<pubDate>Sat, 03 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/nvidia-docker.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/nvidia-docker.html</guid>
-			</item>
-		
-			<item>
-				<title>Git, Github 활용 팁 정리</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;p&gt;많이들 쓰니까 좋은갑따~ 하긴 하는데, 어떤 X이 git이 쉽다고 그런건지는 모르겠다만,.. 명령어도 많고 옵션도 많고.. 문제도 많이 생기고… 설명들도 개떡같고…&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Sat, 03 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/git-commands.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/git-commands.html</guid>
-			</item>
-		
-			<item>
-				<title>Source code 예쁘게 프린트 하기</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;div style=&quot;text-align: right; font-size: 50%&quot;&gt; 
- &lt;a href=&quot;https://www.crazyegg.com/blog/8-reasons-analyze-source-code/&quot;&gt;image from&lt;/a&gt;
-&lt;/div&gt;
-
-</description>
-				
-				<pubDate>Fri, 02 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/source-code-print.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/source-code-print.html</guid>
-			</item>
-		
-			<item>
-				<title>Github.io Blog 만들기 </title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h2 id=&quot;githubio-에-블로그--만들기&quot;&gt;Github.io 에 블로그  만들기&lt;/h2&gt;
-
-</description>
-				
-				<pubDate>Fri, 02 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/github-blog.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/github-blog.html</guid>
 			</item>
 		
 	</channel>

@@ -12,6 +12,7 @@ menu:
 - {name: 'Learning Resources', folder: 'pages', file: 'resources.html'}
 - {name: 'Upcoming', folder: 'pages', file: 'upcoming.html'}
 - {name: 'Documentation', folder: 'pages', file: 'documentation.html'}
+- {name: 'Tips', folder: 'pages', file: 'tips.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
 
