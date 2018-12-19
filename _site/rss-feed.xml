@@ -7,6 +7,21 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>AWK 사용법</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;awk-사용법&quot;&gt;AWK 사용법&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/resources/awk.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/resources/awk.html</guid>
+			</item>
+		
+			<item>
 				<title>OpenAI - Auto Gamebot</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
@@ -16,9 +31,9 @@
 
 </description>
 				
-				<pubDate>Sat, 17 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/documentation/openAI-gamebot.html</link>
-				<guid isPermaLink="true">http://localhost:4000/documentation/openAI-gamebot.html</guid>
+				<pubDate>Sat, 17 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/openAI-gamebot.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/openAI-gamebot.html</guid>
 			</item>
 		
 			<item>
@@ -31,9 +46,9 @@
 
 </description>
 				
-				<pubDate>Wed, 14 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/resources/learning.html</link>
-				<guid isPermaLink="true">http://localhost:4000/resources/learning.html</guid>
+				<pubDate>Wed, 14 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/resources/learning.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/resources/learning.html</guid>
 			</item>
 		
 			<item>
@@ -46,9 +61,9 @@
 
 </description>
 				
-				<pubDate>Fri, 09 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/upcoming/influxdb.html</link>
-				<guid isPermaLink="true">http://localhost:4000/upcoming/influxdb.html</guid>
+				<pubDate>Fri, 09 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/upcoming/influxdb.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/influxdb.html</guid>
 			</item>
 		
 			<item>
@@ -61,9 +76,9 @@
 
 </description>
 				
-				<pubDate>Thu, 08 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/upcoming/mongodb.html</link>
-				<guid isPermaLink="true">http://localhost:4000/upcoming/mongodb.html</guid>
+				<pubDate>Thu, 08 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/upcoming/mongodb.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/mongodb.html</guid>
 			</item>
 		
 			<item>
@@ -76,9 +91,9 @@
 
 </description>
 				
-				<pubDate>Sun, 04 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/upcoming/yaml-json-bin-convert.html</link>
-				<guid isPermaLink="true">http://localhost:4000/upcoming/yaml-json-bin-convert.html</guid>
+				<pubDate>Sun, 04 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/upcoming/yaml-json-bin-convert.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/yaml-json-bin-convert.html</guid>
 			</item>
 		
 			<item>
@@ -91,9 +106,9 @@
 
 </description>
 				
-				<pubDate>Sat, 03 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/documentation/nvidia-docker.html</link>
-				<guid isPermaLink="true">http://localhost:4000/documentation/nvidia-docker.html</guid>
+				<pubDate>Sat, 03 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/nvidia-docker.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/nvidia-docker.html</guid>
 			</item>
 		
 			<item>
@@ -106,9 +121,9 @@
 
 </description>
 				
-				<pubDate>Sat, 03 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/documentation/git-commands.html</link>
-				<guid isPermaLink="true">http://localhost:4000/documentation/git-commands.html</guid>
+				<pubDate>Sat, 03 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/git-commands.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/git-commands.html</guid>
 			</item>
 		
 			<item>
@@ -123,9 +138,9 @@
 
 </description>
 				
-				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/documentation/source-code-print.html</link>
-				<guid isPermaLink="true">http://localhost:4000/documentation/source-code-print.html</guid>
+				<pubDate>Fri, 02 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/source-code-print.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/source-code-print.html</guid>
 			</item>
 		
 			<item>
@@ -138,24 +153,9 @@
 
 </description>
 				
-				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/documentation/github-blog.html</link>
-				<guid isPermaLink="true">http://localhost:4000/documentation/github-blog.html</guid>
-			</item>
-		
-			<item>
-				<title>증명사진 포토프린팅용 콜라주 이미지 만들기</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;p&gt;증명사진 스캔 파일을 업로드하면, 여권/비자/반명함/증명사진 규격으로 프린트할 수 있도록 크기를 잡아주고 collage를 만들어 주는 웹 서비스로 뜻밖에 유료로 서비스하는 곳이 많음. express, node.js를 이용해서 drag &amp;amp; drop으로 file upload하고, 원하는 규격별로 사이즈 잡은 후에 photo-collage 라이브러리를 이용해 A4 한장에 여러 장의 사진이 배치되도록 함.&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Fri, 02 Feb 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/documentation/dev-log-idphoto.html</link>
-				<guid isPermaLink="true">http://localhost:4000/documentation/dev-log-idphoto.html</guid>
+				<pubDate>Fri, 02 Feb 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/documentation/github-blog.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/github-blog.html</guid>
 			</item>
 		
 	</channel>
