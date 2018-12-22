@@ -7,6 +7,21 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Docker container에서 mysql server 실행 안되는 문제</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;증상&quot;&gt;증상&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Fri, 21 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:4000/tips/mysql-docker.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:4000/tips/mysql-docker.html</guid>
+			</item>
+		
+			<item>
 				<title>Python에서 OpenCV 사용하기</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
@@ -149,21 +164,6 @@
 				<pubDate>Thu, 08 Feb 2018 00:00:00 -0600</pubDate>
 				<link>http://0.0.0.0:4000/upcoming/mongodb.html</link>
 				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/mongodb.html</guid>
-			</item>
-		
-			<item>
-				<title>센서 데이터 Text-Binary 변환 엔진</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;데이터-notationserialization-변환-기능&quot;&gt;데이터 notation/serialization 변환 기능&lt;/h1&gt;
-
-</description>
-				
-				<pubDate>Sun, 04 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/upcoming/yaml-json-bin-convert.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/yaml-json-bin-convert.html</guid>
 			</item>
 		
 	</channel>

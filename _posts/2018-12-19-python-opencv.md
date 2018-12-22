@@ -4,7 +4,7 @@ title: "Python에서 OpenCV 사용하기"
 author: "Wook Hyun"
 categories: documentation
 tags: [blog]
-image: nature-1.jpg
+image: python.svg
 comments: true
 ---
 

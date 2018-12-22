@@ -4,7 +4,7 @@ title: "Python에서 fork, exec등을 위한 subprocess 사용법"
 author: "Wook Hyun"
 categories: tips
 tags: [blog]
-image: nature-1.jpg
+image: python.svg
 comments: true
 ---
 
