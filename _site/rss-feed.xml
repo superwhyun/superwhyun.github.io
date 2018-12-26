@@ -7,18 +7,48 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Docker container에서 mysql server 실행 안되는 문제</title>
+				<title>유니티 3D</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
 				
 				
-					<description>&lt;h1 id=&quot;증상&quot;&gt;증상&lt;/h1&gt;
+					<description>&lt;h1 id=&quot;nginx-등-웹서버&quot;&gt;Nginx 등 웹서버&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Tue, 25 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:3000/documentation/unity.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/unity.html</guid>
+			</item>
+		
+			<item>
+				<title>FFMPEG 사용하기</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h2 id=&quot;영상을-일정-간격으로-자르기&quot;&gt;영상을 일정 간격으로 자르기&lt;/h2&gt;
 
 </description>
 				
 				<pubDate>Fri, 21 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/tips/mysql-docker.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/tips/mysql-docker.html</guid>
+				<link>http://0.0.0.0:3000/tips/ffmpeg.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/tips/ffmpeg.html</guid>
+			</item>
+		
+			<item>
+				<title>각종 Docker images 사용법</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;nginx-등-웹서버&quot;&gt;Nginx 등 웹서버&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Fri, 21 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:3000/tips/docker-containers.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/tips/docker-containers.html</guid>
 			</item>
 		
 			<item>
@@ -35,8 +65,8 @@
 </description>
 				
 				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/python-opencv.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/python-opencv.html</guid>
+				<link>http://0.0.0.0:3000/documentation/python-opencv.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/python-opencv.html</guid>
 			</item>
 		
 			<item>
@@ -50,8 +80,23 @@
 </description>
 				
 				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/tips/python-exec.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/tips/python-exec.html</guid>
+				<link>http://0.0.0.0:3000/tips/python-exec.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/tips/python-exec.html</guid>
+			</item>
+		
+			<item>
+				<title>각종 유용한 Linux 명령어들</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;p&gt;기초적인 것들은 제외..&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:3000/tips/linux-command.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/tips/linux-command.html</guid>
 			</item>
 		
 			<item>
@@ -65,8 +110,8 @@
 </description>
 				
 				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/tips/jekyll.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/tips/jekyll.html</guid>
+				<link>http://0.0.0.0:3000/tips/jekyll.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/tips/jekyll.html</guid>
 			</item>
 		
 			<item>
@@ -87,23 +132,8 @@
 </description>
 				
 				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/ethereum-testnet.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/ethereum-testnet.html</guid>
-			</item>
-		
-			<item>
-				<title>AWK, Xargs 등 bash script</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;awk-xargs-등-사용예제&quot;&gt;AWK, Xargs 등 사용예제&lt;/h1&gt;
-
-</description>
-				
-				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/tips/awk.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/tips/awk.html</guid>
+				<link>http://0.0.0.0:3000/documentation/ethereum-testnet.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/ethereum-testnet.html</guid>
 			</item>
 		
 			<item>
@@ -117,8 +147,8 @@
 </description>
 				
 				<pubDate>Sat, 17 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/documentation/openAI-gamebot.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/documentation/openAI-gamebot.html</guid>
+				<link>http://0.0.0.0:3000/documentation/openAI-gamebot.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/openAI-gamebot.html</guid>
 			</item>
 		
 			<item>
@@ -132,38 +162,8 @@
 </description>
 				
 				<pubDate>Wed, 14 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/resources/learning.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/resources/learning.html</guid>
-			</item>
-		
-			<item>
-				<title>InfuxDB + Grafana 사용하기</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h1 id=&quot;influxdb와-grafana-연동하여-시계열-데이터-시각화-하기&quot;&gt;InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기&lt;/h1&gt;
-
-</description>
-				
-				<pubDate>Fri, 09 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/upcoming/influxdb.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/influxdb.html</guid>
-			</item>
-		
-			<item>
-				<title>MongoDB 사용하기</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h2 id=&quot;1-설치-및-실행&quot;&gt;1. 설치 및 실행&lt;/h2&gt;
-
-</description>
-				
-				<pubDate>Thu, 08 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:4000/upcoming/mongodb.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:4000/upcoming/mongodb.html</guid>
+				<link>http://0.0.0.0:3000/resources/learning.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/resources/learning.html</guid>
 			</item>
 		
 	</channel>

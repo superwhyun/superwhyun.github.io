@@ -5,7 +5,7 @@
 
   <title>
     
-      우분투 17.10.1에 nvidia-docker 올리기 | U2PIA
+      FFMPEG 사용하기 | U2PIA
     
   </title>
 
@@ -42,21 +42,21 @@
 
   <!-- Use Jekyll SEO plugin -->
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>우분투 17.10.1에 nvidia-docker 올리기 | U2PIA</title>
+<title>FFMPEG 사용하기 | U2PIA</title>
 <meta name="generator" content="Jekyll v3.6.2" />
-<meta property="og:title" content="우분투 17.10.1에 nvidia-docker 올리기" />
+<meta property="og:title" content="FFMPEG 사용하기" />
 <meta name="author" content="Wook Hyun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Ubuntu 17.10.1에 Nvidia-Docker 설치하는 순서" />
-<meta property="og:description" content="Ubuntu 17.10.1에 Nvidia-Docker 설치하는 순서" />
-<link rel="canonical" href="http://0.0.0.0:3000/documentation/nvidia-docker.html" />
-<meta property="og:url" content="http://0.0.0.0:3000/documentation/nvidia-docker.html" />
+<meta name="description" content="영상을 일정 간격으로 자르기" />
+<meta property="og:description" content="영상을 일정 간격으로 자르기" />
+<link rel="canonical" href="http://0.0.0.0:3000/tips/ffmpeg.html" />
+<meta property="og:url" content="http://0.0.0.0:3000/tips/ffmpeg.html" />
 <meta property="og:site_name" content="U2PIA" />
-<meta property="og:image" content="http://0.0.0.0:3000/nvidia-docker.png" />
+<meta property="og:image" content="http://0.0.0.0:3000/ffmpeg.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-03T00:00:00-06:00" />
+<meta property="article:published_time" content="2018-12-21T00:00:00-06:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","image":"http://0.0.0.0:3000/nvidia-docker.png","url":"http://0.0.0.0:3000/documentation/nvidia-docker.html","headline":"우분투 17.10.1에 nvidia-docker 올리기","dateModified":"2018-02-03T00:00:00-06:00","datePublished":"2018-02-03T00:00:00-06:00","author":{"@type":"Person","name":"Wook Hyun"},"description":"Ubuntu 17.10.1에 Nvidia-Docker 설치하는 순서","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:3000/documentation/nvidia-docker.html"},"@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","image":"http://0.0.0.0:3000/ffmpeg.jpg","url":"http://0.0.0.0:3000/tips/ffmpeg.html","headline":"FFMPEG 사용하기","dateModified":"2018-12-21T00:00:00-06:00","datePublished":"2018-12-21T00:00:00-06:00","author":{"@type":"Person","name":"Wook Hyun"},"description":"영상을 일정 간격으로 자르기","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:3000/tips/ffmpeg.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -124,14 +124,14 @@
   <div class="posts-wrapper">
     <div class="page-content">
   <h1>
-    우분투 17.10.1에 nvidia-docker 올리기
+    FFMPEG 사용하기
   </h1>
 
   <span class="post-date">
     Written on
     
-    February
-    3rd
+    December
+    21st
       ,
     2018
     by
@@ -142,59 +142,37 @@
 
   
     <div class="featured-image">
-      <img src="/assets/img/nvidia-docker.png">
+      <img src="/assets/img/ffmpeg.jpg">
     </div>
   
 
   <article>
-    <h1 id="ubuntu-17101에-nvidia-docker-설치하는-순서">Ubuntu 17.10.1에 Nvidia-Docker 설치하는 순서</h1>
+    <h2 id="영상을-일정-간격으로-자르기">영상을 일정 간격으로 자르기</h2>
 
-<p>nvidia-docker의 공식홈페이지에 연결된 위키에 절차가 나와 있음. 
-https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:00:00 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:00:20 ./mov/1.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:00:20 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:00:40 ./mov/2.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:00:40 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:01:00 ./mov/3.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:01:00 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:01:20 ./mov/4.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:01:20 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:01:40 ./mov/5.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:01:40 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:02:00 ./mov/6.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:02:00 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:02:20 ./mov/7.mp4
+ffmpeg <span class="nt">-i</span> input.mp4 <span class="nt">-ss</span> 00:02:20 <span class="nt">-strict</span> <span class="nt">-2</span> <span class="nt">-to</span> 00:02:40 ./mov/8.mp4
+...
 
-<p>그러나, 이 내용만으로는 부족해서 다시 정리함</p>
+</code></pre></div></div>
 
-<ol>
-  <li>
-    <p>Ubuntu 설치 –&gt; 평소 하던대로
-www.ubuntu.com</p>
-  </li>
-  <li>
-    <p>nvidia 비디오 카드 드라이버 다운로드
-<a href="http://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/XFree86/Linux-x86_64/390.25/NVIDIA-Linux-x86_64-390.25.run&amp;lang=us&amp;type=TITAN">http://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/XFree86/Linux-x86_64/390.25/NVIDIA-Linux-x86_64-390.25.run&amp;lang=us&amp;type=TITAN</a></p>
-  </li>
-  <li>
-    <p>Nueveo 비디오 드라이버 동작 정지
-오픈소스 비디오카드 드라이버인 nouveau를 정지시켜야 한다. 자세한 방법은 <a href="https://codeyarns.com/2017/09/21/how-to-disable-nouveau-driver/">https://codeyarns.com/2017/09/21/how-to-disable-nouveau-driver/</a> 참고.</p>
-  </li>
-  <li>GUI 모드 해제 작업
-    <blockquote>
-      <p>$sudo systemctl set-default multi-user.target</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>재부팅</p>
-  </li>
-  <li>Nvidia 비디오 드라이버 설치
-터미널만 뜬 상태에서 로그인 후 루트 권한으로 실행
-    <blockquote>
-      <p>$ sudo ./NVIDIA-Driver-xxxxx.sh</p>
-    </blockquote>
-  </li>
-  <li>GUI 모드로 전환 후 재부팅
-    <blockquote>
-      <p>$sudo systemctl set-default graphical.target</p>
-    </blockquote>
-  </li>
-  <li>
-    <p>docker CE 설치 - 
-<a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository">https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository</a></p>
-  </li>
-  <li>nvidia-docker 설치/테스트 -
-https://nvidia.github.io/nvidia-docker/</li>
-</ol>
+<h2 id="데스크탑-화면-녹화-및-송출">데스크탑 화면 녹화 및 송출</h2>
 
-<p><strong>주의</strong> : 커널 패치 한 이후에 software update하면 먹통됨. 왠만하면 우분투 설치하자마자 software update하고.. 커널 패치하는게 좋음.</p>
+<p>FFMPEG으로 화면을 녹화하려면,</p>
+
+<p>https://sourceforge.net/projects/screencapturer/files/</p>
+
+<p>에서 드라이버 파일 설치하시고요..</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ffmpeg <span class="nt">-rtbufsize</span> 1500M <span class="nt">-f</span> dshow <span class="nt">-i</span> <span class="nv">video</span><span class="o">=</span><span class="s2">"screen-capture-recorder"</span> <span class="nt">-r</span> 40 <span class="nt">-vcodec</span> libx264 <span class="nt">-threads</span> 0 <span class="nt">-crf</span> 0 <span class="nt">-preset</span> ultrafast <span class="nt">-tune</span> zerolatency <span class="nt">-acodec</span> pcm_s161e <span class="nt">-f</span> mpegts udp://127.0.0.1:1234
+</code></pre></div></div>
+
+<p>을 입력하시면 됩니다.</p>
 
 
   </article>
@@ -226,9 +204,9 @@ https://nvidia.github.io/nvidia-docker/</li>
   <div class="post-share">
     <div class="post-date">Feel free to share!</div>
     <div class="sharing-icons">
-      <a href="https://twitter.com/intent/tweet?text=우분투 17.10.1에 nvidia-docker 올리기&amp;url=/documentation/nvidia-docker.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/documentation/nvidia-docker.html&amp;title=우분투 17.10.1에 nvidia-docker 올리기" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href="https://plus.google.com/share?url=/documentation/nvidia-docker.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/intent/tweet?text=FFMPEG 사용하기&amp;url=/tips/ffmpeg.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/tips/ffmpeg.html&amp;title=FFMPEG 사용하기" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=/tips/ffmpeg.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -258,22 +236,6 @@ https://nvidia.github.io/nvidia-docker/</li>
           
         
           
-            <li>
-              <h3>
-                <a href="/tips/ffmpeg.html">
-                  <div class="related-thumbnail">
-                    
-                      <img src="http://0.0.0.0:3000/assets/img/ffmpeg.jpg">
-                    
-                  </div>
-                  <div class="related-title">
-                    FFMPEG 사용하기
-                  </div>
-                  <!--<small>December 21, 2018</small>-->
-                </a>
-              </h3>
-            </li>
-            
           
         
       

@@ -1,18 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2018-12-22T08:41:01-06:00</updated><id>http://0.0.0.0:4000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">Docker container에서 mysql server 실행 안되는 문제</title><link href="http://0.0.0.0:4000/tips/mysql-docker.html" rel="alternate" type="text/html" title="Docker container에서 mysql server 실행 안되는 문제" /><published>2018-12-21T00:00:00-06:00</published><updated>2018-12-21T00:00:00-06:00</updated><id>http://0.0.0.0:4000/tips/mysql-docker</id><content type="html" xml:base="http://0.0.0.0:4000/tips/mysql-docker.html">&lt;h1 id=&quot;증상&quot;&gt;증상&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:3000/" rel="alternate" type="text/html" /><updated>2018-12-26T00:02:35-06:00</updated><id>http://0.0.0.0:3000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">유니티 3D</title><link href="http://0.0.0.0:3000/documentation/unity.html" rel="alternate" type="text/html" title="유니티 3D" /><published>2018-12-25T00:00:00-06:00</published><updated>2018-12-25T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/unity</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/unity.html">&lt;h1 id=&quot;nginx-등-웹서버&quot;&gt;Nginx 등 웹서버&lt;/h1&gt;
+
+&lt;h2 id=&quot;nginx-container-사용&quot;&gt;Nginx container 사용&lt;/h2&gt;
+
+&lt;h3 id=&quot;docker-composeyml-설정&quot;&gt;docker-compose.yml 설정&lt;/h3&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;na&quot;&gt;nginx&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx:latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apps/nginx/conf/nginx.conf:/etc/nginx/nginx.conf&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apps/nginx/www:/usr/share/nginx/html&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8000:80&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;nginxconf-설정&quot;&gt;nginx.conf 설정&lt;/h3&gt;
+
+&lt;p&gt;기본 nginx:latest image를 다운 받고, 아래 처럼 nginx.conf 파일을 수정함.
+특히 CORS 설정을 위한 부분 참고필요.&lt;/p&gt;
+
+&lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;;
+&lt;span class=&quot;n&quot;&gt;worker_processes&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;;
+
+&lt;span class=&quot;n&quot;&gt;error_log&lt;/span&gt;  /&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;warn&lt;/span&gt;;
+&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;        /&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;;
+
+
+&lt;span class=&quot;n&quot;&gt;events&lt;/span&gt; {
+    &lt;span class=&quot;n&quot;&gt;worker_connections&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;1024&lt;/span&gt;;
+}
+
+
+&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt; {
+    &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;       /&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;mime&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;types&lt;/span&gt;;
+    &lt;span class=&quot;n&quot;&gt;default_type&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;octet&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;;
+
+    &lt;span class=&quot;n&quot;&gt;log_format&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'$remote_addr - $remote_user [$time_local] &quot;$request&quot; '&lt;/span&gt;
+                      &lt;span class=&quot;s1&quot;&gt;'$status $body_bytes_sent &quot;$http_referer&quot; '&lt;/span&gt;
+                      &lt;span class=&quot;s1&quot;&gt;'&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;'&lt;/span&gt;;
+
+    &lt;span class=&quot;n&quot;&gt;access_log&lt;/span&gt;  /&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;access&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;;
+
+    &lt;span class=&quot;n&quot;&gt;sendfile&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;;
+    &lt;span class=&quot;c&quot;&gt;#tcp_nopush     on;
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;keepalive_timeout&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;65&lt;/span&gt;;
+
+    &lt;span class=&quot;c&quot;&gt;#gzip  on;
+&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# include /etc/nginx/conf.d/*.conf;
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; {
+        &lt;span class=&quot;n&quot;&gt;listen&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;;
+        &lt;span class=&quot;n&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;;
+        &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; / {
+            &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;    /&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;share&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;;
+            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;htm&lt;/span&gt;;
+
+            &lt;span class=&quot;c&quot;&gt;# Enable CORS
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Access&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Control&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Allow&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Origin&lt;/span&gt; *;
+ 
+        }
+
+    }
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;mysql-등-db&quot;&gt;MySQL 등 DB&lt;/h1&gt;
+
+&lt;h2 id=&quot;docker-container에서-mysql-server-실행-안되는-문제&quot;&gt;Docker container에서 mysql server 실행 안되는 문제&lt;/h2&gt;
+
+&lt;h3 id=&quot;증상&quot;&gt;증상&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;docker build로 특정 Dockerfile을 이용해 image를 만드는 과정에서 mysqld를 실행하는 단계에서 에러가 발생되며 종료한다.&lt;/li&gt;
   &lt;li&gt;Docker 내부 로그를 들여다보면, 무슨 파일의 권한(privilege) 문제로 서버가 시동되다가 멈추는 현상이다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;원인&quot;&gt;원인&lt;/h1&gt;
+&lt;h3 id=&quot;원인&quot;&gt;원인&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Docker image가 생성될 때의 mysql UID와 실행될 때의 UID가 다르기 때문에 발생&lt;/li&gt;
   &lt;li&gt;좀더 깊은 내용은 &lt;a href=&quot;https://stackoverflow.com/questions/50397971/run-mysql-a-prefilled-docker-container-as-random-non-root-linux-user&quot;&gt;여기&lt;/a&gt; 참고&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;해결책&quot;&gt;해결책&lt;/h1&gt;
+&lt;h3 id=&quot;해결책&quot;&gt;해결책&lt;/h3&gt;
 
 &lt;p&gt;해결법은 아래와 같이 /var/lib/mysql, /var/run/mysql 의 소유권을 mysql:mysql 로 해주면 된다.&lt;/p&gt;
 
@@ -33,7 +106,152 @@
   &lt;span class=&quot;na&quot;&gt;tty&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">증상</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/docker.png" /></entry><entry><title type="html">Python에서 OpenCV 사용하기</title><link href="http://0.0.0.0:4000/documentation/python-opencv.html" rel="alternate" type="text/html" title="Python에서 OpenCV 사용하기" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:4000/documentation/python-opencv</id><content type="html" xml:base="http://0.0.0.0:4000/documentation/python-opencv.html">&lt;p&gt;python으로 openCV를 이용해 카메라/영상을 제어하고자 할때..&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;기타-팁&quot;&gt;기타 팁&lt;/h1&gt;
+
+&lt;h2 id=&quot;docker-image-사이즈-줄이기&quot;&gt;Docker image 사이즈 줄이기&lt;/h2&gt;
+
+&lt;p&gt;https://hackernoon.com/tips-to-reduce-docker-image-sizes-876095da3b34&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Nginx 등 웹서버</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/unity/source-code.jpg" /></entry><entry><title type="html">FFMPEG 사용하기</title><link href="http://0.0.0.0:3000/tips/ffmpeg.html" rel="alternate" type="text/html" title="FFMPEG 사용하기" /><published>2018-12-21T00:00:00-06:00</published><updated>2018-12-21T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/ffmpeg</id><content type="html" xml:base="http://0.0.0.0:3000/tips/ffmpeg.html">&lt;h2 id=&quot;영상을-일정-간격으로-자르기&quot;&gt;영상을 일정 간격으로 자르기&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:00:00 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:00:20 ./mov/1.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:00:20 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:00:40 ./mov/2.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:00:40 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:01:00 ./mov/3.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:01:00 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:01:20 ./mov/4.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:01:20 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:01:40 ./mov/5.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:01:40 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:02:00 ./mov/6.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:02:00 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:02:20 ./mov/7.mp4
+ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:02:20 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:02:40 ./mov/8.mp4
+...
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;데스크탑-화면-녹화-및-송출&quot;&gt;데스크탑 화면 녹화 및 송출&lt;/h2&gt;
+
+&lt;p&gt;FFMPEG으로 화면을 녹화하려면,&lt;/p&gt;
+
+&lt;p&gt;https://sourceforge.net/projects/screencapturer/files/&lt;/p&gt;
+
+&lt;p&gt;에서 드라이버 파일 설치하시고요..&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-rtbufsize&lt;/span&gt; 1500M &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; dshow &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;video&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;screen-capture-recorder&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; 40 &lt;span class=&quot;nt&quot;&gt;-vcodec&lt;/span&gt; libx264 &lt;span class=&quot;nt&quot;&gt;-threads&lt;/span&gt; 0 &lt;span class=&quot;nt&quot;&gt;-crf&lt;/span&gt; 0 &lt;span class=&quot;nt&quot;&gt;-preset&lt;/span&gt; ultrafast &lt;span class=&quot;nt&quot;&gt;-tune&lt;/span&gt; zerolatency &lt;span class=&quot;nt&quot;&gt;-acodec&lt;/span&gt; pcm_s161e &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; mpegts udp://127.0.0.1:1234
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;을 입력하시면 됩니다.&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">영상을 일정 간격으로 자르기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/ffmpeg.jpg" /></entry><entry><title type="html">각종 Docker images 사용법</title><link href="http://0.0.0.0:3000/tips/docker-containers.html" rel="alternate" type="text/html" title="각종 Docker images 사용법" /><published>2018-12-21T00:00:00-06:00</published><updated>2018-12-21T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/docker-containers</id><content type="html" xml:base="http://0.0.0.0:3000/tips/docker-containers.html">&lt;h1 id=&quot;nginx-등-웹서버&quot;&gt;Nginx 등 웹서버&lt;/h1&gt;
+
+&lt;h2 id=&quot;nginx-container-사용&quot;&gt;Nginx container 사용&lt;/h2&gt;
+
+&lt;h3 id=&quot;docker-composeyml-설정&quot;&gt;docker-compose.yml 설정&lt;/h3&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;na&quot;&gt;nginx&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx:latest&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apps/nginx/conf/nginx.conf:/etc/nginx/nginx.conf&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./apps/nginx/www:/usr/share/nginx/html&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;8000:80&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;nginxconf-설정&quot;&gt;nginx.conf 설정&lt;/h3&gt;
+
+&lt;p&gt;기본 nginx:latest image를 다운 받고, 아래 처럼 nginx.conf 파일을 수정함.
+특히 CORS 설정을 위한 부분 참고필요.&lt;/p&gt;
+
+&lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;;
+&lt;span class=&quot;n&quot;&gt;worker_processes&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;;
+
+&lt;span class=&quot;n&quot;&gt;error_log&lt;/span&gt;  /&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;warn&lt;/span&gt;;
+&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;        /&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;;
+
+
+&lt;span class=&quot;n&quot;&gt;events&lt;/span&gt; {
+    &lt;span class=&quot;n&quot;&gt;worker_connections&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;1024&lt;/span&gt;;
+}
+
+
+&lt;span class=&quot;n&quot;&gt;http&lt;/span&gt; {
+    &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt;       /&lt;span class=&quot;n&quot;&gt;etc&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;mime&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;types&lt;/span&gt;;
+    &lt;span class=&quot;n&quot;&gt;default_type&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;application&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;octet&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;;
+
+    &lt;span class=&quot;n&quot;&gt;log_format&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'$remote_addr - $remote_user [$time_local] &quot;$request&quot; '&lt;/span&gt;
+                      &lt;span class=&quot;s1&quot;&gt;'$status $body_bytes_sent &quot;$http_referer&quot; '&lt;/span&gt;
+                      &lt;span class=&quot;s1&quot;&gt;'&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;'&lt;/span&gt;;
+
+    &lt;span class=&quot;n&quot;&gt;access_log&lt;/span&gt;  /&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;access&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;;
+
+    &lt;span class=&quot;n&quot;&gt;sendfile&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;on&lt;/span&gt;;
+    &lt;span class=&quot;c&quot;&gt;#tcp_nopush     on;
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;keepalive_timeout&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;65&lt;/span&gt;;
+
+    &lt;span class=&quot;c&quot;&gt;#gzip  on;
+&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# include /etc/nginx/conf.d/*.conf;
+&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; {
+        &lt;span class=&quot;n&quot;&gt;listen&lt;/span&gt;  &lt;span class=&quot;m&quot;&gt;80&lt;/span&gt;;
+        &lt;span class=&quot;n&quot;&gt;server_name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localhost&lt;/span&gt;;
+        &lt;span class=&quot;n&quot;&gt;location&lt;/span&gt; / {
+            &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;    /&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;share&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;nginx&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;;
+            &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;.&lt;span class=&quot;n&quot;&gt;htm&lt;/span&gt;;
+
+            &lt;span class=&quot;c&quot;&gt;# Enable CORS
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;add_header&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Access&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Control&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Allow&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;Origin&lt;/span&gt; *;
+ 
+        }
+
+    }
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;mysql-등-db&quot;&gt;MySQL 등 DB&lt;/h1&gt;
+
+&lt;h2 id=&quot;docker-container에서-mysql-server-실행-안되는-문제&quot;&gt;Docker container에서 mysql server 실행 안되는 문제&lt;/h2&gt;
+
+&lt;h3 id=&quot;증상&quot;&gt;증상&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;docker build로 특정 Dockerfile을 이용해 image를 만드는 과정에서 mysqld를 실행하는 단계에서 에러가 발생되며 종료한다.&lt;/li&gt;
+  &lt;li&gt;Docker 내부 로그를 들여다보면, 무슨 파일의 권한(privilege) 문제로 서버가 시동되다가 멈추는 현상이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;원인&quot;&gt;원인&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Docker image가 생성될 때의 mysql UID와 실행될 때의 UID가 다르기 때문에 발생&lt;/li&gt;
+  &lt;li&gt;좀더 깊은 내용은 &lt;a href=&quot;https://stackoverflow.com/questions/50397971/run-mysql-a-prefilled-docker-container-as-random-non-root-linux-user&quot;&gt;여기&lt;/a&gt; 참고&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;해결책&quot;&gt;해결책&lt;/h3&gt;
+
+&lt;p&gt;해결법은 아래와 같이 /var/lib/mysql, /var/run/mysql 의 소유권을 mysql:mysql 로 해주면 된다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dockerfile에서 mysql 관련된 명령을 실행하기 전에 /var/lib/mysql에 대한 허가권을 다시 터치해 줌
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;s&quot;&gt;RUN chown -R mysql:mysql /var/lib/mysql &amp;amp;&amp;amp; chown -R mysql:mysql /var/run/ &amp;amp;&amp;amp; service mysql start&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;주의할 점은 반드시 이 줄은 하나의 RUN 명령줄에 포함되어 있어야 함. 별도의 RUN을 만들어 쓰게 되면 중간단계의 container 이미지가 삭제되기 때문에 명령의 결과가 반영되지 않는다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;docker-compose.yml에서 명령을 실행할 때 허가권 바꿔주는 명령을 실행하도록 함
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;ixs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ixs:1.3.1&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;9000:9000&quot;&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;9010:9010&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bash -c &quot;chown -R mysql:mysql /var/lib/mysql &amp;amp;&amp;amp; /uprep/ixs.sh 192.168.1.4:9000 9010&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;uprep_ixs_1.3.1&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;tty&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;기타-팁&quot;&gt;기타 팁&lt;/h1&gt;
+
+&lt;h2 id=&quot;docker-image-사이즈-줄이기&quot;&gt;Docker image 사이즈 줄이기&lt;/h2&gt;
+
+&lt;p&gt;https://hackernoon.com/tips-to-reduce-docker-image-sizes-876095da3b34&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Nginx 등 웹서버</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/docker.png" /></entry><entry><title type="html">Python에서 OpenCV 사용하기</title><link href="http://0.0.0.0:3000/documentation/python-opencv.html" rel="alternate" type="text/html" title="Python에서 OpenCV 사용하기" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/python-opencv</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/python-opencv.html">&lt;p&gt;python으로 openCV를 이용해 카메라/영상을 제어하고자 할때..&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;h1 id=&quot;background&quot;&gt;Background&lt;/h1&gt;
@@ -139,7 +357,7 @@ refer to [https://stackoverflow.com/questions/52634009/opencv-python-scripts-mac
         &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;cv2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destroyAllWindows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;            
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">python으로 openCV를 이용해 카메라/영상을 제어하고자 할때.. Background</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/python.svg" /></entry><entry><title type="html">Python에서 fork, exec등을 위한 subprocess 사용법</title><link href="http://0.0.0.0:4000/tips/python-exec.html" rel="alternate" type="text/html" title="Python에서 fork, exec등을 위한 subprocess 사용법" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:4000/tips/python-exec</id><content type="html" xml:base="http://0.0.0.0:4000/tips/python-exec.html">&lt;h1 id=&quot;예제코드&quot;&gt;예제코드&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">python으로 openCV를 이용해 카메라/영상을 제어하고자 할때.. Background</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/python.svg" /></entry><entry><title type="html">Python에서 fork, exec등을 위한 subprocess 사용법</title><link href="http://0.0.0.0:3000/tips/python-exec.html" rel="alternate" type="text/html" title="Python에서 fork, exec등을 위한 subprocess 사용법" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/python-exec</id><content type="html" xml:base="http://0.0.0.0:3000/tips/python-exec.html">&lt;h1 id=&quot;예제코드&quot;&gt;예제코드&lt;/h1&gt;
 
 &lt;p&gt;특정 사이트를 미러링하도록 하는 코드&lt;/p&gt;
 
@@ -158,7 +376,36 @@ refer to [https://stackoverflow.com/questions/52634009/opencv-python-scripts-mac
     &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Popen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wget&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;-P&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;pages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PIPE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stderr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;communicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">예제코드</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/python.svg" /></entry><entry><title type="html">Jekyll 사용팁</title><link href="http://0.0.0.0:4000/tips/jekyll.html" rel="alternate" type="text/html" title="Jekyll 사용팁" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:4000/tips/jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/tips/jekyll.html">&lt;h1 id=&quot;google-docs-문서-임베딩하기&quot;&gt;Google Docs 문서 임베딩하기&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">예제코드</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/python.svg" /></entry><entry><title type="html">각종 유용한 Linux 명령어들</title><link href="http://0.0.0.0:3000/tips/linux-command.html" rel="alternate" type="text/html" title="각종 유용한 Linux 명령어들" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/linux-command</id><content type="html" xml:base="http://0.0.0.0:3000/tips/linux-command.html">&lt;p&gt;기초적인 것들은 제외..&lt;/p&gt;
+
+&lt;h1 id=&quot;scp를-이용해-터미널-상에서-ssh-연결을-이용해-파일-전송하기&quot;&gt;SCP를 이용해 터미널 상에서 SSH 연결을 이용해 파일 전송하기&lt;/h1&gt;
+
+&lt;p&gt;SSH를 이용해서 다른 서버로 파일 전송하기가 참 용이하다. FTP 등을 쓸 필요도 없고, SSH 서버에 직접 전송하기 떄문에 사용하기도 용이하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    scp &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; &amp;lt;port&amp;gt; &amp;lt;filenames&amp;gt; &amp;lt;username&amp;gt;@IP:&amp;lt;dest-folder&amp;gt;
+
+    ex&amp;gt;
+        그 디렉토리에 있는 파일들을 통으로 옮길 경우,
+            scp &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; 122 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; whyun@x.x.x.x:~/SERVICE/UPREP
+
+        Recursive 하게 할 경우,
+            scp &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; 122 &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; whyun@x.x.x.x:~/SERVICE/UPREP
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;https://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh&lt;/p&gt;
+
+&lt;h1 id=&quot;awk-xargs-등-bash-script&quot;&gt;AWK, Xargs 등 bash script&lt;/h1&gt;
+
+&lt;p&gt;특정 사이트의 html 내용 분석해서 mp4 파일만 다운로드하는 shell script&lt;/p&gt;
+
+&lt;p&gt;awk, xargs 등의 사용예제를 확인가능함.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm article/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+rm pages/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+python3 app.py
+&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;wr_id pages/board.php&lt;span class=&quot;se&quot;&gt;\?&lt;/span&gt;bo_table&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;korea&lt;span class=&quot;se&quot;&gt;\&amp;amp;&lt;/span&gt;page&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;|grep Hot|awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a href=\&quot;'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{ print $2 }'&lt;/span&gt;|awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;amp;page'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;'s/\&amp;amp;amp;/\&amp;amp;/'&lt;/span&gt; | xargs wget &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; article
+&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;mp4 article/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; | awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'=http://a.b.c/'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print &quot;http://a.b.c/&quot; $2}'&lt;/span&gt;| awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;amp'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt;| xargs wget &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">기초적인 것들은 제외..</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/bash.jpg" /></entry><entry><title type="html">Jekyll 사용팁</title><link href="http://0.0.0.0:3000/tips/jekyll.html" rel="alternate" type="text/html" title="Jekyll 사용팁" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/jekyll</id><content type="html" xml:base="http://0.0.0.0:3000/tips/jekyll.html">&lt;h1 id=&quot;google-docs-문서-임베딩하기&quot;&gt;Google Docs 문서 임베딩하기&lt;/h1&gt;
 
 &lt;p&gt;구글문서에서 ‘Files-&amp;gt;웹에 게시’해서 나온 iframe link를
 아래에서 iframe src 부분만 바꿔치기해서 사용한다.&lt;/p&gt;
@@ -173,7 +420,7 @@ refer to [https://stackoverflow.com/questions/52634009/opencv-python-scripts-mac
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;https://dev-notes.eu/2016/09/embed-google-slides-in-jekyll/&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Google Docs 문서 임베딩하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/jekyll_github.png" /></entry><entry><title type="html">Ethereum testnet 구축, 채굴, 자체 코인 발행</title><link href="http://0.0.0.0:4000/documentation/ethereum-testnet.html" rel="alternate" type="text/html" title="Ethereum testnet 구축, 채굴, 자체 코인 발행" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:4000/documentation/ethereum-testnet</id><content type="html" xml:base="http://0.0.0.0:4000/documentation/ethereum-testnet.html">&lt;style&gt;
+&lt;p&gt;https://dev-notes.eu/2016/09/embed-google-slides-in-jekyll/&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">Google Docs 문서 임베딩하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/jekyll_github.png" /></entry><entry><title type="html">Ethereum testnet 구축, 채굴, 자체 코인 발행</title><link href="http://0.0.0.0:3000/documentation/ethereum-testnet.html" rel="alternate" type="text/html" title="Ethereum testnet 구축, 채굴, 자체 코인 발행" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/ethereum-testnet</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/ethereum-testnet.html">&lt;style&gt;
 .responsive-wrap iframe{ max-width: 100%;}
 &lt;/style&gt;
 
@@ -181,18 +428,7 @@ refer to [https://stackoverflow.com/questions/52634009/opencv-python-scripts-mac
 &lt;!-- this is the embed code provided by Google --&gt;
   &lt;iframe src=&quot;https://docs.google.com/document/d/e/2PACX-1vSqUUImEBqVQzeldrtyyfuhfw04PzGNrrIOMWQV4jnggtW2JlGq2pYrhpbSiliYnBx6zkv7jFPl-k5q/pub?embedded=true&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
 &lt;!-- Google embed ends --&gt;
-&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/nature-1.jpg" /></entry><entry><title type="html">AWK, Xargs 등 bash script</title><link href="http://0.0.0.0:4000/tips/awk.html" rel="alternate" type="text/html" title="AWK, Xargs 등 bash script" /><published>2018-12-19T00:00:00-06:00</published><updated>2018-12-19T00:00:00-06:00</updated><id>http://0.0.0.0:4000/tips/awk</id><content type="html" xml:base="http://0.0.0.0:4000/tips/awk.html">&lt;h1 id=&quot;awk-xargs-등-사용예제&quot;&gt;AWK, Xargs 등 사용예제&lt;/h1&gt;
-
-&lt;p&gt;특정 사이트의 html 내용 분석해서 mp4 파일만 다운로드하는 shell script&lt;/p&gt;
-
-&lt;p&gt;awk, xargs 등의 사용예제를 확인가능함.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rm article/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-rm pages/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-python3 app.py
-&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;wr_id pages/board.php&lt;span class=&quot;se&quot;&gt;\?&lt;/span&gt;bo_table&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;korea&lt;span class=&quot;se&quot;&gt;\&amp;amp;&lt;/span&gt;page&lt;span class=&quot;se&quot;&gt;\=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;|grep Hot|awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a href=\&quot;'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{ print $2 }'&lt;/span&gt;|awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;amp;page'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt; | sed &lt;span class=&quot;s1&quot;&gt;'s/\&amp;amp;amp;/\&amp;amp;/'&lt;/span&gt; | xargs wget &lt;span class=&quot;nt&quot;&gt;-P&lt;/span&gt; article
-&lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;mp4 article/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; | awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'=http://a.b.c/'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print &quot;http://a.b.c/&quot; $2}'&lt;/span&gt;| awk &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;amp'&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt;| xargs wget &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">AWK, Xargs 등 사용예제</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/bash.jpg" /></entry><entry><title type="html">OpenAI - Auto Gamebot</title><link href="http://0.0.0.0:4000/documentation/openAI-gamebot.html" rel="alternate" type="text/html" title="OpenAI - Auto Gamebot" /><published>2018-02-17T00:00:00-06:00</published><updated>2018-02-17T00:00:00-06:00</updated><id>http://0.0.0.0:4000/documentation/openAI-gamebot</id><content type="html" xml:base="http://0.0.0.0:4000/documentation/openAI-gamebot.html">&lt;h2 id=&quot;openai를-이용한-auto-game-bot-처음-시작하기&quot;&gt;OpenAI를 이용한 Auto game bot 처음 시작하기&lt;/h2&gt;
+&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/nature-1.jpg" /></entry><entry><title type="html">OpenAI - Auto Gamebot</title><link href="http://0.0.0.0:3000/documentation/openAI-gamebot.html" rel="alternate" type="text/html" title="OpenAI - Auto Gamebot" /><published>2018-02-17T00:00:00-06:00</published><updated>2018-02-17T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/openAI-gamebot</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/openAI-gamebot.html">&lt;h2 id=&quot;openai를-이용한-auto-game-bot-처음-시작하기&quot;&gt;OpenAI를 이용한 Auto game bot 처음 시작하기&lt;/h2&gt;
 
 &lt;p&gt;몇가지 게임을 docker container로 제공하고…
 VNC를 이용해 원격으로 이미지를 받아오고…
@@ -689,7 +925,7 @@ quay.io/openai/universe.flashgames   0.20.28             e55f692f7c56        11 
 
 &lt;h2 id=&quot;잠정-결론&quot;&gt;잠정 결론..&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;이거 뭐에 써먹지?&lt;/strong&gt;&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">OpenAI를 이용한 Auto game bot 처음 시작하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/openai-gym.png" /></entry><entry><title type="html">유용한 학습 사이트</title><link href="http://0.0.0.0:4000/resources/learning.html" rel="alternate" type="text/html" title="유용한 학습 사이트" /><published>2018-02-14T00:00:00-06:00</published><updated>2018-02-14T00:00:00-06:00</updated><id>http://0.0.0.0:4000/resources/learning</id><content type="html" xml:base="http://0.0.0.0:4000/resources/learning.html">&lt;p&gt;일단 &lt;a href=&quot;http://www.bloter.net/archives/225814&quot;&gt;여기&lt;/a&gt;를 먼저 함 훑어 보시고…&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이거 뭐에 써먹지?&lt;/strong&gt;&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">OpenAI를 이용한 Auto game bot 처음 시작하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/openai-gym.png" /></entry><entry><title type="html">유용한 학습 사이트</title><link href="http://0.0.0.0:3000/resources/learning.html" rel="alternate" type="text/html" title="유용한 학습 사이트" /><published>2018-02-14T00:00:00-06:00</published><updated>2018-02-14T00:00:00-06:00</updated><id>http://0.0.0.0:3000/resources/learning</id><content type="html" xml:base="http://0.0.0.0:3000/resources/learning.html">&lt;p&gt;일단 &lt;a href=&quot;http://www.bloter.net/archives/225814&quot;&gt;여기&lt;/a&gt;를 먼저 함 훑어 보시고…&lt;/p&gt;
 
 &lt;p&gt;아래는 추천할만한 곳.&lt;/p&gt;
 
@@ -706,380 +942,4 @@ quay.io/openai/universe.flashgames   0.20.28             e55f692f7c56        11 
       &lt;li&gt;&lt;a href=&quot;https://www.makeschool.com/academy/&quot;&gt;https://www.makeschool.com/academy/&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">일단 여기를 먼저 함 훑어 보시고…</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/city-1.jpg" /></entry><entry><title type="html">InfuxDB + Grafana 사용하기</title><link href="http://0.0.0.0:4000/upcoming/influxdb.html" rel="alternate" type="text/html" title="InfuxDB + Grafana 사용하기" /><published>2018-02-09T00:00:00-06:00</published><updated>2018-02-09T00:00:00-06:00</updated><id>http://0.0.0.0:4000/upcoming/influxdb</id><content type="html" xml:base="http://0.0.0.0:4000/upcoming/influxdb.html">&lt;h1 id=&quot;influxdb와-grafana-연동하여-시계열-데이터-시각화-하기&quot;&gt;InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기&lt;/h1&gt;
-
-&lt;p&gt;InfluxDb나 Grafana는 시계열 데이터를 위해 특화되었기 때문에 time 정보가 있어야만 유용하게 사용할 수 있다.
-비 시계열성 데이터에 대한 chartting web app은 많이 있기는 한데, 라이센스가 유료일 공산이 크다.&lt;/p&gt;
-
-&lt;h2 id=&quot;influxdb&quot;&gt;InfluxDB&lt;/h2&gt;
-
-&lt;h3 id=&quot;특징&quot;&gt;특징&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;시계열 데이터 저장&lt;/li&gt;
-  &lt;li&gt;현재 시각 이후의 미래 데이터는 저장이 안됨(?)&lt;/li&gt;
-  &lt;li&gt;시계열 데이터는 UTC 시간 기준
-    &lt;ul&gt;
-      &lt;li&gt;즉, datetime.now()가 아닌 datetime.utcnow()를 써야 함.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;같은 시간으로 여러 데이터를 넣으면 덮어 씌워진다.
-    &lt;ul&gt;
-      &lt;li&gt;이를 해결하려면, 특정 데이터는 ‘tag’로 저장하면 된다. 아래 예제 참고&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;measurement&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;table_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;tags&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fatrCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fields&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;facilityId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fatrCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fldCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;itemCode&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;sectCode&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-             &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;senVal&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;influxdb-설치&quot;&gt;InfluxDB 설치&lt;/h3&gt;
-
-&lt;p&gt;설치하고 설정 잡느라 고생하지 말고, Docker를 쓰자&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ docker pull influxdb&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;터미널에서 바로 실행하려면 아래처럼 하자.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ docker run -p 8086:8086 
-      -v influxdb:/var/lib/influxdb 
-      influxdb&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;docker-compose.yml을 쓰려면 아래처럼 하자.&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;na&quot;&gt;influxdb&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;influxdb:latest&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;influxdb&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./app/influxdb/influxdb:/var/lib/influxdb&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;8086:8086&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;잘 돌아가는지 확인해 보자. influxdb CLI 접속하기!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ docker exec -it influxdb influx&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;이제 database를 하나 만들고 지워보자.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; show databases;
-name: databases
-name
-----
-_internal
-           
-&amp;gt; create database test_db
-&amp;gt; show databases
-name: databases
-name
-----
-_internal
-test_db
-&amp;gt; drop database test_db
-&amp;gt; show databases
-name: databases
-name
-----
-_internal
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;다시 만들고, 만져보자.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TBD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;시간정보가 가독성 떨어지면,&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; precision rfc3339
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;measurement(table)을 없애려면,&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;drop measurement environment_tbl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;python을-위한-influxdb-라이브러리-설치&quot;&gt;Python을 위한 InfluxDB 라이브러리 설치&lt;/h3&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$pip3 install influxdb&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;grafana와-연동&quot;&gt;Grafana와 연동&lt;/h2&gt;
-
-&lt;p&gt;influxDB에 들어 있는 내용을 그래프로 시각화 하기&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Add Data Source&lt;/li&gt;
-  &lt;li&gt;Add Dashboard&lt;/li&gt;
-  &lt;li&gt;Edit Graph
-    &lt;ul&gt;
-      &lt;li&gt;에러가 뜨거나 그래프가 안 그려지면, SQL 쿼리문을 잘 들여다 본다.&lt;/li&gt;
-      &lt;li&gt;docker logs 명령어로 influxdb container의 로그파일을 들여다 본다.
-        &lt;ul&gt;
-          &lt;li&gt;자세히 들여다보면 주소가 보인다. 그것을 카피해서 브라우저에서 열어본다. 잘 되나 본다.
-            &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; [httpd] 10.255.0.2 - root [09/Feb/2018:09:02:59 +0000] &quot;GET /query?db=tstest&amp;amp;epoch=ms&amp;amp;p=%5BREDACTED%5D&amp;amp;q=SELECT+%22fld03%22+FROM+%22table02%22+WHERE+%28%22host%22+%3D+%27server02%27%29+AND+time+%3E%3D+1517410800000ms+GROUP+BY+time%281s%29+fill%28none%29&amp;amp;u=root HTTP/1.1&quot; 200 103 &amp;lt;&quot;http://grafana.u2pia.local/d/tG3MB6jkk/new-dashboard-copy?panelId=2&amp;amp;fullscreen&amp;amp;edit&amp;amp;orgId=1&amp;amp;from=now%2FM&amp;amp;to=now&amp;amp;tab=metrics&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36&quot; 06e4af33-0d78-11e8-8033-000000000000 1044
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;            &lt;/div&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Grafana 페이지에서 ‘Query Inspector’를 보면 에러가 뭔지 대강 알 수 있다.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://egloos.zum.com/mcchae/v/11201229&quot;&gt;Python-InfluxDB 입력 및 검색&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://yenaworldblog.wordpress.com/2017/07/28/influxdb/&quot;&gt;INFLUXDB 설명 및 설치&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">InfluxDB와 Grafana 연동하여 시계열 데이터 시각화 하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/arctic-1.jpg" /></entry><entry><title type="html">MongoDB 사용하기</title><link href="http://0.0.0.0:4000/upcoming/mongodb.html" rel="alternate" type="text/html" title="MongoDB 사용하기" /><published>2018-02-08T00:00:00-06:00</published><updated>2018-02-08T00:00:00-06:00</updated><id>http://0.0.0.0:4000/upcoming/mongodb</id><content type="html" xml:base="http://0.0.0.0:4000/upcoming/mongodb.html">&lt;h2 id=&quot;1-설치-및-실행&quot;&gt;1. 설치 및 실행&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-호스트에서-직접-설치실행&quot;&gt;1. 호스트에서 직접 설치/실행&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew를 이용해 설치한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ brew install mongodb&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;터미널에서 그냥 실행
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ mongod&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;2-도커로-데몬-실행&quot;&gt;2. 도커로 데몬 실행&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;도커 이미지를 다운 받고...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ docker pull mongo&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;아래의 docker-compose.yml 을 이용한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;na&quot;&gt;mongodb&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mongo:latest&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;container_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mongodb&quot;&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MONGO_DATA_DIR=/data/db&lt;/span&gt;
-        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;MONGO_LOG_DIR=/dev/null&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./app/mongodb/data/db:/data/db&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;27017:27017&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mongod --smallfiles --logpath=/dev/null&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# --quiet&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;그리고, docker-compose up으로 실행하거나
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;docker-compose up&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;또는, 아래와 같이 docker stack을 통해 실행시킨다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;$ docker stack deploy –compose-file docker-compose.yml u2pia&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;주의할 점으로 호스트에 mongod가 이미 돌고 있으면 port가 쫑 날 수 있다. 주의해라.
-다만, 작업의 편의를 위해 호스트에도 mongodb를 설치는 해 두자. 서버는 docker container로 구동되지만, 호스트에서 접근이 가능하게 하려면..
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;2-cli-사용&quot;&gt;2. CLI 사용&lt;/h2&gt;
-
-&lt;h3 id=&quot;21-데이터베이스테이블-생성&quot;&gt;2.1 데이터베이스/테이블 생성&lt;/h3&gt;
-
-&lt;h3 id=&quot;22-데이터베이스-삭제&quot;&gt;2.2 데이터베이스 삭제&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;아래처럼 하자
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; show dbs
-admin         0.000GB
-config        0.000GB
-local         0.000GB
-smartfarm_db  0.000GB
-terrydb       0.000GB
-&amp;gt; use terrydb
-switched to db terrydb
-&amp;gt; db.dropDatabase()
-{ &quot;dropped&quot; : &quot;terrydb&quot;, &quot;ok&quot; : 1 }
-&amp;gt; show dbs
-admin         0.000GB
-config        0.000GB
-local         0.000GB
-smartfarm_db  0.000GB
-&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2x-특정-컬렉션테이블내-데이터-통째로-삭제&quot;&gt;2.x 특정 컬렉션(테이블)내 데이터 통째로 삭제&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.environment_tbl.remove({})
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2x-조회결과-카운트&quot;&gt;2.x 조회결과 카운트&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.environment_tbl.find().count()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2x-중복데이터-지우기&quot;&gt;2.x 중복데이터 지우기&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;duplicates&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'environment_tbl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;aggregate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;  
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-      &lt;span class=&quot;na&quot;&gt;measDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$ne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;facilityId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$ne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;fatrCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$ne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}},&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-      &lt;span class=&quot;na&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;measDate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$measDate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;facilityId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$facilityId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fatrCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$fatrCode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;dups&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; 
-
-  &lt;span class=&quot;p&quot;&gt;}},&lt;/span&gt; 
-  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-      &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;$gt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dups&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;      
-    &lt;span class=&quot;nx&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dups&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dupId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; 
-        &lt;span class=&quot;nx&quot;&gt;duplicates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dupId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'environment_tbl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;$in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;duplicates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}})&lt;/span&gt;  
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;refer to &lt;a href=&quot;http://takuu.me/remove-duplicates-from-mongodb/&quot;&gt;http://takuu.me/remove-duplicates-from-mongodb/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2x-sql의-group-by-기능-특정-값의-반복-횟수를-보여주는-방법&quot;&gt;2.x SQL의 Group By 기능 (특정 값의 반복 횟수를 보여주는 방법)&lt;/h3&gt;
-
-&lt;p&gt;아래 예제는 주소(addressName)이 반복되는 횟수를 기준으로 group을 만듬.
-즉, _id, count 두 개로 이뤄진 가상의 테이블을 하나 만들고, count를 기준으로 내리막순 정렬을 시키는 것임.&lt;/p&gt;
-
-&lt;p&gt;아래 예제는 farminfo_tbl에 기재된 주소(지역)를 기준으로 카운트&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;farminfo_tbl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;aggregate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$group&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$addressName&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;$sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$sort&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;count&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;아래 예제는 수집된 environment 정보를 farm 기준으로 카운트한다. 이를 통해 수집현황을 볼 수 있다.&lt;/p&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;environment_tbl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;aggregate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$group&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$facilityId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;$sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}},&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$sort&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;count&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;2x-테이블콜렉션-2개-조합해서-쿼리-하기&quot;&gt;2.x 테이블(콜렉션) 2개 조합해서 쿼리 하기&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;environment_tbl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;aggregate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;   
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;$group&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$facilityId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;$sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}},&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;$lookup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;farminfo_tbl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;localField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;foreignField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;facilityId&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;wtf&quot;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;그-외-참고할-만한-좋은-사이트&quot;&gt;그 외 참고할 만한 좋은 사이트&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://jy86.tistory.com/entry/MongoDB-MongoDB-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%BF%BC%EB%A6%AC-%EC%82%AC%EC%9A%A9%EB%B2%95&quot;&gt;MongoDB 명령어, 쿼리 사용법&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-파이썬-몽고db-프로그래밍&quot;&gt;3. 파이썬-몽고DB 프로그래밍&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;먼저 pymongo를 설치한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;pip3 install pymongo&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;31-삽입&quot;&gt;3.1 삽입&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;아래 코드를 실행해 본다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-    &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
-    &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pymongo&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pymongo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MongoClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mongodb://localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;smartfarm_db&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'_id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'users'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'first'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'man'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'last'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'woman'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;doc2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'first'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'boy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'last'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'girl'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;insert failed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exc_info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_id는 해당 레코드의 키 값으로 이해하면 되고,
-값을 입력하지 않으면 알아서 해쉬값을 만들어 넣어준다.
-
-
-잘 들어갔나 확인해 보자. 터미널에서 mongodb client 실행
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;mongo&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &amp;gt; show dbs
-        admin         0.000GB
-        config        0.000GB
-        local         0.000GB
-        smartfarm_db  0.000GB
-    &amp;gt; use smartfarm_db
-        switched to db smartfarm_db
-    &amp;gt; db.users.find()
-        { &quot;_id&quot; : ObjectId(&quot;5a7c5881be818c6404ee413b&quot;), &quot;first&quot; : &quot;boy&quot;, &quot;last&quot; : &quot;girl&quot; }
-    &amp;gt; db.users.find()
-        { &quot;_id&quot; : ObjectId(&quot;5a7c5881be818c6404ee413b&quot;), &quot;first&quot; : &quot;boy&quot;, &quot;last&quot; : &quot;girl&quot; }
-        { &quot;_id&quot; : &quot;users&quot;, &quot;first&quot; : &quot;man&quot;, &quot;last&quot; : &quot;woman&quot; }
-        { &quot;_id&quot; : ObjectId(&quot;5a7c58cfbe818c641844c4a1&quot;), &quot;first&quot; : &quot;boy&quot;, &quot;last&quot; : &quot;girl&quot; }
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;잘 들어갔다.
-프로그램 실행시킬때 마다 같은 값이 들어간다. 단, _id값은 바뀐다. 근데 비슷하게 바뀐다. 무슨 상황인지 이해될꺼다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;31-삽입-1&quot;&gt;3.1 삽입&lt;/h3&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">1. 설치 및 실행</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:4000/arctic-2.jpg" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">일단 여기를 먼저 함 훑어 보시고…</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/city-1.jpg" /></entry></feed>

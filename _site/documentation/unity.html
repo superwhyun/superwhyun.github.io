@@ -5,7 +5,7 @@
 
   <title>
     
-      Docker container에서 mysql server 실행 안되는 문제 | U2PIA
+      유니티 3D | U2PIA
     
   </title>
 
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/syntax.css">
   <!-- Use Atom -->
-  <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="U2PIA" />
+  <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:3000/feed.xml" title="U2PIA" />
   <!-- RSS-v2.0
   <link href="/rss-feed.xml" type="application/rss+xml" rel="alternate" title="U2PIA | Joy of learning"/>
   //-->
@@ -42,21 +42,21 @@
 
   <!-- Use Jekyll SEO plugin -->
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Docker container에서 mysql server 실행 안되는 문제 | U2PIA</title>
+<title>유니티 3D | U2PIA</title>
 <meta name="generator" content="Jekyll v3.6.2" />
-<meta property="og:title" content="Docker container에서 mysql server 실행 안되는 문제" />
+<meta property="og:title" content="유니티 3D" />
 <meta name="author" content="Wook Hyun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="증상" />
-<meta property="og:description" content="증상" />
-<link rel="canonical" href="http://0.0.0.0:4000/tips/mysql-docker.html" />
-<meta property="og:url" content="http://0.0.0.0:4000/tips/mysql-docker.html" />
+<meta name="description" content="Nginx 등 웹서버" />
+<meta property="og:description" content="Nginx 등 웹서버" />
+<link rel="canonical" href="http://0.0.0.0:3000/documentation/unity.html" />
+<meta property="og:url" content="http://0.0.0.0:3000/documentation/unity.html" />
 <meta property="og:site_name" content="U2PIA" />
-<meta property="og:image" content="http://0.0.0.0:4000/docker.png" />
+<meta property="og:image" content="http://0.0.0.0:3000/unity/source-code.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-12-21T00:00:00-06:00" />
+<meta property="article:published_time" content="2018-12-25T00:00:00-06:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","image":"http://0.0.0.0:4000/docker.png","url":"http://0.0.0.0:4000/tips/mysql-docker.html","headline":"Docker container에서 mysql server 실행 안되는 문제","dateModified":"2018-12-21T00:00:00-06:00","datePublished":"2018-12-21T00:00:00-06:00","author":{"@type":"Person","name":"Wook Hyun"},"description":"증상","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/tips/mysql-docker.html"},"@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","image":"http://0.0.0.0:3000/unity/source-code.jpg","url":"http://0.0.0.0:3000/documentation/unity.html","headline":"유니티 3D","dateModified":"2018-12-25T00:00:00-06:00","datePublished":"2018-12-25T00:00:00-06:00","author":{"@type":"Person","name":"Wook Hyun"},"description":"Nginx 등 웹서버","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:3000/documentation/unity.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -124,15 +124,14 @@
   <div class="posts-wrapper">
     <div class="page-content">
   <h1>
-    Docker container에서 mysql server 실행 안되는 문제
+    유니티 3D
   </h1>
 
   <span class="post-date">
     Written on
     
     December
-    21st
-      ,
+    25th,
     2018
     by
     
@@ -142,26 +141,99 @@
 
   
     <div class="featured-image">
-      <img src="/assets/img/docker.png">
+      <img src="/assets/img/unity/source-code.jpg">
     </div>
   
 
   <article>
-    <h1 id="증상">증상</h1>
+    <h1 id="nginx-등-웹서버">Nginx 등 웹서버</h1>
+
+<h2 id="nginx-container-사용">Nginx container 사용</h2>
+
+<h3 id="docker-composeyml-설정">docker-compose.yml 설정</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">nginx</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">nginx:latest</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./apps/nginx/conf/nginx.conf:/etc/nginx/nginx.conf</span>
+      <span class="pi">-</span> <span class="s">./apps/nginx/www:/usr/share/nginx/html</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8000:80"</span>
+</code></pre></div></div>
+
+<h3 id="nginxconf-설정">nginx.conf 설정</h3>
+
+<p>기본 nginx:latest image를 다운 받고, 아래 처럼 nginx.conf 파일을 수정함.
+특히 CORS 설정을 위한 부분 참고필요.</p>
+
+<div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user</span>  <span class="n">nginx</span>;
+<span class="n">worker_processes</span>  <span class="m">1</span>;
+
+<span class="n">error_log</span>  /<span class="n">var</span>/<span class="n">log</span>/<span class="n">nginx</span>/<span class="n">error</span>.<span class="n">log</span> <span class="n">warn</span>;
+<span class="n">pid</span>        /<span class="n">var</span>/<span class="n">run</span>/<span class="n">nginx</span>.<span class="n">pid</span>;
+
+
+<span class="n">events</span> {
+    <span class="n">worker_connections</span>  <span class="m">1024</span>;
+}
+
+
+<span class="n">http</span> {
+    <span class="n">include</span>       /<span class="n">etc</span>/<span class="n">nginx</span>/<span class="n">mime</span>.<span class="n">types</span>;
+    <span class="n">default_type</span>  <span class="n">application</span>/<span class="n">octet</span>-<span class="n">stream</span>;
+
+    <span class="n">log_format</span>  <span class="n">main</span>  <span class="s1">'$remote_addr - $remote_user [$time_local] "$request" '</span>
+                      <span class="s1">'$status $body_bytes_sent "$http_referer" '</span>
+                      <span class="s1">'"$http_user_agent" "$http_x_forwarded_for"'</span>;
+
+    <span class="n">access_log</span>  /<span class="n">var</span>/<span class="n">log</span>/<span class="n">nginx</span>/<span class="n">access</span>.<span class="n">log</span>  <span class="n">main</span>;
+
+    <span class="n">sendfile</span>        <span class="n">on</span>;
+    <span class="c">#tcp_nopush     on;
+</span>
+    <span class="n">keepalive_timeout</span>  <span class="m">65</span>;
+
+    <span class="c">#gzip  on;
+</span>
+    <span class="c"># include /etc/nginx/conf.d/*.conf;
+</span>
+    <span class="n">server</span> {
+        <span class="n">listen</span>  <span class="m">80</span>;
+        <span class="n">server_name</span> <span class="n">localhost</span>;
+        <span class="n">location</span> / {
+            <span class="n">root</span>    /<span class="n">usr</span>/<span class="n">share</span>/<span class="n">nginx</span>/<span class="n">html</span>;
+            <span class="n">index</span>   <span class="n">index</span>.<span class="n">html</span>  <span class="n">index</span>.<span class="n">htm</span>;
+
+            <span class="c"># Enable CORS
+</span>            <span class="n">add_header</span> <span class="n">Access</span>-<span class="n">Control</span>-<span class="n">Allow</span>-<span class="n">Origin</span> *;
+ 
+        }
+
+    }
+
+}
+
+</code></pre></div></div>
+
+<h1 id="mysql-등-db">MySQL 등 DB</h1>
+
+<h2 id="docker-container에서-mysql-server-실행-안되는-문제">Docker container에서 mysql server 실행 안되는 문제</h2>
+
+<h3 id="증상">증상</h3>
 
 <ul>
   <li>docker build로 특정 Dockerfile을 이용해 image를 만드는 과정에서 mysqld를 실행하는 단계에서 에러가 발생되며 종료한다.</li>
   <li>Docker 내부 로그를 들여다보면, 무슨 파일의 권한(privilege) 문제로 서버가 시동되다가 멈추는 현상이다.</li>
 </ul>
 
-<h1 id="원인">원인</h1>
+<h3 id="원인">원인</h3>
 
 <ul>
   <li>Docker image가 생성될 때의 mysql UID와 실행될 때의 UID가 다르기 때문에 발생</li>
   <li>좀더 깊은 내용은 <a href="https://stackoverflow.com/questions/50397971/run-mysql-a-prefilled-docker-container-as-random-non-root-linux-user">여기</a> 참고</li>
 </ul>
 
-<h1 id="해결책">해결책</h1>
+<h3 id="해결책">해결책</h3>
 
 <p>해결법은 아래와 같이 /var/lib/mysql, /var/run/mysql 의 소유권을 mysql:mysql 로 해주면 된다.</p>
 
@@ -183,6 +255,12 @@
 </code></pre></div>    </div>
   </li>
 </ul>
+
+<h1 id="기타-팁">기타 팁</h1>
+
+<h2 id="docker-image-사이즈-줄이기">Docker image 사이즈 줄이기</h2>
+
+<p>https://hackernoon.com/tips-to-reduce-docker-image-sizes-876095da3b34</p>
 
 
   </article>
@@ -214,9 +292,9 @@
   <div class="post-share">
     <div class="post-date">Feel free to share!</div>
     <div class="sharing-icons">
-      <a href="https://twitter.com/intent/tweet?text=Docker container에서 mysql server 실행 안되는 문제&amp;url=/tips/mysql-docker.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=/tips/mysql-docker.html&amp;title=Docker container에서 mysql server 실행 안되는 문제" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href="https://plus.google.com/share?url=/tips/mysql-docker.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/intent/tweet?text=유니티 3D&amp;url=/documentation/unity.html" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=/documentation/unity.html&amp;title=유니티 3D" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://plus.google.com/share?url=/documentation/unity.html" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -232,16 +310,16 @@
           
             <li>
               <h3>
-                <a href="/documentation/python-opencv.html">
+                <a href="/tips/ffmpeg.html">
                   <div class="related-thumbnail">
                     
-                      <img src="http://0.0.0.0:4000/assets/img/python.svg">
+                      <img src="http://0.0.0.0:3000/assets/img/ffmpeg.jpg">
                     
                   </div>
                   <div class="related-title">
-                    Python에서 OpenCV 사용하기
+                    FFMPEG 사용하기
                   </div>
-                  <!--<small>December 19, 2018</small>-->
+                  <!--<small>December 21, 2018</small>-->
                 </a>
               </h3>
             </li>
