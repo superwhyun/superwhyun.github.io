@@ -7,18 +7,37 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>유니티 3D</title>
+				<title>유니티 3D - 예제</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
 				
 				
-					<description>&lt;h1 id=&quot;nginx-등-웹서버&quot;&gt;Nginx 등 웹서버&lt;/h1&gt;
+					<description>&lt;p&gt;거의 생초짜가 전문강사님의 강의를 듣고 다시 해 보며 부딪혀 본 내용을 기록한 것입니다.
+백문이 불여일견입니다. 책 아무리 들여다보는 것 보다, 직접 하는 것이 낫고..
+혼자 하는 것 보다 전문가의 도움을 받는 것이 훨씬 시간을 절약합니다.&lt;/p&gt;
 
 </description>
 				
 				<pubDate>Tue, 25 Dec 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:3000/documentation/unity.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/unity.html</guid>
+				<link>http://0.0.0.0:3000/documentation/unity-example.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/unity-example.html</guid>
+			</item>
+		
+			<item>
+				<title>유니티 3D - 기본</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;p&gt;거의 생초짜가 전문강사님의 강의를 듣고 다시 해 보며 부딪혀 본 내용을 기록한 것입니다.
+백문이 불여일견입니다. 책 아무리 들여다보는 것 보다, 직접 하는 것이 낫고..
+혼자 하는 것 보다 전문가의 도움을 받는 것이 훨씬 시간을 절약합니다.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 25 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:3000/documentation/unity-basics.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/unity-basics.html</guid>
 			</item>
 		
 			<item>
@@ -149,21 +168,6 @@
 				<pubDate>Sat, 17 Feb 2018 00:00:00 -0600</pubDate>
 				<link>http://0.0.0.0:3000/documentation/openAI-gamebot.html</link>
 				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/openAI-gamebot.html</guid>
-			</item>
-		
-			<item>
-				<title>유용한 학습 사이트</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;p&gt;일단 &lt;a href=&quot;http://www.bloter.net/archives/225814&quot;&gt;여기&lt;/a&gt;를 먼저 함 훑어 보시고…&lt;/p&gt;
-
-</description>
-				
-				<pubDate>Wed, 14 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:3000/resources/learning.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:3000/resources/learning.html</guid>
 			</item>
 		
 	</channel>
