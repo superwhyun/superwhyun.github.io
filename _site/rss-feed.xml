@@ -41,6 +41,21 @@
 			</item>
 		
 			<item>
+				<title>MUD의 역사/계보, 근황, 그리고 한글화</title>
+				
+					<dc:creator>Wook Hyun</dc:creator>
+				
+				
+					<description>&lt;h1 id=&quot;계보-역사&quot;&gt;계보, 역사&lt;/h1&gt;
+
+</description>
+				
+				<pubDate>Tue, 25 Dec 2018 00:00:00 -0600</pubDate>
+				<link>http://0.0.0.0:3000/documentation/MUD.html</link>
+				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/MUD.html</guid>
+			</item>
+		
+			<item>
 				<title>FFMPEG 사용하기</title>
 				
 					<dc:creator>Wook Hyun</dc:creator>
@@ -153,21 +168,6 @@
 				<pubDate>Wed, 19 Dec 2018 00:00:00 -0600</pubDate>
 				<link>http://0.0.0.0:3000/documentation/ethereum-testnet.html</link>
 				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/ethereum-testnet.html</guid>
-			</item>
-		
-			<item>
-				<title>OpenAI - Auto Gamebot</title>
-				
-					<dc:creator>Wook Hyun</dc:creator>
-				
-				
-					<description>&lt;h2 id=&quot;openai를-이용한-auto-game-bot-처음-시작하기&quot;&gt;OpenAI를 이용한 Auto game bot 처음 시작하기&lt;/h2&gt;
-
-</description>
-				
-				<pubDate>Sat, 17 Feb 2018 00:00:00 -0600</pubDate>
-				<link>http://0.0.0.0:3000/documentation/openAI-gamebot.html</link>
-				<guid isPermaLink="true">http://0.0.0.0:3000/documentation/openAI-gamebot.html</guid>
 			</item>
 		
 	</channel>

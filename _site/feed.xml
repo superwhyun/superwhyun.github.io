@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:3000/" rel="alternate" type="text/html" /><updated>2018-12-26T02:51:37-06:00</updated><id>http://0.0.0.0:3000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">유니티 3D - 예제</title><link href="http://0.0.0.0:3000/documentation/unity-example.html" rel="alternate" type="text/html" title="유니티 3D - 예제" /><published>2018-12-25T00:00:00-06:00</published><updated>2018-12-25T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/unity-example</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/unity-example.html">&lt;p&gt;거의 생초짜가 전문강사님의 강의를 듣고 다시 해 보며 부딪혀 본 내용을 기록한 것입니다.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://0.0.0.0:3000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:3000/" rel="alternate" type="text/html" /><updated>2018-12-26T10:48:56-06:00</updated><id>http://0.0.0.0:3000/</id><title type="html">U2PIA</title><subtitle>Joy of learning</subtitle><author><name>Wook Hyun</name></author><entry><title type="html">유니티 3D - 예제</title><link href="http://0.0.0.0:3000/documentation/unity-example.html" rel="alternate" type="text/html" title="유니티 3D - 예제" /><published>2018-12-25T00:00:00-06:00</published><updated>2018-12-25T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/unity-example</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/unity-example.html">&lt;p&gt;거의 생초짜가 전문강사님의 강의를 듣고 다시 해 보며 부딪혀 본 내용을 기록한 것입니다.
 백문이 불여일견입니다. 책 아무리 들여다보는 것 보다, 직접 하는 것이 낫고..
 혼자 하는 것 보다 전문가의 도움을 받는 것이 훨씬 시간을 절약합니다.&lt;/p&gt;
 
@@ -1220,7 +1220,85 @@ Project 화면에서 번들하고자 하는 모델을 선택한다 . (Prefab 선
         &lt;span class=&quot;n&quot;&gt;SceneManager&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;LoadSceneAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// CoRoutine 으로 숨겨서 로딩하고 다 받아지면 넘어가는 ..&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">거의 생초짜가 전문강사님의 강의를 듣고 다시 해 보며 부딪혀 본 내용을 기록한 것입니다. 백문이 불여일견입니다. 책 아무리 들여다보는 것 보다, 직접 하는 것이 낫고.. 혼자 하는 것 보다 전문가의 도움을 받는 것이 훨씬 시간을 절약합니다.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/unity/unity.png" /></entry><entry><title type="html">FFMPEG 사용하기</title><link href="http://0.0.0.0:3000/tips/ffmpeg.html" rel="alternate" type="text/html" title="FFMPEG 사용하기" /><published>2018-12-21T00:00:00-06:00</published><updated>2018-12-21T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/ffmpeg</id><content type="html" xml:base="http://0.0.0.0:3000/tips/ffmpeg.html">&lt;h2 id=&quot;영상을-일정-간격으로-자르기&quot;&gt;영상을 일정 간격으로 자르기&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">거의 생초짜가 전문강사님의 강의를 듣고 다시 해 보며 부딪혀 본 내용을 기록한 것입니다. 백문이 불여일견입니다. 책 아무리 들여다보는 것 보다, 직접 하는 것이 낫고.. 혼자 하는 것 보다 전문가의 도움을 받는 것이 훨씬 시간을 절약합니다.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/unity/unity.png" /></entry><entry><title type="html">MUD의 역사/계보, 근황, 그리고 한글화</title><link href="http://0.0.0.0:3000/documentation/MUD.html" rel="alternate" type="text/html" title="MUD의 역사/계보, 근황, 그리고 한글화" /><published>2018-12-25T00:00:00-06:00</published><updated>2018-12-25T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/MUD</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/MUD.html">&lt;h1 id=&quot;계보-역사&quot;&gt;계보, 역사&lt;/h1&gt;
+
+&lt;h2 id=&quot;-diku-머드---circle-머드---tbamud&quot;&gt;* &lt;a href=&quot;https://www.circlemud.org/&quot;&gt;Diku 머드&lt;/a&gt; -&amp;gt; &lt;a href=&quot;https://www.circlemud.org/&quot;&gt;Circle 머드&lt;/a&gt; -&amp;gt; &lt;a href=&quot;https://tbamud.com/&quot;&gt;tbaMUD&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;놀랍게도 이 세 사이트 모두 살아있다.
+    &lt;ul&gt;
+      &lt;li&gt;단, tbaMUD를 제외하고는 화석&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Circle Mud의 공식 최종 릴리즈는 3.1&lt;/li&gt;
+  &lt;li&gt;TBA에서 이어 받아 계속 업데이트를 해 오고 있으며, 현재 2018.1월 버전이 최신 버전
+    &lt;ul&gt;
+      &lt;li&gt;3.6 버전을 한글화한 &lt;a href=&quot;http://bbs.vtmode.co.kr/14604&quot;&gt;사례&lt;/a&gt;가 있음 (대략 80%)&lt;/li&gt;
+      &lt;li&gt;최신 버전은 공식홈페이지의 &lt;a href=&quot;https://drive.google.com/drive/u/0/folders/0B40XbRH2Qbx5SlBVQjZnN2RFbDQ?tid=0B40XbRH2Qbx5fkE2UE0tUUdGbzVCWC10c1dFaENJRTN0TUE3anRUYWdDdjVQWWVBZ3l0b2M&quot;&gt;구글 드라이브&lt;/a&gt;에서 다운받을 수 있음.&lt;/li&gt;
+      &lt;li&gt;또는 &lt;a href=&quot;https://github.com/tbamud/tbamud&quot;&gt;github&lt;/a&gt;에서 최신 받을 수 있음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Diku, Circle의 라이센스를 그대로 따름.
+    &lt;ul&gt;
+      &lt;li&gt;어떠한 경우에도 돈을 받아서는 안됨. 상용화 불가.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;소스-컴파일&quot;&gt;소스 컴파일&lt;/h1&gt;
+
+&lt;p&gt;소스코드를 다운로드하고 압축을 해제한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chmod +x configure
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;./configure
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;src
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;chmod +x licheck
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;컴파일 들어가기전에 라이센스 동의하는 메뉴가 잠시 나온다. 당연히 동의해 주고 나오면 Warning 하나 없이 깨끗하게 컴파일 됨.
+정말 깔끔하게 잘 짠 코드라고 할 수 밖에 없다.&lt;/p&gt;
+
+&lt;h1 id=&quot;실행&quot;&gt;실행&lt;/h1&gt;
+
+&lt;h2 id=&quot;서버-실행&quot;&gt;서버 실행&lt;/h2&gt;
+
+&lt;p&gt;컴파일이 완료된 후 제일 바깥 디렉토리로 나와서, 아래와 같이 실행한다.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sh autorun.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;혹시 listening port를 바꾸고 싶으면, autorun.sh 파일을 열어 PORT 변수의 값을 바꿔주면 된다.&lt;/p&gt;
+
+&lt;h2 id=&quot;클라이언트-실행&quot;&gt;클라이언트 실행&lt;/h2&gt;
+
+&lt;p&gt;다른 터미널을 띄워서&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;telnet localhost 4000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;해주면 깔끔하게 실행된다.&lt;/p&gt;
+
+&lt;h1 id=&quot;맵-bulding&quot;&gt;맵 Bulding&lt;/h1&gt;
+
+&lt;p&gt;쪼까 복잡시럽다고 한다. 이건 찬찬히…&lt;/p&gt;
+
+&lt;h1 id=&quot;한글화&quot;&gt;한글화&lt;/h1&gt;
+
+&lt;p&gt;lib/world/wld 폴더밑에 있는 파일들을 번역하면 된다. 그리고, 서버를 restart하면 자동으로 한글이 반영된다.
+단, 메뉴까지 한글화 하려면 코드를 손대야 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;자동화-방법&quot;&gt;자동화 방법&lt;/h2&gt;
+
+&lt;p&gt;구글 Translation API 이용하면 될 듯.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jungwoon.github.io/google%20cloud/2018/01/03/Translation-Api/&quot;&gt;자바&lt;/a&gt;나 Python으로 쉽게 할 수 있는 듯함.&lt;/p&gt;
+
+&lt;h3 id=&quot;방법-1&quot;&gt;방법 1&lt;/h3&gt;
+&lt;p&gt;send_to_char() 함수가 character들에게 명령결과 등을 송신한다. 이 부분에 번역코드를 넣으면… 될듯..
+근데 C를 지원하지를 않으네… 파이썬은 하네.. 그럼 번역 GW를 하나 만들어야 하나? 아님 Python C Wrapper가 있을라나..&lt;/p&gt;
+
+&lt;h3 id=&quot;방법-2&quot;&gt;방법 2&lt;/h3&gt;
+&lt;p&gt;소스코드를 통으로 읽어서 “ “ 사이의 문자열을 API로 번역하고, 그 결과로 문자열을 치환하도록 함.
+당연히 world 파일들은 쉽게 할 수 있을테고…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;하루정도 뚝딱거리면 가능은 하겠다. 근데, 번역의 품질이 아주 개판이다&lt;/strong&gt;&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">계보, 역사</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/mud.png" /></entry><entry><title type="html">FFMPEG 사용하기</title><link href="http://0.0.0.0:3000/tips/ffmpeg.html" rel="alternate" type="text/html" title="FFMPEG 사용하기" /><published>2018-12-21T00:00:00-06:00</published><updated>2018-12-21T00:00:00-06:00</updated><id>http://0.0.0.0:3000/tips/ffmpeg</id><content type="html" xml:base="http://0.0.0.0:3000/tips/ffmpeg.html">&lt;h2 id=&quot;영상을-일정-간격으로-자르기&quot;&gt;영상을 일정 간격으로 자르기&lt;/h2&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:00:00 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:00:20 ./mov/1.mp4
 ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; input.mp4 &lt;span class=&quot;nt&quot;&gt;-ss&lt;/span&gt; 00:00:20 &lt;span class=&quot;nt&quot;&gt;-strict&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-to&lt;/span&gt; 00:00:40 ./mov/2.mp4
@@ -1536,501 +1614,4 @@ python3 app.py
 &lt;!-- this is the embed code provided by Google --&gt;
   &lt;iframe src=&quot;https://docs.google.com/document/d/e/2PACX-1vSqUUImEBqVQzeldrtyyfuhfw04PzGNrrIOMWQV4jnggtW2JlGq2pYrhpbSiliYnBx6zkv7jFPl-k5q/pub?embedded=true&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
 &lt;!-- Google embed ends --&gt;
-&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/nature-1.jpg" /></entry><entry><title type="html">OpenAI - Auto Gamebot</title><link href="http://0.0.0.0:3000/documentation/openAI-gamebot.html" rel="alternate" type="text/html" title="OpenAI - Auto Gamebot" /><published>2018-02-17T00:00:00-06:00</published><updated>2018-02-17T00:00:00-06:00</updated><id>http://0.0.0.0:3000/documentation/openAI-gamebot</id><content type="html" xml:base="http://0.0.0.0:3000/documentation/openAI-gamebot.html">&lt;h2 id=&quot;openai를-이용한-auto-game-bot-처음-시작하기&quot;&gt;OpenAI를 이용한 Auto game bot 처음 시작하기&lt;/h2&gt;
-
-&lt;p&gt;몇가지 게임을 docker container로 제공하고…
-VNC를 이용해 원격으로 이미지를 받아오고…
-이걸 가지고 ML 학습을 시키는 건데…&lt;/p&gt;
-
-&lt;p&gt;함 해보자..&lt;/p&gt;
-
-&lt;p&gt;https://www.youtube.com/watch?v=XI-I9i_GzIw&amp;amp;index=6&amp;amp;list=PL2-dafEMk2A64XaBlIUUI96yojneEfsuO
-의 내용을 토대로 학습하였다.&lt;/p&gt;
-
-&lt;p&gt;다른 학자/교수들은 너무 기초부터 지루하게 설명하는데, 이 사람은 딱 사람들이 궁금해 하는 것에서 시작한다는 점에서 마음에 든다.&lt;/p&gt;
-
-&lt;h3 id=&quot;openai&quot;&gt;openAI&lt;/h3&gt;
-
-&lt;p&gt;아래 링크에 앵간한 설명 다 되어있다. 하라는 대로 하면 된다.
-https://github.com/openai/universe&lt;/p&gt;
-
-&lt;p&gt;setup.py라는 것에 dependency, 설치되어야 할 패키지등이 기술되어 있다.
-아래 명령어로 setup.py에 기재된 대로 일괄 설치시킨다. 난 python3을 쓸꺼니까 pip대신 pip3를 썼다.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;pip3 install -e .&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;아래 게임들이 docker image로 이미 만들어져 있다. 그래서, 일단 시작!하기 좋다. 뭔가 되는 것이 보여야 할 맛이 나지 않겠나?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Atari and CartPole environments over VNC: gym-core.Pong-v3, gym-core.CartPole-v0, etc.&lt;/li&gt;
-  &lt;li&gt;Flashgames over VNC: flashgames.DuskDrive-v0, etc.&lt;/li&gt;
-  &lt;li&gt;Browser tasks (“World of Bits”) over VNC: wob.mini.TicTacToe-v0, etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;게임의 화면을 VNC로 받아오게 해서 쓰는 것 같은데, 좀 많이 unstable할 것 같다.&lt;/p&gt;
-
-&lt;h3 id=&quot;첫-걸음&quot;&gt;첫 걸음&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/llSourcell/OpenAI_Game_Bot_Live_stream&quot;&gt;여기&lt;/a&gt;
-에서 demo.py를 다운받아서 시작해 보자.&lt;/p&gt;
-
-&lt;p&gt;하라는대로 하면 될것 같지만, 세상 모든 일이 그러하듯 당연히 안될거다. 트러블을 잡아보자.&lt;/p&gt;
-
-&lt;h4 id=&quot;trouble-shooting&quot;&gt;Trouble shooting&lt;/h4&gt;
-
-&lt;p&gt;무작정 실행하면 다음 에러가 나올 수 있다. (안 나올 수도 있고~)&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;whyunui-MBP2017:OpenAI_Game_Bot_Live_stream whyun$ python demo.py 
-Traceback (most recent call last):
-  File &quot;demo.py&quot;, line 2, in &amp;lt;module&amp;gt;
-    import universe
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/__init__.py&quot;, line 20, in &amp;lt;module&amp;gt;
-    import universe.scoreboard
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/scoreboard/__init__.py&quot;, line 1, in &amp;lt;module&amp;gt;
-    from gym.benchmarks import scoring
-ModuleNotFoundError: No module named 'gym.benchmarks'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이상하다. 분명 하라는대로 다 설치했는데? 
-아래와 같이 해 보자.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;whyunui-MBP2017:OpenAI_Game_Bot_Live_stream whyun$ python
-Python 3.6.2 (default, Jul 23 2017, 19:10:13) 
-[GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)] on darwin
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&amp;gt;&amp;gt;&amp;gt; import gym
-&amp;gt;&amp;gt;&amp;gt; gym
-&amp;lt;module 'gym' from '/usr/local/lib/python3.6/site-packages/gym/__init__.py'&amp;gt;
-&amp;gt;&amp;gt;&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;좀 뒤져보니… benchmarks 패키지가 gym에서 갑자기 사라졌다네? 곧 고치겠지만, 아래와 같이 낮은 버전으로 내리면 된다.
-&lt;a href=&quot;https://github.com/openai/universe/issues/228&quot;&gt;참고&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip uninstall gym
-pip install gym==0.9.5
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그럼 될까?&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;whyunui-MBP2017:OpenAI_Game_Bot_Live_stream whyun$ python demo.py 
-[2018-02-17 17:49:35,551] Making new env: flashgames.CoasterRacer-v0
-Traceback (most recent call last):
-  File &quot;demo.py&quot;, line 93, in &amp;lt;module&amp;gt;
-    main()	
-  File &quot;demo.py&quot;, line 39, in main
-    observation_n = env.reset()
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 104, in reset
-    return self._reset()
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/timer.py&quot;, line 18, in _reset
-    return self.env.reset()
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 104, in reset
-    return self._reset()
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/render.py&quot;, line 28, in _reset
-    observation_n = self.env.reset()
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 104, in reset
-    return self._reset()
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/throttle.py&quot;, line 42, in _reset
-    observation = self.env.reset()
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 104, in reset
-    return self._reset()
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/envs/vnc_env.py&quot;, line 336, in _reset
-    self._handle_connect()
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/envs/vnc_env.py&quot;, line 510, in _handle_connect
-    for remote in self.remote_manager.pop(n=n):
-AttributeError: 'VNCEnv' object has no attribute 'remote_manager'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;에이~ 그럼 재미 없지~!! (라고 말은 하지만 육두문자가 떠오른 것은 인지상정!)
-좀 뒤져보니, env.configure(remotes=1)을 넣어줘야 한단다.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-
-	&lt;span class=&quot;c&quot;&gt;#init environment&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gym&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'flashgames.CoasterRacer-v0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remotes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;observation_n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;다시 실행해 보자. 아래와 같이 docker image를 받아오는 것으 ㄹ볼 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;whyunui-MBP2017:OpenAI_Game_Bot_Live_stream whyun$ !p
-python demo.py 
-[2018-02-17 18:00:29,906] Making new env: flashgames.CoasterRacer-v0
-[2018-02-17 18:00:29,913] Writing logs to file: /tmp/universe-81183.log
-[2018-02-17 18:00:29,952] Ports used: dict_keys([])
-[2018-02-17 18:00:29,952] [0] Creating container: image=quay.io/openai/universe.flashgames:0.20.28. Run the same thing by hand as: docker run -p 5900:5900 -p 15900:15900 --privileged --cap-add SYS_ADMIN --ipc host quay.io/openai/universe.flashgames:0.20.28
-[2018-02-17 18:00:29,986] Image quay.io/openai/universe.flashgames:0.20.28 not present locally; pulling
-0.20.28: Pulling from openai/universe.flashgames
-aed15891ba52: Pull complete
-773ae8583d14: Pull complete
-d1d48771f782: Pull complete
-...
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;어, 뭔가 브라우저가 떴다가…. 먹통이 되삔네? 로그 메시지를 보자.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[2018-02-17 18:02:36,113] Ports used: dict_keys([])
-[2018-02-17 18:02:36,677] Remote closed: address=localhost:5901
-[2018-02-17 18:02:36,679] At least one sockets was closed by the remote. Sleeping 1s...
-universe-XBY3vd-0 | Setting VNC and rewarder password: openai
-universe-XBY3vd-0 | [Sat Feb 17 09:02:40 UTC 2018] Waiting for /tmp/.X11-unix/X0 to be created (try 1/10)
-universe-XBY3vd-0 | [Sat Feb 17 09:02:40 UTC 2018] [/usr/local/bin/sudoable-env-setup] Disabling outbound network traffic for none
-universe-XBY3vd-0 | [init] [2018-02-17 09:02:40,891] Launching system_diagnostics_logger.py, recorder_logdir=/tmp/demo
-universe-XBY3vd-0 | [tigervnc] 
-universe-XBY3vd-0 | [tigervnc] Xvnc TigerVNC 1.7.0 - built Sep  8 2016 10:39:22
-universe-XBY3vd-0 | [tigervnc] Copyright (C) 1999-2016 TigerVNC Team and many others (see README.txt)
-universe-XBY3vd-0 | [tigervnc] See http://www.tigervnc.org for information on TigerVNC.
-universe-XBY3vd-0 | [tigervnc] Underlying X server release 11400000, The X.Org Foundation
-universe-XBY3vd-0 | [tigervnc] 
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension VNC-EXTENSION
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension Generic Event Extension
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension SHAPE
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension MIT-SHM
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XInputExtension
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XTEST
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension BIG-REQUESTS
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension SYNC
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XKEYBOARD
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XC-MISC
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XINERAMA
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XFIXES
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension RENDER
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension RANDR
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension COMPOSITE
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension DAMAGE
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension MIT-SCREEN-SAVER
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension DOUBLE-BUFFER
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension RECORD
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension DPMS
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension X-Resource
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XVideo
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension XVideo-MotionCompensation
-universe-XBY3vd-0 | [tigervnc] Initializing built-in extension GLX
-universe-XBY3vd-0 | [tigervnc] 
-universe-XBY3vd-0 | [tigervnc] Sat Feb 17 09:02:40 2018
-universe-XBY3vd-0 | [tigervnc]  vncext:      VNC extension running!
-universe-XBY3vd-0 | [tigervnc]  vncext:      Listening for VNC connections on all interface(s), port 5900
-universe-XBY3vd-0 | [tigervnc]  vncext:      created VNC server for screen 0
-universe-XBY3vd-0 | [tigervnc] [dix] Could not init font path element /usr/share/fonts/X11/Type1/, removing from list!
-universe-XBY3vd-0 | [tigervnc] [dix] Could not init font path element /usr/share/fonts/X11/75dpi/, removing from list!
-universe-XBY3vd-0 | [init] [2018-02-17 09:02:40,906] Launching reward_recorder.py, recorder_logdir=/tmp/demo
-universe-XBY3vd-0 | [tigervnc] [dix] Could not init font path element /usr/share/fonts/X11/100dpi/, removing from list!
-universe-XBY3vd-0 | [init] [2018-02-17 09:02:40,917] Launching vnc_recorder.py, recorder_logdir=/tmp/demo
-universe-XBY3vd-0 | [init] [2018-02-17 09:02:40,927] PID 55 launched with command ['sudo', '-H', '-u', 'nobody', 'DISPLAY=:0', 'DBUS_SESSION_BUS_ADDRESS=/dev/null', '/app/universe-envs/controlplane/bin/controlplane.py', '--rewarder-port=15901']
-universe-XBY3vd-0 | [init] [2018-02-17 09:02:41,043] init detected end of child process 59 with exit code 0, not killed by signal
-universe-XBY3vd-0 | WebSocket server settings:
-universe-XBY3vd-0 |   - Listen on :5898
-universe-XBY3vd-0 |   - Flash security policy server
-universe-XBY3vd-0 |   - No SSL/TLS support (no cert file)
-universe-XBY3vd-0 |   - proxying from :5898 to localhost:5900
-[2018-02-17 18:02:37,679] Remote closed: address=localhost:15901
-[2018-02-17 18:02:37,681] Remote closed: address=localhost:5901
-[2018-02-17 18:02:37,682] At least one sockets was closed by the remote. Sleeping 1s...
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:02:41 [error] 63#63: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: , request: &quot;GET / HTTP/1.1&quot;, upstream: &quot;http://127.0.0.1:15901/&quot;, host: &quot;127.0.0.1:10003&quot;
-universe-XBY3vd-0 | [nginx] 172.17.0.1 - openai [17/Feb/2018:09:02:41 +0000] &quot;GET / HTTP/1.1&quot; 502 182 &quot;-&quot; &quot;-&quot;
-universe-XBY3vd-0 | [tigervnc] 
-universe-XBY3vd-0 | [tigervnc] Sat Feb 17 09:02:41 2018
-universe-XBY3vd-0 | [tigervnc]  Connections: accepted: 172.17.0.1::44036
-universe-XBY3vd-0 | [vnc_recorder] [2018-02-17 09:02:41,714] Listening on 0.0.0.0:5899
-universe-XBY3vd-0 | [reward_recorder] [2018-02-17 09:02:41,722] Listening on 0.0.0.0:15898
-universe-XBY3vd-0 | [init] [2018-02-17 09:02:41,818] init detected end of child process 17 with exit code 0, not killed by signal
-universe-XBY3vd-0 | [2018-02-17 09:02:41,939] [INFO:root] Starting play_controlplane.py with the following: command=['/app/universe-envs/controlplane/bin/controlplane.py', '--rewarder-port=15901'] args=Namespace(bot_demonstration=False, demonstration=False, env_id=None, idle_timeout=None, integrator_mode=False, no_env=False, no_rewarder=False, no_scorer=False, no_vexpect=False, remotes='vnc://127.0.0.1:5900', rewarder_fps=60, rewarder_port=15901, verbosity=0) env=environ({'TERM': 'xterm', 'HOME': '/nonexistent', 'SUDO_COMMAND': '/app/universe-envs/controlplane/bin/controlplane.py --rewarder-port=15901', 'HOSTNAME': 'c92bff94be55', 'SUDO_USER': 'root', 'SHELL': '/usr/sbin/nologin', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'SUDO_UID': '0', 'USERNAME': 'nobody', 'DISPLAY': ':0', 'LOGNAME': 'nobody', 'USER': 'nobody', 'DBUS_SESSION_BUS_ADDRESS': '/dev/null', 'SUDO_GID': '0', 'MAIL': '/var/mail/nobody'})
-universe-XBY3vd-0 | [2018-02-17 09:02:41,939] [INFO:root] [EnvStatus] Changing env_state: None (env_id=None) -&amp;gt; None (env_id=None) (episode_id: 0-&amp;gt;0, fps=60)
-universe-XBY3vd-0 | [2018-02-17 09:02:41,939] [INFO:universe.rewarder.remote] Starting Rewarder on port=15901
-universe-XBY3vd-0 | [2018-02-17 09:02:41,942] [INFO:universe.extra.universe.wrappers.logger] Running VNC environments with Logger set to print_frequency=5. To change this, pass &quot;print_frequency=k&quot; or &quot;print_frequency=None&quot; to &quot;env.configure&quot;.
-universe-XBY3vd-0 | [2018-02-17 09:02:41,942] [INFO:universe.remotes.hardcoded_addresses] No rewarder addresses were provided, so this env cannot connect to the remote's rewarder channel, and cannot send control messages (e.g. reset)
-universe-XBY3vd-0 | [2018-02-17 09:02:41,942] [INFO:universe.envs.vnc_env] Using the golang VNC implementation
-universe-XBY3vd-0 | [2018-02-17 09:02:41,942] [INFO:universe.envs.vnc_env] Using VNCSession arguments: {'start_timeout': 7, 'compress_level': 9, 'encoding': 'zrle', 'fine_quality_level': 50, 'subsample_level': 2}. (Customize by running &quot;env.configure(vnc_kwargs={...})&quot;
-universe-XBY3vd-0 | [2018-02-17 09:02:41,943] [INFO:universe.envs.vnc_env] Printed stats will ignore clock skew. (This usually makes sense only when the environment and agent are on the same machine.)
-universe-XBY3vd-0 | [2018-02-17 09:02:41,950] [INFO:universe.envs.vnc_env] [0] Connecting to environment: vnc://127.0.0.1:5900 password=openai. If desired, you can manually connect a VNC viewer, such as TurboVNC. Most environments provide a convenient in-browser VNC client: http://None/viewer/?password=openai
-universe-XBY3vd-0 | [2018-02-17 09:02:41,951] [INFO:universe.extra.universe.envs.vnc_env] [0] Connecting to environment details: vnc_address=127.0.0.1:5900 vnc_password=openai rewarder_address=None rewarder_password=openai
-universe-XBY3vd-0 | 2018/02/17 09:02:41 I0217 09:02:41.951574 58 gymvnc.go:417] [0:127.0.0.1:5900] opening connection to VNC server
-universe-XBY3vd-0 | [2018-02-17 09:02:41,952] [INFO:root] [EnvStatus] Changing env_state: None (env_id=None) -&amp;gt; resetting (env_id=None) (episode_id: 0-&amp;gt;1, fps=60)
-universe-XBY3vd-0 | [2018-02-17 09:02:41,952] [INFO:root] [MainThread] Env state: env_id=None episode_id=1
-universe-XBY3vd-0 | [2018-02-17 09:02:41,952] [INFO:root] [MainThread] Writing None to /tmp/demo/env_id.txt
-universe-XBY3vd-0 | [tigervnc]  Connections: accepted: 127.0.0.1::59474
-universe-XBY3vd-0 | [tigervnc]  SConnection: Client needs protocol version 3.8
-universe-XBY3vd-0 | [tigervnc]  SConnection: Client requests security type VncAuth(2)
-universe-XBY3vd-0 | [Sat Feb 17 09:02:41 UTC 2018] [/usr/local/bin/sudoable-env-setup] Disabling outbound network traffic for none
-universe-XBY3vd-0 | [2018-02-17 09:02:41,975] [INFO:gym_flashgames.launcher] [MainThread] Launching new Chrome process (attempt 0/10)
-universe-XBY3vd-0 | [2018-02-17 09:02:41,975] [INFO:root] Replacing selenium_wrapper_server since we currently do it at every episode boundary
-universe-XBY3vd-0 | [tigervnc]  VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
-universe-XBY3vd-0 | 2018/02/17 09:02:41 I0217 09:02:41.983761 58 gymvnc.go:550] [0:127.0.0.1:5900] connection established
-universe-XBY3vd-0 | [tigervnc]  VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
-universe-XBY3vd-0 | [2018-02-17 09:02:42,125] [selenium_wrapper_server] Calling webdriver.Chrome()
-[2018-02-17 18:02:38,688] Using the golang VNC implementation
-[2018-02-17 18:02:38,688] Using VNCSession arguments: {'start_timeout': 7, 'encoding': 'tight', 'fine_quality_level': 50, 'subsample_level': 2}. (Customize by running &quot;env.configure(vnc_kwargs={...})&quot;
-universe-XBY3vd-0 | [tigervnc] 
-universe-XBY3vd-0 | [tigervnc] Sat Feb 17 09:02:42 2018
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:02:42 [info] 63#63: *1 client 172.17.0.1 closed keepalive connection
-universe-XBY3vd-0 | [tigervnc]  Connections: closed: 172.17.0.1::44036 (Clean disconnection)
-universe-XBY3vd-0 | [tigervnc]  EncodeManager: Framebuffer updates: 0
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:   Total: 0 rects, 0 pixels
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:          0 B (1:-nan ratio)
-[2018-02-17 18:02:38,695] [0] Connecting to environment: vnc://localhost:5901 password=openai. If desired, you can manually connect a VNC viewer, such as TurboVNC. Most environments provide a convenient in-browser VNC client: http://localhost:15901/viewer/?password=openai
-2018/02/17 18:02:38 I0217 18:02:38.695987 81183 gymvnc.go:417] [0:localhost:5901] opening connection to VNC server
-universe-XBY3vd-0 | [tigervnc]  Connections: accepted: 172.17.0.1::44042
-universe-XBY3vd-0 | [tigervnc]  SConnection: Client needs protocol version 3.8
-2018/02/17 18:02:38 I0217 18:02:38.708281 81183 gymvnc.go:550] [0:localhost:5901] connection established
-universe-XBY3vd-0 | [tigervnc]  SConnection: Client requests security type VncAuth(2)
-universe-XBY3vd-0 | [tigervnc]  VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
-universe-XBY3vd-0 | [tigervnc]  VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
-universe-XBY3vd-0 | [2018-02-17 09:02:42,563] [INFO:universe.rewarder.remote] Client connecting: peer=tcp4:127.0.0.1:54308 observer=False
-universe-XBY3vd-0 | [2018-02-17 09:02:42,563] [INFO:universe.rewarder.remote] WebSocket connection established
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:02:44 [info] 63#63: *5 client sent invalid request while reading client request line, client: 127.0.0.1, server: , request: &quot;CONNECT www.google.com:443 HTTP/1.1&quot;
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:02:44 [info] 63#63: *6 client sent invalid request while reading client request line, client: 127.0.0.1, server: , request: &quot;CONNECT www.google.com:443 HTTP/1.1&quot;
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:02:44 [info] 63#63: *7 client sent invalid request while reading client request line, client: 127.0.0.1, server: , request: &quot;CONNECT www.google.com:443 HTTP/1.1&quot;
-universe-XBY3vd-0 | [2018-02-17 09:02:44,974] [selenium_wrapper_server] Call to webdriver.Chrome() completed: 2.85s
-universe-XBY3vd-0 | [2018-02-17 09:02:44,975] [INFO:gym_flashgames.launcher] [MainThread] Navigating browser to url=http://localhost
-[2018-02-17 18:02:41,128] Throttle fell behind by 2.39s; lost 143.68 frames
-universe-XBY3vd-0 | [2018-02-17 09:02:45,068] [INFO:root] [EnvStatus] Changing env_state: resetting (env_id=None) -&amp;gt; running (env_id=None) (episode_id: 1-&amp;gt;1, fps=60)
-universe-XBY3vd-0 | [2018-02-17 09:02:45,074] [INFO:root] [MainThread] Writing None to /tmp/demo/env_id.txt
-universe-XBY3vd-0 | Manhole[1518858165.0809]: Patched &amp;lt;built-in function fork&amp;gt; and &amp;lt;built-in function fork&amp;gt;.
-universe-XBY3vd-0 | Manhole[1518858165.0814]: Manhole UDS path: /tmp/manhole-58
-universe-XBY3vd-0 | Manhole[1518858165.0922]: Waiting for new connection (in pid:58) ...
-universe-XBY3vd-0 | [2018-02-17 09:02:46,966] [INFO:universe.wrappers.logger] Stats for the past 5.01s: vnc_updates_ps=3.8 n=1 reaction_time=None observation_lag=None action_lag=None reward_ps=0.0 reward_total=0.0 vnc_bytes_ps[total]=357957.6 vnc_pixels_ps[total]=532999.9 reward_lag=None rewarder_message_lag=None fps=22.74
-universe-XBY3vd-0 | [2018-02-17 09:02:50,080] [INFO:universe.pyprofile] [pyprofile] period=5.00s timers={&quot;rewarder.compute_reward&quot;: {&quot;mean&quot;: &quot;411.29us&quot;, &quot;calls&quot;: 301, &quot;std&quot;: &quot;182.74us&quot;}, &quot;vnc_env.VNCEnv.vnc_session.step&quot;: {&quot;mean&quot;: &quot;169.31us&quot;, &quot;calls&quot;: 301, &quot;std&quot;: &quot;92.46us&quot;}, &quot;rewarder.sleep&quot;: {&quot;mean&quot;: &quot;15.45ms&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;670.98us&quot;}, &quot;rewarder.frame&quot;: {&quot;mean&quot;: &quot;17.37ms&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;611.00us&quot;}} counters={&quot;reward.vnc.updates.n&quot;: {&quot;mean&quot;: 0.06312292358803995, &quot;calls&quot;: 301, &quot;std&quot;: 0.6678339725107008}} gauges={} (export_time=121.83us)
-universe-XBY3vd-0 | [2018-02-17 09:02:50,080] [INFO:universe.rewarder.remote] [Rewarder] Over past 5.00s, sent 1 reward messages to agent: reward=0 reward_min=0 reward_max=0 done=False info={'rewarder.vnc.updates.pixels': 0, 'rewarder.vnc.updates.n': 0, 'rewarder.vnc.updates.bytes': 0, 'rewarder.profile': '&amp;lt;763 bytes&amp;gt;'}
-universe-XBY3vd-0 | [2018-02-17 09:02:51,981] [INFO:universe.wrappers.logger] Stats for the past 5.01s: vnc_updates_ps=0.0 n=1 reaction_time=None observation_lag=None action_lag=None reward_ps=0.0 reward_total=0.0 vnc_bytes_ps[total]=0.0 vnc_pixels_ps[total]=0.0 reward_lag=None rewarder_message_lag=None fps=60.03
-universe-XBY3vd-0 | [2018-02-17 09:02:55,080] [INFO:universe.pyprofile] [pyprofile] period=5.00s timers={&quot;rewarder.compute_reward&quot;: {&quot;mean&quot;: &quot;440.98us&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;189.32us&quot;}, &quot;vnc_env.VNCEnv.vnc_session.step&quot;: {&quot;mean&quot;: &quot;177.15us&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;93.70us&quot;}, &quot;rewarder.sleep&quot;: {&quot;mean&quot;: &quot;15.29ms&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;603.19us&quot;}, &quot;rewarder.frame&quot;: {&quot;mean&quot;: &quot;17.48ms&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;496.74us&quot;}} counters={&quot;agent_conn.reward&quot;: {&quot;mean&quot;: 0.0, &quot;calls&quot;: 1, &quot;std&quot;: 0}, &quot;reward.vnc.updates.n&quot;: {&quot;mean&quot;: 0.0, &quot;calls&quot;: 300, &quot;std&quot;: 0.0}} gauges={} (export_time=115.39us)
-universe-XBY3vd-0 | [2018-02-17 09:02:55,080] [INFO:universe.rewarder.remote] [Rewarder] Over past 5.00s, sent 1 reward messages to agent: reward=0 reward_min=0 reward_max=0 done=False info={'rewarder.vnc.updates.pixels': 0, 'rewarder.vnc.updates.n': 0, 'rewarder.vnc.updates.bytes': 0, 'rewarder.profile': '&amp;lt;804 bytes&amp;gt;'}
-universe-XBY3vd-0 | [2018-02-17 09:02:56,997] [INFO:universe.wrappers.logger] Stats for the past 5.01s: vnc_updates_ps=0.0 n=1 reaction_time=None observation_lag=None action_lag=None reward_ps=0.0 reward_total=0.0 vnc_bytes_ps[total]=0.0 vnc_pixels_ps[total]=0.0 reward_lag=None rewarder_message_lag=None fps=60.02
-universe-XBY3vd-0 | [2018-02-17 09:03:00,081] [INFO:universe.pyprofile] [pyprofile] period=5.00s timers={&quot;rewarder.compute_reward&quot;: {&quot;mean&quot;: &quot;391.47us&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;172.18us&quot;}, &quot;vnc_env.VNCEnv.vnc_session.step&quot;: {&quot;mean&quot;: &quot;150.89us&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;76.76us&quot;}, &quot;rewarder.sleep&quot;: {&quot;mean&quot;: &quot;15.44ms&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;562.19us&quot;}, &quot;rewarder.frame&quot;: {&quot;mean&quot;: &quot;17.39ms&quot;, &quot;calls&quot;: 300, &quot;std&quot;: &quot;466.06us&quot;}} counters={&quot;agent_conn.reward&quot;: {&quot;mean&quot;: 0.0, &quot;calls&quot;: 1, &quot;std&quot;: 0}, &quot;reward.vnc.updates.n&quot;: {&quot;mean&quot;: 0.0, &quot;calls&quot;: 300, &quot;std&quot;: 0.0}} gauges={} (export_time=112.53us)
-universe-XBY3vd-0 | [2018-02-17 09:03:00,081] [INFO:universe.rewarder.remote] [Rewarder] Over past 5.00s, sent 1 reward messages to agent: reward=0 reward_min=0 reward_max=0 done=False info={'rewarder.vnc.updates.pixels': 0, 'rewarder.vnc.updates.n': 0, 'rewarder.vnc.updates.bytes': 0, 'rewarder.profile': '&amp;lt;803 bytes&amp;gt;'}
-universe-XBY3vd-0 | [2018-02-17 09:03:02,013] [INFO:universe.wrappers.logger] Stats for the past 5.02s: vnc_updates_ps=0.0 n=1 reaction_time=None observation_lag=None action_lag=None reward_ps=0.0 reward_total=0.0 vnc_bytes_ps[total]=0.0 vnc_pixels_ps[total]=0.0 reward_lag=None rewarder_message_lag=None fps=60.01
-[2018-02-17 18:03:01,127] [0:localhost:5901] ntpdate -q -p 8 localhost call timed out after 20.0s; killing the subprocess. This is ok, but you could have more accurate timings by enabling UDP port 123 traffic to your env. (Alternatively, you can try increasing the timeout by setting environment variable UNIVERSE_NTPDATE_TIMEOUT=10.)
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *10 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *11 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *12 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *13 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *14 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *15 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *16 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *17 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *18 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *19 client closed connection while waiting for request, client: 172.17.0.1, server: 0.0.0.0:15900
-universe-XBY3vd-0 | [2018-02-17 09:03:05,038] [INFO:universe.rewarder.remote] CONNECTION STATUS: Marking connection as active: observer=False peer=tcp4:127.0.0.1:54308 total_conns=1
-[2018-02-17 18:03:01,187] [0:localhost:5901] Sending reset for env_id=flashgames.CoasterRacer-v0 fps=60 episode_id=0
-universe-XBY3vd-0 | [2018-02-17 09:03:05,063] [INFO:universe.rewarder.remote] Received reset message: {'headers': {'episode_id': '0', 'message_id': 10, 'sent_at': 1518858181.187246}, 'body': {'seed': None, 'env_id': 'flashgames.CoasterRacer-v0', 'fps': 60}, 'method': 'v0.env.reset'}
-universe-XBY3vd-0 | [2018-02-17 09:03:05,070] [INFO:root] [EnvStatus] Changing env_state: running (env_id=None) -&amp;gt; resetting (env_id=flashgames.CoasterRacer-v0) (episode_id: 1-&amp;gt;2, fps=60)
-universe-XBY3vd-0 | [2018-02-17 09:03:05,073] [ERROR:root] Closing server (via subprocess.close()) and all chromes (via pkill chromedriver || :; pkill chrome || :)
-universe-XBY3vd-0 | [2018-02-17 09:03:05,079] [INFO:root] [Rewarder] Blocking until env finishes resetting
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,088] init detected end of child process 111 with exit code 0, killed by SIGTERM: 15
-universe-XBY3vd-0 | [2018-02-17 09:03:05,091] [INFO:root] [EnvController] RESET CAUSE: changing out environments due to v0.env.reset (with episode_id=0): flashgames.CoasterRacer-v0 -&amp;gt; flashgames.CoasterRacer-v0 (new episode_id=2 fps=60)
-universe-XBY3vd-0 | [2018-02-17 09:03:05,092] [INFO:root] [EnvController] Env state: env_id=flashgames.CoasterRacer-v0 episode_id=2
-universe-XBY3vd-0 | [2018-02-17 09:03:05,092] [INFO:root] [EnvController] Writing flashgames.CoasterRacer-v0 to /tmp/demo/env_id.txt
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,102] init detected end of child process 126 with exit code 0, not killed by signal
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,103] init detected end of child process 332 with exit code 0, killed by SIGTERM: 15
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,103] init detected end of child process 348 with exit code 0, killed by SIGTERM: 15
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *9 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:80
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:03:05 [info] 63#63: *8 client 127.0.0.1 closed keepalive connection
-universe-XBY3vd-0 | [Sat Feb 17 09:03:05 UTC 2018] [/usr/local/bin/sudoable-env-setup] Allowing outbound network traffic to non-private IPs for git-lfs. (Going to fetch files via git lfs.)
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,160] init detected end of child process 125 with exit code 0, killed by SIGTERM: 15
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,160] init detected end of child process 122 with exit code 0, not killed by signal
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,160] init detected end of child process 123 with exit code 0, not killed by signal
-universe-XBY3vd-0 | [init] [2018-02-17 09:03:05,161] init detected end of child process 114 with exit code 0, not killed by signal
-universe-XBY3vd-0 | [unpack-lfs] [2018-02-17 09:03:05,240] Fetching files: git lfs pull -I git-lfs/flashgames.CoasterRacer-v0.tar.gz
-universe-XBY3vd-0 | [unpack-lfs] [2018-02-17 09:03:05,242] If this hangs, your docker container may not be able to communicate with Github
-universe-XBY3vd-0 | [nginx] 2018/02/17 09:04:05 [info] 63#63: *3 upstream timed out (110: Connection timed out) while proxying upgraded connection, client: 172.17.0.1, server: , request: &quot;GET / HTTP/1.1&quot;, upstream: &quot;http://127.0.0.1:15901/&quot;, host: &quot;localhost:15901&quot;
-universe-XBY3vd-0 | [nginx] 172.17.0.1 - openai [17/Feb/2018:09:04:05 +0000] &quot;GET / HTTP/1.1&quot; 101 4455 &quot;-&quot; &quot;AutobahnPython/17.10.1&quot;
-universe-XBY3vd-0 | [2018-02-17 09:04:05,090] [INFO:universe.rewarder.remote] WebSocket connection closed: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
-[2018-02-17 18:04:01,150] [0] Closing rewarder connection
-universe-XBY3vd-0 | [2018-02-17 09:04:05,091] [INFO:universe.rewarder.remote] [Twisted] Active client disconnected (sent 11 messages). Still have 0 active clients left
-Traceback (most recent call last):
-  File &quot;demo.py&quot;, line 94, in &amp;lt;module&amp;gt;
-universe-XBY3vd-0 | [tigervnc] 
-universe-XBY3vd-0 | [tigervnc] Sat Feb 17 09:04:05 2018
-universe-XBY3vd-0 | [tigervnc]  Connections: closed: 172.17.0.1::44042 (Clean disconnection)
-universe-XBY3vd-0 | [tigervnc]  EncodeManager: Framebuffer updates: 20
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:   Tight:
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:     Solid: 43 rects, 2.50697 Mpixels
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:            688 B (1:14576.1 ratio)
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:     Bitmap RLE: 8 rects, 52.512 kpixels
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:                 415 B (1:506.371 ratio)
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:     Indexed RLE: 24 rects, 314.46 kpixels
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:                  11.2979 KiB (1:108.75 ratio)
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:   Tight (JPEG):
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:     Full Colour: 14 rects, 549.336 kpixels
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:                  106.937 KiB (1:20.0681 ratio)
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:   Total: 89 rects, 3.42328 Mpixels
-universe-XBY3vd-0 | [tigervnc]  EncodeManager:          119.312 KiB (1:112.087 ratio)
-    main()	
-  File &quot;demo.py&quot;, line 89, in main
-    observation_n, reward_n, done_n, info = env.step(action_n)
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 96, in step
-    return self._step(action)
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/timer.py&quot;, line 23, in _step
-    observation_n, reward_n, done_n, info = self.env.step(action_n)
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 96, in step
-    return self._step(action)
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/render.py&quot;, line 33, in _step
-    observation_n, reward_n, done_n, info_n = self.env.step(action_n)
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 96, in step
-    return self._step(action)
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/throttle.py&quot;, line 51, in _step
-    accum_observation_n, accum_reward_n, accum_done_n, accum_info = self._substep(action_n)
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/wrappers/throttle.py&quot;, line 132, in _substep
-    observation_n, reward_n, done_n, info = self.env.step(action_n)
-  File &quot;/usr/local/lib/python3.6/site-packages/gym/core.py&quot;, line 96, in step
-    return self._step(action)
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/envs/vnc_env.py&quot;, line 464, in _step
-    self._handle_crashed_n(info_n)
-  File &quot;/Users/whyun/Devel/Projects/ML_gamebot/universe/universe/envs/vnc_env.py&quot;, line 537, in _handle_crashed_n
-    raise error.Error('{}/{} environments have crashed! Most recent error: {}'.format(len(self.crashed), self.n, errors))
-universe.error.Error: 1/1 environments have crashed! Most recent error: {'0': 'Rewarder session failed: Lost connection: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake) (clean=False code=1006)'}
-universe-XBY3vd-0 | [unpack-lfs] [2018-02-17 09:04:05,247] git lfs timed out after 60 seconds. Your docker container probably can't communicate with Github.
-universe-XBY3vd-0 | It is fetching from https://github.com/, so make sure your container can connect to public addresses on port 443.
-[2018-02-17 18:04:01,338] Killing and removing container: id=c92bff94be55d030bf78246de5c46fb9f377571db256c23b0953f30484e855db
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;뭔가 학습이 진행 되다가… 죽은것 같다. 
-다시 실행해 본다. 
-어! 된다!
-어? 근데 곧 죽었다.
-뭔가 소켓쪽 에러가 마구 뿜뿜한다.&lt;/p&gt;
-
-&lt;p&gt;openai 공식홈페이지에서 제공하는 예제를 가지고 다시 해보자.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gym&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;universe&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# register the universe environments&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gym&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'flashgames.DuskDrive-v0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;configure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remotes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# automatically creates a local docker container&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;observation_n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;action_n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'KeyEvent'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'ArrowUp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ob&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;observation_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;# your agent here&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;observation_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reward_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;done_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;action_n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;잘 된다. 근데 얘는 UP 버튼만 누르기 때문에 수천번 돌려도 아무짝에 쓸모 없다.
-그래서 원래 하려던 코드에 나와있는 게임을 교체했더니 잘 동작한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# env = gym.make('flashgames.CoasterRacer-v0')&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gym&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'flashgames.DuskDrive-v0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;!-- ![openai screen](openai.png){:class=&quot;img-responsive&quot;} --&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/openai.png&quot; alt=&quot;openai flashgame screenshot&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;찬찬히 까보자. 
-도커 이미지는 다음을 포함하는 것 같다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;flashgame&lt;/li&gt;
-  &lt;li&gt;vnc server&lt;/li&gt;
-  &lt;li&gt;chrome&lt;/li&gt;
-  &lt;li&gt;web server&lt;/li&gt;
-  &lt;li&gt;websocket server&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;독특한게, 대개의 docker image/container는 server program이 구동되는 것이 통상적인데, 얘네는 마치 virtual desktop environment가 돌아가는 것 같다. 굉장히 특이하긴 한데, 다른 곳에 응용할 수 있는 가능성을 보여준 것이 꽤 흥미롭다.
-GUI application이 docker image에 들어가게 하는 방법은 &lt;a href=&quot;https://stackoverflow.com/questions/16296753/can-you-run-gui-apps-in-a-docker-container&quot;&gt;여기&lt;/a&gt;의 내용을 참고하자.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;...
-quay.io/openai/universe.flashgames   0.20.28             e55f692f7c56        11 months ago       1.75GB
-...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이 이미지/컨테이너가 하는 일이 뭔지 보는 가장 좋은 방법은 Dockerfile을 까 보는 것!!&lt;/p&gt;
-
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;FROM ubuntu:16.04&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;RUN apt-get update \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;amp;&amp;amp; apt-get install -y libav-tools \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;python3-numpy \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;python3-scipy \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;python3-setuptools \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;python3-pip \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;libpq-dev \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;libjpeg-dev \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;curl \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;cmake \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;swig \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;python3-opengl \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;libboost-all-dev \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;libsdl2-dev \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;wget \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;unzip \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;git \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;golang \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;net-tools \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;iptables \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;libvncserver-dev \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;software-properties-common \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;amp;&amp;amp; apt-get clean \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/*&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;RUN ln -sf /usr/bin/pip3 /usr/local/bin/pip \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;amp;&amp;amp; ln -sf /usr/bin/python3 /usr/local/bin/python \&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&amp;amp;&amp;amp; pip install -U pip&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Install gym&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;RUN pip install gym[all]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Get the faster VNC driver&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;RUN pip install go-vncdriver&amp;gt;=0.4.0&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Install pytest (for running test cases)&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;RUN pip install pytest&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Force the container to use the go vnc driver&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;ENV UNIVERSE_VNCDRIVER='go'&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;WORKDIR /usr/local/universe/&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Cachebusting&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;COPY ./setup.py ./&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;COPY ./tox.ini ./&lt;/span&gt;
-
-&lt;span class=&quot;s&quot;&gt;RUN pip install -e .&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Upload our actual code&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;COPY . ./&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Just in case any python cache files were carried over from the source directory, remove them&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;RUN py3clean .&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;대충 눈여겨 봐야 할 것으로..&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;go-vncdriver : vnc viewer 역할을 하면서 vnc server로부터 영상(스냅샷?)을 수집하는 기능&lt;/li&gt;
-  &lt;li&gt;pytest : 단위별 기능테스트 하는 패키지&lt;/li&gt;
-  &lt;li&gt;gym[atari] in setup.py&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;등이 있다.&lt;/p&gt;
-
-&lt;p&gt;또 하나 눈여겨 볼 것이 최종 실행 명령이 없이, 설치에 관련된 명령만이 나열되어 있다는 점이다. 실행을 위한 명령은 다른 곳에서 공급받는 다는 얘기. 
-로그 파일을 잘 들여다보면, command=[‘/app/universe-envs/controlplane/bin/controlplane.py’, ‘–rewarder-port=15901’] 이 있는데, 얘가 실제 관련 프로그램 구동을 담당하는 듯 하고, 15901 포트는 웹소켓 포트로 reward가 발생하면 값을 전달해 주는 포트로 보인다.&lt;/p&gt;
-
-&lt;p&gt;도커 컨테이너 내의 브라우저는 Chrome WebDriver를 이용했다. 완전 웹쪽 전문가(특히 브라우저 개발자)가 붙어 있는 모양이다.&lt;/p&gt;
-
-&lt;p&gt;어쨌든 궁금했던 것은 다음과 같다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;게임을 어떻게 시작되도록 하는가? 클릭되어야 할 좌표는 미리 입력하는 건가?
-    &lt;ul&gt;
-      &lt;li&gt;ㅇㅇ. 게임별 environment가 있고, 게임을 start 하기 위한 마우스 좌표 등을 미리 포함시키도록 하고 있음.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;reward는 어떻게 알아내는가? 즉, 성공/실패 여부는 어떻게 알아내지?
-    &lt;ul&gt;
-      &lt;li&gt;이것도 미리.. 정해놔야 함.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;VNC에서 화면 데이터를 읽어서 어떻게 처리하는가?
-    &lt;ul&gt;
-      &lt;li&gt;처리하지 않음. universe에서 다 해줌.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;학습된 모델을 save/load 할 수 있는가?
-    &lt;ul&gt;
-      &lt;li&gt;만들면 됨. 별로 어렵진 않음.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;잠정-결론&quot;&gt;잠정 결론..&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;이거 뭐에 써먹지?&lt;/strong&gt;&lt;/p&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html">OpenAI를 이용한 Auto game bot 처음 시작하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/openai-gym.png" /></entry></feed>
+&lt;/div&gt;</content><author><name>Wook Hyun</name></author><category term="blog" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://0.0.0.0:3000/nature-1.jpg" /></entry></feed>
