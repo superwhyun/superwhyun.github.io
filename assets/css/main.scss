@@ -1,25 +1,54 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
 ---
+// CSS Style Guide: http://codeguide.co/#css
 
-/*
-  Site variables
-*/
 
-$base-font-family: 'Roboto', sans-serif;
 
-$body-font-family: Georgia, serif;
+$scheme    : '{{ site.scheme | default: Muse }}';
+$variables : base $scheme custom;
+$mixins    : base $scheme custom;
 
-$code-font-family: "Source Code Pro", monospace;
 
-$brand-color: black;
+{% include _helper/config_map.html %}
+$jekyll-config-map : {{ config_map }};
 
-$container-width: 1200px;
+@function jekyll-config($key) {
+  @return map-get($jekyll-config-map, $key);
+}
 
-$tablet-width: 600px;
+// Variables Layer
+// --------------------------------------------------
+@import "_variables/base";
+@import "_variables/{{ site.scheme | default: Muse }}";
+@import "_variables/custom";
 
-$phone-width: 480px;
+// Mixins Layer
+// --------------------------------------------------
+@import "_mixins/base";
+@import "_mixins/{{ site.scheme | default: Muse }}";
+@import "_mixins/custom";
 
-$header-thickness: 56px;
 
-@import "_sass/-sections-dir";
+
+// Common Layer
+// --------------------------------------------------
+
+// Scaffolding
+@import "_common/scaffolding/scaffolding";
+
+// Layout
+@import "_common/outline/outline";
+
+// Components
+@import "_common/components/components";
+
+
+// Schemes Layer
+// --------------------------------------------------
+@import "_schemes/{{ site.scheme | default: Muse }}/index";
+
+
+
+// Custom Layer
+// --------------------------------------------------
+@import "_custom/custom";

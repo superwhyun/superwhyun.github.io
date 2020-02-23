@@ -8,4 +8,3 @@ image: cuba-4.jpg
 ---
 
 /dev/null
-

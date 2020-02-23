@@ -390,7 +390,7 @@ env = gym.make('flashgames.DuskDrive-v0')
 ```
 
 <!-- ![openai screen](openai.png){:class="img-responsive"} -->
-![openai flashgame screenshot]({{ "/assets/img/openai.png" }}){:class="img-responsive"}
+![openai flashgame screenshot]({{ "/assets/images/openai.png" }}){:class="img-responsive"}
 
 
 찬찬히 까보자. 

@@ -93,7 +93,7 @@ _post/ 디렉토리 밑에 naming 규칙에 맞게 파일을 생성하고, YAML 
 이미지를 넣고 싶으면 아래 태그를 이용하고, 
 이미지는 assets/img 폴더 밑에 넣어주자.
 
-![screenshot]({{ "/assets/img/openai.png" }}){:class="img-responsive"}
+![screenshot]({{ "/assets/images/openai.png" }}){:class="img-responsive"}
 
 
 <hr>
