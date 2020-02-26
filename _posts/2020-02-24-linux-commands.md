@@ -29,6 +29,15 @@ do
         sleep 30
 done
 ```
+또는
+```
+while ! ssh -i some.rpi.key -p 2022 whoever@localhost "tmux a || tmux"; do
+        sleep 1;
+done;
+```
+
+autossh를 쓰면 이 모든 것을 자동으로 해 주나, 최근 우분투 리눅스의 apparmour가 아예 이 프로그램이 실행되는 것을 커널레벨에서 disable 시켜서 더 이상은 사용할 수 없다. (~~그러나 라즈베리파이라면?~~)
+
 
 #### In host B,
 ```
@@ -97,6 +106,11 @@ snap은 sandbox 형태로 필요한 라이브러리까지 모두 포함해서 �
 
 
 ## Git
+
+### 한글파일명이 깨질때
+```
+git config --global core.quotepath false
+```
 
 ### remember id/password
 ```
