@@ -9,7 +9,47 @@ title: 라즈베리파이에서 서보모터 제어, 서보 드라이버/햇 사
 ## GPIO를 이용한 서보모터 제어
 
 ```
-TBD
+import RPi.GPIO as GPIO
+import time
+
+pin=18
+
+DEFAULT_POSITION=3.0
+MIN_POSITION=3.0
+MAX_POSITION=10.0
+STEP=0.1
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(pin, GPIO.OUT)
+
+p=GPIO.PWM(pin, 50)
+p.start(DEFAULT_POSITION)
+cur_pos=DEFAULT_POSITION
+
+try:
+  while True:
+
+    inp, outp, err = select.select([sys.stdin], [], [])
+    c = sys.stdin.read()
+    if c == 'q':
+        raise KeyboardInterrupt
+        break
+    elif c == '+':
+        if(cur_pos <= MAX_POSITION):
+            cur_pos=cur_pos + STEP
+    elif c == '-':
+        if(cur_pos >= MIN_POSITION):
+            cur_pos=cur_pos - STEP
+    else:
+        print("fuck 개눌당 찌끄레기들")
+    
+    p.ChangeDutyCycle(cur_pos)
+   
+
+except KeyboardInterrupt:
+  p.stop()
+  GPIO.cleanup()
+
 ```
 
 ## Servo Driver/Hat을 이용한 I2C 기반 서보모터 제어
