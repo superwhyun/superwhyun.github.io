@@ -12,17 +12,22 @@ title: temp
 
 그리고, PCA3956 제어 코드는 [Waveshare Wiki](https://www.waveshare.com/wiki/Servo_Driver_HAT)에서 다운 받아서 사용한다.
 
+
+아래 코드는 다운받은 파이썬3용 라이브러리 파일(PCA9685.py)을 lib 디렉토리에 넣은 후에 사용한 예제이다.
+
 ```
-...<snip>....
+from lib import PCA9685
+import time
 
-if __name__=='__main__':
 
-  pwm = PCA9685(0x40, debug=False)
+
+if __name__ == '__main__':
+  pwm = PCA9685.PCA9685(0x40, debug=False)
   pwm.setPWMFreq(50)
 
 
   for i in range(6):
-    pwm.setServoPulse(i, 500) # 500은 0도를 의미한다.
+    pwm.setServoPulse(i, 500)
     time.sleep(0.4)
 
   for i in range(6):
@@ -31,6 +36,7 @@ if __name__=='__main__':
 
   print('Done')
   time.sleep(2)
+
 
 ```
 
