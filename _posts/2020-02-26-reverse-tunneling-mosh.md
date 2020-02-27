@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [ssh, tunneling, reverse, firewall, mosh]
+tags: [ssh, tunneling, reverse, firewall, mosh, raspberry]
 title: Reverse tunneling using ssh, and one more thing; mosh
 ---
 
@@ -17,16 +17,36 @@ SSH reverse tunneling 은 방화벽 등으로 인해 외부에서 접속하여 �
 
 ## SSH 기본 설정
 
-### 라즈베리파이
+### (라즈베리파이) ssh 로그인 설정 
 
-### 외부서버
+HOME 디렉토리의 .ssh 디렉토리내에 "config" 라는 파일 생성하고 다음을 기입한다.
+주기적으로 데이터를 송신하여 해당 connection이 끊기는 것을 막는다.
+```
+ServerAliveInterval 60
+```
+ssh-keygen -t rsa
+ssh-copy-id [USER]@[SERVER]
+```
+주의할 사항으로 ssh-keygen을 사용할 때 passphrase는 안 넣어줘야 자동으로 로그인이 된다.
+여기에 passphrase를 입력하면, 매번 비번을 입력해야 해서 자동으로 로그인하는 맛이 떨어진다. (음?)
+
+### autossh 실행
+
+```
+autossh -M 20000 -f -N REMOTE_USER@REMOTE_SERVER -R 9999:localhost:22
+```
 
 
-## autossh 실행
+### (REMOTE_SERVER) ssh 로그인
+
 
 ## 외부 접속
+```
+ssh PI_USER@localhost -p 9999
+```
 
-### 외부서버
+
+
 
 
 ## mosh 사용
