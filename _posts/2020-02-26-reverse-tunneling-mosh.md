@@ -24,6 +24,10 @@ HOME 디렉토리의 .ssh 디렉토리내에 "config" 라는 파일 생성하고
 ```
 ServerAliveInterval 60
 ```
+
+그리고 아래 명령을 통해 pem 파일을 생성하고 원격지 서버에 전송/등록한다.
+
+```
 ssh-keygen -t rsa
 ssh-copy-id [USER]@[SERVER]
 ```
