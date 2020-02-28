@@ -3,7 +3,7 @@ layout: post
 title: "Docker, Docker swarm 사용기"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [docker, swarm]
 image: docker-swarm.jpg
 comments: true
 ---

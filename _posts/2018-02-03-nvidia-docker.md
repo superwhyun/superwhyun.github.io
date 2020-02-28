@@ -3,7 +3,7 @@ layout: post
 title: "우분투 17.10.1에 nvidia-docker 올리기"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [nvidia, gpu, docker]
 image: nvidia-docker.png
 comments: true
 ---

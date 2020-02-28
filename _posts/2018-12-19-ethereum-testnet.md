@@ -3,7 +3,7 @@ layout: post
 title: "Ethereum testnet 구축, 채굴, 자체 코인 발행"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [ethereum, testnet]
 image: nature-1.jpg
 comments: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Source code 예쁘게 프린트 하기"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [enscript, source, print]
 image: source-code.jpg
 comments: true
 ---

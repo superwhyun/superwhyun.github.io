@@ -3,7 +3,7 @@ layout: post
 title: "각종 Docker images 사용법"
 author: "Wook Hyun"
 categories: tips
-tags: [blog]
+tags: [docker, container]
 image: docker.png
 comments: true
 ---

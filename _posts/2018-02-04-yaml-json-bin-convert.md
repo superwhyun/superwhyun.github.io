@@ -3,7 +3,7 @@ layout: post
 title: "센서 데이터 Text-Binary 변환 엔진"
 author: "Wook Hyun"
 categories: upcoming
-tags: [blog]
+tags: [yaml, python, json, binary, convert]
 image: conversion.jpg
 comments: true
 ---

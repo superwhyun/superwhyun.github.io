@@ -3,7 +3,7 @@ layout: post
 title: "유니티 3D - 예제"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [Unity, example]
 image: unity/unity.png
 comments: true
 ---

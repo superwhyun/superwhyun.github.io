@@ -3,7 +3,7 @@ layout: post
 title: "OpenAI - Auto Gamebot"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [machine leaning, ai, openai]
 image: openai-gym.png
 comments: true
 ---

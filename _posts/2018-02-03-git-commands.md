@@ -3,7 +3,7 @@ layout: post
 title: "Git, Github 활용 팁 정리"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [git]
 # image: nature-1.jpg
 comments: true
 ---

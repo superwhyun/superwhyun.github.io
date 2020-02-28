@@ -3,7 +3,7 @@ layout: post
 title: "Google Translation API를 써보자 (Python)"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [damnit google]
 image: mud.png
 comments: true
 ---

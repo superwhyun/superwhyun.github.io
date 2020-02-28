@@ -3,7 +3,7 @@ layout: post
 title: "Github.io Blog 만들기 "
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [github.io, blog, jekyll]
 image: cuba-1.jpg
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "유니티 3D - 예제 2"
 author: "Wook Hyun"
 categories: upcoming
-tags: [blog]
+tags: [Unity, example, draft]
 image: unity/unity.jpg
 comments: true
 ---

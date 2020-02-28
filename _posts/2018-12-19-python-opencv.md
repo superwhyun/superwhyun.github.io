@@ -3,7 +3,7 @@ layout: post
 title: "Python에서 OpenCV 사용하기"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [python, opencv, camera]
 image: python.svg
 comments: true
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "유니티 3D - 기본"
 author: "Wook Hyun"
 categories: documentation
-tags: [blog]
+tags: [Unity, basic]
 image: unity/unity.png
 comments: true
 ---

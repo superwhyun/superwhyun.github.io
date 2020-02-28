@@ -3,7 +3,7 @@ layout: post
 title: "각종 유용한 Linux 명령어들"
 author: "Wook Hyun"
 categories: tips
-tags: [blog]
+tags: [linux, command, xargs, bash]
 image: bash.jpg
 comments: true
 ---

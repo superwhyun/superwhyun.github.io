@@ -3,7 +3,7 @@ layout: post
 title: "Python에서 fork, exec등을 위한 subprocess 사용법"
 author: "Wook Hyun"
 categories: tips
-tags: [blog]
+tags: [mirroring, crawling]
 image: python.svg
 comments: true
 ---
