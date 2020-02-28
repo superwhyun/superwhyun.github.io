@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: [machine learning, opencv, draft]
+tags: [machine learning, opencv]
 title: 이미지에서 특정객체(e.g, 자동차) 숫자 세기
 ---
 
