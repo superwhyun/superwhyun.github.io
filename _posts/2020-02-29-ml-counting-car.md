@@ -81,9 +81,48 @@ nvidia tensorRT 라이브러리를 설치하지 않아서 그런 것이니 [설�
 뻔한 스토리다. 순서대로 [x1,y1, x2,y2]가 있다.
 confidence 값은 뭐 말 안해도 알거라 생략.
 
-다음에는 이 기능을 이용해 내 사진들 중 자동차 사진만 걷어서 따로 모으는 것을 만들어 보고자 하며, 아래의 기능이 필요해 보인다.
-- 이미지 객체 숫자 카운팅 (이 포스트의 내용)
-- 디렉토리를 recursive하게 돌며 모든 이미지에 대해 시행
-  - 사람의 수는 없으나, 자동차만 있는 경우는 특정 폴더로 이동! 
+암튼, 대충 인터넷에서 자동차 나온 이미지 잡아다가 돌리면 아래처럼 차량에 box를 칠해주는 것을 볼 수 있다.
+![Result](/assets/images/2020-02-29-17-45-08.png)
 
 
+## 이제 쓰는 법을 알았으니, 써먹어야겠지?
+
+아들내미가 자동차 사진을 내 스맛폰으로 하도 찍어대서 내 사진첩이 엉망이 되어 버린 상태.. 자동차만 찍힌 사진을 솎아내는 기능을 만들어 보았다. 뭐, 대단한 건 없고 디렉토리 스캔해서 사람수는 0인데 자동차 수가 1개 이상인 이미지만 잡아내는 거임. 프리뤼 심플.
+
+
+```
+import cv2
+import matplotlib.pyplot as plt
+import cvlib as cv
+from cvlib.object_detection import draw_bbox
+import os
+
+
+def detect_car_person(img_name):
+    # print(img_name)
+    im = cv2.imread(img_name)
+    bbox, label, conf = cv.detect_common_objects(im)
+
+    if(label.count('car') > 0 and label.count('person') ==0 ):
+        return img_name
+    else:
+        return None
+
+
+
+if __name__ == '__main__':
+
+    print('scanning....')
+
+    for (path, dir, files) in os.walk("./photos"):
+        print('gogogo')
+        for filename in files:
+            ext = os.path.splitext(filename)[-1]
+            if ext == '.jpg':
+                car_filtered = detect_car_person(path+'/'+filename)
+                if(car_filtered is not None):
+                    print(car_filtered)
+    
+    print('completed')
+
+```
