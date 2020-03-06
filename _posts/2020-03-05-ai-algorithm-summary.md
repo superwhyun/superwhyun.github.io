@@ -33,7 +33,8 @@ title: AI 알고리즘 정리
 
 주로 게임 인공지능 등에 많이 활용될 수 있을 것 같고, 각종 산업에 많이 적용되기 좋은 모델인 것 같다. e.g, 작업 로봇의 동작, 자율주행 등등.
 
-
+### 추천 영상
+  - https://www.youtube.com/watch?v=W_gxLKSsSIE
 
 ## CNN (Convolutional Neural Network)
 
