@@ -35,7 +35,7 @@ sudo rm -rf /usr/local/cuda-10.0
 
 
 
-## 설치
+## Nvida의 deb 파일을 이용한 설치
 
  - NVIDIA graphic card driver 설치
  - CUDA 라이브러리 설치
@@ -50,54 +50,10 @@ NVIDIA SDK 홈페이지에서 필요한 설치파일들을 다운받자. deb 파
 얘도 Nvidia 홈페이지에서 다운 받아 설치할 수 있기는 한데, 쉽게 가자.
 
 ```
-sudo apt install nvidia~~~
+sudo apt-get install --no-install-recommends nvidia-driver-430
 ```
 
-
-### CUDNN 설치
-
-
-
-### TensorRT 설치
-nvidia sdk site에서 다운 받을 수 있으며 __자신의 시스템 버전__, __설치된 cuda버전__ 에 맞는 녀석을 다운 받자.
-
-```
-sudo apt-get install tensorrt
-```
-
-https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html#downloading (~~에서 하라는 대로 해서 되면 좋겠지만, 언제나 그러하듯 문제가 생긴다. ~~) 에서 하라는 대로 하면 된다.
-
-## Trouble Shooting
- 
-### sudo apt-get update
-혹시 apt update를 했을때, 이런 류의 에러가 뜰 때는 
-```
-W: Failed to fetch https://nvidia.github.io/libnvidia-container/ubuntu18.04/amd64/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6ED91CA3AC1160CD
-```
-아래와 같이 해 준다.
-```
-curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-```
-
-### sudo apt-get install tensorrt
-
-
-```
-sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb
-sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.0_amd64.deb
-```
-
-자, 다시 tensorRT를 설치해 보자.
-```
-sudo apt-get install tensorrt
-```
-
-
-
-
-
-
-### cuda 10.2 설치
+### CUDA 설치
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
 sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -108,10 +64,43 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
+### CUDNN 설치
+
+자신의 시스템 버전에 맞는 cudnn을 다운 받자. deb 파일로 하자. 
+```
+sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.0_amd64.deb
+```
+이렇게 하면, /var/cudnn-xx-xx-xx 라는 폴더에 deb 파일들이 쭈욱 풀린다.
+이후에 이 폴더를 apt 로 검색이 가능하도록 아래 명령을 실행한다.
+```
+
+```
+이제 apt 명령을 사용해서 /var 밑에 있는 deb 파일들을 설치하자.
+```
+sudo apt update
+sudo apt install cudnn
+```
 
 
-어라라..
-tensorflow 2.0의 경우, cuda 10.1 만 지원하네? 하하 미촤버리겠네.
+### TensorRT 설치
+이번에는 __자신의 시스템 버전__, __설치된 cuda버전__ 에 맞는 녀석을 다운 받자.
+
+https://docs.nvidia.com/deeplearning/sdk/tensorrt-install-guide/index.html#downloading (~~에서 하라는 대로 해서 되면 좋겠지만, 언제나 그러하듯 문제가 생긴다. ~~) 에서 하라는 대로 하면 된다.
+
+```
+sudo dpkg -i libtensorrt7-xxxx
+sudo apt update
+sudo apt-get install tensorrt
+```
+
+
+
+
+## APT를 이용한 설치
+
+비슷한 방법이긴 한데, 이게 약간 좀 더 쉬운 면은 있다.
+대동소이하다.
 
 ```
 # Add NVIDIA package repositories
@@ -139,6 +128,21 @@ sudo apt-get install -y --no-install-recommends libnvinfer6=6.0.1-1+cuda10.1 \
     libnvinfer-dev=6.0.1-1+cuda10.1 \
     libnvinfer-plugin6=6.0.1-1+cuda10.1
 ```
+
+
+## Trouble Shooting
+ 
+### Public Key signature error
+혹시 apt update를 했을때, 이런 류의 에러가 뜰 때는 
+```
+W: Failed to fetch https://nvidia.github.io/libnvidia-container/ubuntu18.04/amd64/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 6ED91CA3AC1160CD
+```
+아래와 같이 해 준다.
+```
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+```
+
+nvidia의 gpgkey가 만료되었기 때문에 그런거다.
 
 
 
