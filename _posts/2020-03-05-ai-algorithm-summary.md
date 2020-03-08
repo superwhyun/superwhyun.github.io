@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: draft
 tags: [ai, algorithm, usage, draft]
 title: AI 알고리즘 정리
 ---

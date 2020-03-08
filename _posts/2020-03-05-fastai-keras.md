@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: draft
 tags: [keras, fastai, draft]
 title: Keras, Fastai 에 대한 간단한 요약
 ---
