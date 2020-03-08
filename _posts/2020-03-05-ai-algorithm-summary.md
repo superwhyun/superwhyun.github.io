@@ -25,7 +25,17 @@ title: AI 알고리즘 정리
 *머신러닝은 맞는데 뉴럴 네트워크로까지 보기에는 애매하지 않을까?*
 
 
-## RNN (Reinforcement Neural Network)
+## RNN (순환학습, Recurrent Neural Network)
+
+> RNN은 Recurrent Neural Network의 약자로 hidden state를 반복해서 돌기 때문에 이런 이름이 붙었습니다. 물론 Recursive Neural Network도 줄이면 RNN이지만 대부분 RNN이라 하면 Recurrent Neural Network를 칭합니다. [출처](http://isukorea.com/blog/home/waylight3/234)
+
+### Variants of RNN
+
+#### LSTM(Long short term memory network)
+
+
+## RNN (강화학습, Reinforcement Neural Network)
+
 
 ### 기본 설명
 >강화 학습은 환경으로부터의 피드백을 기반으로 행위자(agent)의 행동을 분석하고 최적화합니다. 기계는 어떤 액션을 취해야 할지 듣기 보다는 최고의 보상을 산출하는 액션을 발견하기 위해 서로 다른 시나리오를 시도합니다. 시행 착오(Trial-and-error)와 지연 보상(delayed reward)은 다른 기법과 구별되는 강화 학습만의 특징입니다.
@@ -34,6 +44,9 @@ title: AI 알고리즘 정리
 주로 게임 인공지능 등에 많이 활용될 수 있을 것 같고, 각종 산업에 많이 적용되기 좋은 모델인 것 같다. e.g, 작업 로봇의 동작, 자율주행 등등.
 
 
+### 유용한 자료
+- http://blog.naver.com/laonple/221027194402
+- 
 
 ## CNN (Convolutional Neural Network)
 
