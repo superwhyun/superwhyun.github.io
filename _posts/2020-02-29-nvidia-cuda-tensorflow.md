@@ -1,7 +1,7 @@
 ---
 layout: post
-categories: draft
-tags: [nvidia, cuda, tensorrt, install, draft]
+categories: information
+tags: [nvidia, cuda, tensorrt, install]
 title: Ubuntu 18.04에 cuda, tensorrt 등 설치하기
 ---
 
