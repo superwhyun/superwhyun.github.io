@@ -64,12 +64,38 @@ GAN은 Discriminative 모델과 Generative 모델이 경쟁적으로 서로를 �
 일차적으로 Discriminative 모델에 대한 선행 학습은 필요. 
 Generative 모델은 가짜를 만들고, Discriminative 모델은 진위 여부를 판단하고 그 결과를 feedback 을 주어 다시 학습시키면서 모델의 지능을 높여가는 방식
 
+화풍모사와 같이 한정된 데이터를 이용하는 경우에 적합.
+
+- Discirminatvie Model
+  - 특징
+    - 그림에서 화풍을 뽑아내는 요소를 판단
+  - 절차
+    - Convolution등으로 특징을 모델링
+    - Train, Test set 수집 
+    - Train
+    - Inference
+- Generative Model
+  - 특징
+    - 화풍지식 --> 화풍결정 --> 그림재현
+    - 비지도 방식으로 labeled data 없어도 됨
+    - class에 대한 확률모델 생성/이용
+  - 절차
+    - 화풍복제방법 학습하는 ML 모델 
+    - Train, Test set 수집
+    - Train
+    - 실제 example 바탕으로 inference ==> 유사도를 사용해 모델에서 화풍재현 확인
+
+
 ### Variants of GAN 
 GAN이 제안된 이후에 DCGAN, cycleGAN, LSGAN, SGAN, ACGAN, StackGAN 등등이 나왔으며 각각의 용도에 따른 특징이 존재
 - LSGAN(Least Square GAN)
 - SGAN(Semi-Supervised GAN)
 - ACGAN(Auxillary Classifier GAN)
 - StackGAN(Stack GAN)
+- DCGAN
+  - 새로운 장면 생성
+- SimGAN
+  - 모조데이터 보강
 
 ### 추천 영상
 - [1시간만에 GAN(Generative Adversarial Network) 완전 정복하기](https://tv.naver.com/v/1947034)
