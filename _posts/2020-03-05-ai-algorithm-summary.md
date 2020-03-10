@@ -127,11 +127,6 @@ GAN이 제안된 이후에 DCGAN, cycleGAN, LSGAN, SGAN, ACGAN, StackGAN 등등�
 이게 공식 용어인지는 모르겠으나.. 이미 학습된 모델을 가져다가 다른 용도로 써먹는 것 정도로 이해하면 될 듯하다. 기존에 학습된 모델을 가지고 새로운 데이터의 feature를 뽑아내기 용이해서 Feature Extractor라고도 불리기도 한다.
 가장 유명한 것이 Artistic Style Transfer 가 있겠다.
 
-장점으로는 
-- 데이터 부족을 어느정도 해결
-- 학습시간을 줄여 줌
-
-
 ---
 
 ## 오토인코더(Auto Encoder)
@@ -140,8 +135,7 @@ GAN이 제안된 이후에 DCGAN, cycleGAN, LSGAN, SGAN, ACGAN, StackGAN 등등�
 
 ~~유용하다고 하는데 근데 얘를 뭐에 쓰는지에 대해서는 감이 잘 안 오네..~~
 
-가장 유용한 예로는 Semantic Segmentation 이라고 함
-- e.g, 항공사진을 입력받아 지도 이미지로
+가장 유용한 예로는 Semantic Segmentation 이라고 함 (e.g, 항공사진을 입력받아 지도 이미지로)
 
 대표적인 모델로는 U-Net (2015)이 있음
 - 원래 생체 데이터 이미지에 대한 segmentation을 목표로 만들어짐
