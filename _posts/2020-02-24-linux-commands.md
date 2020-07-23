@@ -60,16 +60,46 @@ SSH로 원격 데몬형 프로세스 실행
 
 ssh id@host screen -d -m <command>
 
+### Trouble Shooting
 
+bash에서는 잘 되던 것이 zsh를 이용해서 디렉토리를 recursive하게 가져오려고 할 경우 다음과 같은 에러가 나올 수 있다.
+```
+(base) whyun@u2pia tmp % scp -r user@host:*.jpg .
+zsh: no matches found: pi@u2pia.duckdns.org:*.jpg
+```
+
+이럴때는 아래처럼 *을 사용하기 전에 \을 붙여준다.
+```
+(base) whyun@u2pia tmp % scp -r user@host:\*.jpg .
+
+```
 
 
 ## Network
 
 
-특정 port 를 listening 하고 있는 프로세스/프로그램 찾아내기
+### 특정 port 를 listening 하고 있는 프로세스/프로그램 찾아내기
+
 ```
 sudo lsof -i -P -n|grep LISTEN
 ```
+
+### 원격지에 위치한 리눅스 서버의 X-window에 GUI 응용 띄우기
+
+간혹 X-window GUI 응용을 띄워야 할 경우가 있는데, 원격지에서는 이게 되지 않는다.
+
+원격지로 GUI 자체를 전송하는 것은 xhost와 DISPLAY 환경변수 조합만 맞춰주면 예전(20년....)에는 되었는데, 이제 조금 복잡한 과정을 거쳐야 한다. 
+
+일단, 지금 필요한 것은 리눅스 원격지 서버에 띄워진 X window에 GUI 응용을 실행시키는 것이므로...
+아래처럼 해 주고 실행하면 된다.
+
+```
+export DISPLAY=:1
+```
+
+간혹, 안되는 경우, 뒤의 숫자를 0에서 시작해서 하나씩 올려보는 것도 한 방법이다.
+
+
 
 ## Conda
 
