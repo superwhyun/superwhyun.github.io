@@ -128,10 +128,11 @@ for exported_foldername in ${exported_foldername_array[*]}; do
     mv -i -v "$exported_file_path" "$posts_folder_path/$fixed_filename.md"
     mv -i -v "$exported_foldername/$exported_filename" "$images_folder_path/$fixed_filename"
 
-    git add
+    git pull
     git add "$posts_folder_path/$fixed_filename.md"
     git add "$images_folder_path/$fixed_filename"
     git commit -m "$fixed_filename is uploaded"
+    git push
 
     rm -r "$exported_foldername"
     rm -r "$exported_foldername.zip"
