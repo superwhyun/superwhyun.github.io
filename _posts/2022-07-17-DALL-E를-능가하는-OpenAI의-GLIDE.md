@@ -2,11 +2,12 @@
 title: DALL-E를 능가하는 OpenAI의 GLIDE
 
 categories: information
-tags: [DALL-E, GL 찍먹]
+tags: []
 Created: 2022년 6월 19일 오후 4:07
-Last Edited Time: 2022년 7월 17일 오전 3:37
+Last Edited Time: 2022년 7월 17일 오전 4:02
 ---
 Status: 완료
+요약:  OpenAI에서 공개한 GLIDE 찍먹해보기
 
 - 이 글에서 관심을 갖게 됨.
 
