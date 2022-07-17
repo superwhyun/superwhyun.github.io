@@ -5,7 +5,7 @@ tags: [raspberry, pi, mattermost]
 Created: 2022년 5월 5일 오후 10:33
 Last Edited Time: 2022년 7월 11일 오후 5:56
 ---
-Status: 완료
+
 Type: Techinical Memo
 요약: Slack이 괜찮은 편이기는 하나 무료 메시지 숫자가 10,000개에 제한되어 있어 금방 소진된다. 오픈소스 대안을 찾아보니, 역시나 있다. 슬랙과 거의 판박이로 똑같다. 집에서 놀고 있는 라즈베리파이에 설치해 보았더니 아주 잘 된다.
 

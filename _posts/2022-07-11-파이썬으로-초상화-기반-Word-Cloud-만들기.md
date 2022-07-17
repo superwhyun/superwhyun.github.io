@@ -6,7 +6,7 @@ tags: [python, portrait, mask image, word cloud]
 Created: 2022년 6월 6일 오후 5:59
 Last Edited Time: 2022년 7월 11일 오후 6:08
 ---
-Status: 완료
+
 요약: Word Cloud를 주어진 이미지에 맞춰 이쁘게 만들어 주는 기능을 만들어 봄. medium에 있는 글을 보고 따라하면서 일부 수정보완했음.
 원문링크: https://jelena-ristic.medium.com/create-wordcloud-portraits-with-python-bb5ce794bc91
 
